@@ -167,11 +167,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                     <h2 className="text-2xl md:text-3xl font-bold mb-2">
                       {props.titleModal}
                     </h2>
-                    <img
-                      src={props.bannerUrl}
-                      alt=""
-                      className="object-cover h-32 w-full mt-6"
-                    />
+                    <div className="block w-full h-[1px] bg-white mx-auto"></div>
                   </li>
 
                   <li className="mt-8">
