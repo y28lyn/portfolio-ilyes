@@ -64,7 +64,7 @@ const Veille = () => {
             <div className="grid max-w-md grid-cols-1 gap-6 mx-auto lg:grid-cols-3 lg:max-w-full">
               {articlesData.map((article, index) => (
                 <VeilleArticle
-                  key={index} // Assurez-vous d'utiliser une clé unique pour chaque élément généré
+                  key={index}
                   source={article.source}
                   date={article.date}
                   author={article.author}
@@ -72,6 +72,7 @@ const Veille = () => {
                   desc={article.desc}
                   imgUrl={article.imgUrl}
                   linkUrl={article.linkUrl}
+                  isEven={index % 2 === 0}
                 />
               ))}
             </div>

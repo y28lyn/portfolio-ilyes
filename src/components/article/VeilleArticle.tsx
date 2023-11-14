@@ -6,12 +6,17 @@ interface VeilleProps {
   desc: string;
   imgUrl: string;
   linkUrl: string;
+  isEven: boolean;
 }
 
 const VeilleArticle: React.FC<VeilleProps> = (props: VeilleProps) => {
   return (
     <>
-      <div className="overflow-hidden bg-gray-700 rounded shadow">
+      <div
+        className={`overflow-hidden rounded shadow ${
+          props.isEven ? "bg-gray-700" : "bg-gray-800"
+        }`}
+      >
         <div className="p-5">
           <div className="relative">
             <img
