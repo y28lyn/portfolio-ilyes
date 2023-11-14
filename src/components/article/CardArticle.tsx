@@ -59,7 +59,7 @@ export default function CardArticle() {
     },
     {
       title: "Installation d'un GLPI",
-      desc: "GLPI simplifie gestion informatique lycée. Suivi, tickets, inventaires, ressources. Open-source, convivial, productivité. Centralisez, supervisez, améliorez efficacement.",
+      desc: "GLPI simplifie la gestion informatique. Suivi des actifs, gestion des tickets, inventaires simples. Open-source, convivial, optimisez la productivité dès l'installation.",
       imgUrl: "glpi.png",
       link: "#",
       linkUrl: "#",
