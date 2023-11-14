@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    { "source": "/parcours", "destination": "/parcours" },
+    { "source": "/experience", "destination": "/experience" },
+    { "source": "/situation", "destination": "/situation" },
+    { "source": "/certification", "destination": "/certification" },
+    { "source": "/veille", "destination": "/veille" },
+    { "source": "/contact", "destination": "/contact" },
+    {
+      "source": "/politique_confidentialite",
+      "destination": "/politique_confidentialite"
+    },
+    {
+      "source": "/conditions_utilisation",
+      "destination": "/conditions_utilisation"
+    },
+    { "source": "/mention_legales", "destination": "/mention_legales" }
+  ]
+}
