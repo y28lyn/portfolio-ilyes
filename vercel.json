@@ -1,19 +1,13 @@
 {
   "rewrites": [
-    { "source": "/parcours", "destination": "/parcours" },
-    { "source": "/experience", "destination": "/experience" },
-    { "source": "/situation", "destination": "/situation" },
-    { "source": "/certification", "destination": "/certification" },
-    { "source": "/veille", "destination": "/veille" },
-    { "source": "/contact", "destination": "/contact" },
-    {
-      "source": "/politique_confidentialite",
-      "destination": "/politique_confidentialite"
-    },
-    {
-      "source": "/conditions_utilisation",
-      "destination": "/conditions_utilisation"
-    },
-    { "source": "/mention_legales", "destination": "/mention_legales" }
+    { "source": "/parcours", "destination": "/index.html" },
+    { "source": "/experience", "destination": "/index.html" },
+    { "source": "/situation", "destination": "/index.html" },
+    { "source": "/certification", "destination": "/index.html" },
+    { "source": "/veille", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" },
+    { "source": "/politique_confidentialite", "destination": "/index.html" },
+    { "source": "/conditions_utilisation", "destination": "/index.html" },
+    { "source": "/mention_legales", "destination": "/index.html" }
   ]
 }
