@@ -4,30 +4,27 @@ export default function CardArticle() {
   const projects = [
     {
       title: "Refactoring d'Inolib",
-      desc: "Description du projet 1.",
-      imgUrl:
-        "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      link: "GitHub",
+      desc: "Optimisation du site INOLIB post-lancement. Améliorations d'images et de style avec TailwindCSS. Collaboration cruciale pour renforcer la réputation et l'expérience utilisateur.",
+      imgUrl: "/inolib.png",
+      link: "https://www.inolib.com/",
       linkUrl: "https://github.com/inolib/website",
       titleModal: "Refactoring d'Inolib",
-      descModal: "Description du projet 1.",
+      descModal: "Description du projet .",
     },
     {
       title: "Création d'InoFormation",
-      desc: "Description du projet 2.",
-      imgUrl:
-        "https://images.unsplash.com/photo-1526925539332-aa3b66e35444?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      link: "GitHub",
+      desc: "Création d'une plateforme de formation interne sur l'accessibilité numérique. Utilisation de ReactJS, Typescript, TailwindCSS, et GIT. Renforcement de la réputation de l'entreprise.",
+      imgUrl: "inoformation.png",
+      link: "https://inolib-formation.vercel.app/",
       linkUrl: "https://github.com/y28lyn/inolib-formation",
       titleModal: "Création d'InoFormation",
       descModal: "Description du projet 2.",
     },
     {
-      title: "Création d'InoTest",
-      desc: "Description du projet 3.",
-      imgUrl:
-        "https://images.unsplash.com/photo-1607743386830-f198fbd7f9c4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      link: "GitHub",
+      title: "Création d'Inotest",
+      desc: "Projet majeur sur les tests d'accessibilité numérique et création d'une librairie de composants avec ReactJS, Typescript, TailwindCSS et GIT.",
+      imgUrl: "inotest.png",
+      link: "https://inotest.vercel.app/",
       linkUrl: "https://github.com/Dindonix/InoTest",
       titleModal: "Création d'InoTest",
       descModal: "Description du projet 3.",
@@ -48,6 +45,7 @@ export default function CardArticle() {
               linkUrl={project.linkUrl}
               titleModal={project.titleModal}
               descModal={project.descModal}
+              cardColor={index % 2 === 0 ? "bg-gray-700" : "bg-gray-800"}
             />
           ))}
         </div>
