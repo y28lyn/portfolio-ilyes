@@ -3,9 +3,6 @@ import { useEffect, useState } from "react";
 interface ContentCardProps {
   title: string;
   desc: string;
-  imgUrl: string;
-  link: string;
-  linkUrl: string;
   titleModal: string;
   contexte: string;
   besoin: string;
@@ -13,6 +10,10 @@ interface ContentCardProps {
   realisation: string;
   bilan: string;
   competence: string;
+  imgUrl: string;
+  bannerUrl: string;
+  link: string;
+  linkUrl: string;
   cardColor: string;
   showGitHubButton?: boolean;
   showLinkButton?: boolean;
@@ -167,7 +168,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                       {props.titleModal}
                     </h2>
                     <img
-                      src={props.imgUrl}
+                      src={props.bannerUrl}
                       alt=""
                       className="object-cover h-32 w-full mt-6"
                     />

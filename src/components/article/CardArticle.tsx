@@ -6,6 +6,8 @@ export default function CardArticle() {
       title: "Refactoring d'Inolib",
       desc: "Optimisation du site INOLIB post-lancement. Améliorations d'images et de style avec TailwindCSS. Collaboration cruciale pour renforcer la réputation et l'expérience utilisateur.",
       imgUrl: "/inolib.png",
+      bannerUrl:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "https://www.inolib.com/",
       linkUrl: "https://github.com/inolib/website",
       titleModal: "Refactoring d'Inolib",
@@ -28,6 +30,8 @@ export default function CardArticle() {
       title: "Création d'InoFormation",
       desc: "Création d'une plateforme de formation interne sur l'accessibilité numérique. Utilisation de ReactJS, Typescript, TailwindCSS, et GIT. Renforcement de la réputation de l'entreprise.",
       imgUrl: "inoformation.png",
+      bannerUrl:
+        "https://images.unsplash.com/photo-1550025899-5f8a06b1b3a8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D",
       link: "https://inolib-formation.vercel.app/",
       linkUrl: "https://github.com/y28lyn/inolib-formation",
       titleModal: "Création d'InoFormation",
@@ -50,6 +54,8 @@ export default function CardArticle() {
       title: "Création d'Inotest",
       desc: "Projet majeur sur les tests d'accessibilité numérique et création d'une librairie de composants avec ReactJS, Typescript, TailwindCSS et GIT.",
       imgUrl: "inotest.png",
+      bannerUrl:
+        "https://images.unsplash.com/photo-1502899576159-f224dc2349fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D",
       link: "https://inotest.vercel.app/",
       linkUrl: "https://github.com/Dindonix/InoTest",
       titleModal: "Création d'InoTest",
@@ -72,6 +78,8 @@ export default function CardArticle() {
       title: "Création d'Autoclean",
       desc: "Le site web Autoclean est une vitrine en ligne destinée à présenter l'entreprise et ses services. Il a été développé en utilisant les technologies React.js, TypeScript et Tailwind CSS.",
       imgUrl: "autoclean.png",
+      bannerUrl:
+        "https://images.unsplash.com/photo-1555448248-2571daf6344b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D",
       link: "https://autoclean-lyon.fr/",
       linkUrl: "https://github.com/y28lyn/autoclean",
       titleModal: "Création d'Autoclean",
@@ -88,6 +96,8 @@ export default function CardArticle() {
       title: "Continuation d'SGRC",
       desc: "La Table d'Hélène est une application PHP simplifiant la prise de commandes et la gestion des tables, plats, boissons, et menus pour le lycée Hélène Boucher.",
       imgUrl: "sgrc.png",
+      bannerUrl:
+        "https://images.unsplash.com/photo-1551509134-eb7c5ea9ad2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGlwYWQlMjBwcm8lMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D",
       link: "https://brodet.fr/SGRC/",
       linkUrl: "https://github.com/y28lyn/sgrc",
       titleModal: "Continuation d'SGRC",
@@ -104,6 +114,8 @@ export default function CardArticle() {
       title: "Installation d'un GLPI",
       desc: "GLPI simplifie la gestion informatique. Suivi des actifs, gestion des tickets, inventaires simples. Open-source, convivial, optimisez la productivité dès l'installation.",
       imgUrl: "glpi.png",
+      bannerUrl:
+        "https://images.unsplash.com/photo-1619359059287-9d024d7081ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGlwYWQlMjBwcm8lMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D",
       link: "#",
       linkUrl: "#",
       titleModal: "Continuation d'SGRC",
@@ -128,6 +140,7 @@ export default function CardArticle() {
               title={project.title}
               desc={project.desc}
               imgUrl={project.imgUrl}
+              bannerUrl={project.bannerUrl}
               link={project.link}
               linkUrl={project.linkUrl}
               titleModal={project.titleModal}
