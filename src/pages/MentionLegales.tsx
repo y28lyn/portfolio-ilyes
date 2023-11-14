@@ -10,16 +10,16 @@ const MentionLegales = () => {
         <section className="mt-6">
           <h2 className="text-xl font-bold">Responsable du Site Web</h2>
           <p>Responsable éditorial : Ilyes BEIRADE</p>
-          <p>Adresse : Adresse</p>
-          <p>Téléphone : Téléphone</p>
-          <p>E-mail : E-Mail</p>
+          <p>Adresse : #</p>
+          <p>Téléphone : #</p>
+          <p>E-mail : #</p>
         </section>
 
         <section className="mt-6">
           <h2 className="text-xl font-bold">Hébergeur du Site Web</h2>
-          <p>Nom de l'hébergeur : Nom</p>
-          <p>Siège social : Adresse</p>
-          <p>Téléphone : Numéro </p>
+          <p>Nom de l'hébergeur : #</p>
+          <p>Siège social : #</p>
+          <p>Téléphone : #</p>
         </section>
 
         <section className="mt-6">
