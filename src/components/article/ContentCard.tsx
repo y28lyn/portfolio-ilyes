@@ -7,7 +7,12 @@ interface ContentCardProps {
   link: string;
   linkUrl: string;
   titleModal: string;
-  descModal: string;
+  contexte: string;
+  besoin: string;
+  environnement: string;
+  realisation: string;
+  bilan: string;
+  competence: string;
   cardColor: string;
   showGitHubButton?: boolean;
   showLinkButton?: boolean;
@@ -135,7 +140,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
           </div>
 
           {modalOpen && (
-            <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-80 flex items-center justify-center">
+            <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-80 flex items-center justify-center text-justify">
               <div className="bg-gray-700 h-[75vh] w-[90%] md:h-[85vh] md:w-[98%] mt-10 rounded-lg shadow-lg mx-auto p-8 overflow-y-scroll">
                 <div className="flex justify-end">
                   <button onClick={closeModal}>
@@ -156,15 +161,73 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                     </svg>
                   </button>
                 </div>
-                <h2 className="text-lg md:text-xl text-white font-bold mb-2">
-                  {props.titleModal}
-                </h2>
-                <p className="text-gray-300">{props.descModal}</p>
-                <img
-                  src="https://images.unsplash.com/photo-1699900000165-a4ce52bc25e9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8"
-                  alt=""
-                  className="h-screen mt-6"
-                />
+                <ul className="text-white">
+                  <li>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                      {props.titleModal}
+                    </h2>
+                    <img
+                      src={props.imgUrl}
+                      alt=""
+                      className="object-cover h-32 w-full mt-6"
+                    />
+                  </li>
+
+                  <li className="mt-8">
+                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                      Contexte
+                    </h2>
+                    <p className="text-gray-300">{props.contexte}</p>
+                  </li>
+
+                  <li className="mt-8">
+                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                      Besoin
+                    </h2>
+                    <p className="text-gray-300">{props.besoin}</p>
+                  </li>
+
+                  <li className="mt-8">
+                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                      Environnement
+                    </h2>
+                    <p className="text-gray-300">{props.environnement}</p>
+                  </li>
+
+                  <li className="mt-8">
+                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                      Réalisation
+                    </h2>
+                    <p className="text-gray-300">{props.realisation}</p>
+                  </li>
+
+                  <li className="mt-8">
+                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                      Bilan
+                    </h2>
+                    <p className="text-gray-300">{props.bilan}</p>
+                  </li>
+
+                  <li className="mt-8">
+                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                      Production associé
+                    </h2>
+                    <a
+                      href={props.link}
+                      target="blank"
+                      className="text-gray-300 underline"
+                    >
+                      {props.link}
+                    </a>
+                  </li>
+
+                  <li className="mt-8">
+                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                      Compétence mis en œuvre
+                    </h2>
+                    <p className="text-gray-300">{props.competence}</p>
+                  </li>
+                </ul>
               </div>
             </div>
           )}
