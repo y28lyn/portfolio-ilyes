@@ -1,13 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/parcours", "destination": "/index.html" },
-    { "source": "/experience", "destination": "/index.html" },
-    { "source": "/situation", "destination": "/index.html" },
-    { "source": "/certification", "destination": "/index.html" },
-    { "source": "/veille", "destination": "/index.html" },
-    { "source": "/contact", "destination": "/index.html" },
-    { "source": "/politique_confidentialite", "destination": "/index.html" },
-    { "source": "/conditions_utilisation", "destination": "/index.html" },
-    { "source": "/mention_legales", "destination": "/index.html" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
