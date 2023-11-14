@@ -40,8 +40,8 @@ const PolitiqueConfidentialite = () => {
           <h2 className="text-xl font-bold">Contact</h2>
           <p>
             Si vous avez des questions ou des préoccupations concernant notre
-            politique de confidentialité, n'hésitez pas à nous contacter à
-            l'adresse i.beirade@gmail.com ou en appelant 07 78 90 74 44.
+            politique de confidentialité, n'hésitez pas à me contacter sur
+            LinkedIn.
           </p>
         </section>
       </div>

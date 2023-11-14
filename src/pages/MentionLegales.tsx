@@ -68,8 +68,7 @@ const MentionLegales = () => {
           <h2 className="text-xl font-bold">Contact</h2>
           <p>
             Si vous avez des questions ou des préoccupations concernant nos
-            mentions légales, n'hésitez pas à nous contacter à l'adresse
-            i.beirade@gmail.com ou en appelant 07 78 90 74 44.
+            mentions légales, n'hésitez pas à me contacter sur LinkedIn.
           </p>
         </section>
       </div>
