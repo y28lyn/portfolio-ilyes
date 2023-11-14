@@ -25,14 +25,22 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
   };
 
   useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && modalOpen) {
+        closeModal();
+      }
+    };
+
     if (modalOpen) {
       document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
     } else {
       document.body.style.overflow = "auto";
     }
 
     return () => {
       document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [modalOpen]);
 
