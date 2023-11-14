@@ -9,7 +9,9 @@ export default function CardArticle() {
       link: "https://www.inolib.com/",
       linkUrl: "https://github.com/inolib/website",
       titleModal: "Refactoring d'Inolib",
-      descModal: "Description du projet .",
+      descModal: "Description du projet Inolib.",
+      showGithub: true,
+      showLink: true,
     },
     {
       title: "Création d'InoFormation",
@@ -18,7 +20,9 @@ export default function CardArticle() {
       link: "https://inolib-formation.vercel.app/",
       linkUrl: "https://github.com/y28lyn/inolib-formation",
       titleModal: "Création d'InoFormation",
-      descModal: "Description du projet 2.",
+      descModal: "Description du projet InoFormation.",
+      showGithub: true,
+      showLink: true,
     },
     {
       title: "Création d'Inotest",
@@ -27,7 +31,42 @@ export default function CardArticle() {
       link: "https://inotest.vercel.app/",
       linkUrl: "https://github.com/Dindonix/InoTest",
       titleModal: "Création d'InoTest",
-      descModal: "Description du projet 3.",
+      descModal: "Description du projet Inotest.",
+      showGithub: true,
+      showLink: true,
+    },
+    {
+      title: "Création d'Autoclean",
+      desc: "Le site web Autoclean est une vitrine en ligne destinée à présenter l'entreprise et ses services. Il a été développé en utilisant les technologies React.js, TypeScript et Tailwind CSS.",
+      imgUrl: "autoclean.png",
+      link: "https://autoclean-lyon.fr/",
+      linkUrl: "https://github.com/y28lyn/autoclean",
+      titleModal: "Création d'Autoclean",
+      descModal: "Description du projet Autoclean.",
+      showGithub: true,
+      showLink: true,
+    },
+    {
+      title: "Continuation d'SGRC",
+      desc: "La Table d'Hélène est une application PHP simplifiant la prise de commandes et la gestion des tables, plats, boissons, et menus pour le lycée Hélène Boucher.",
+      imgUrl: "sgrc.png",
+      link: "https://brodet.fr/SGRC/",
+      linkUrl: "https://github.com/y28lyn/sgrc",
+      titleModal: "Continuation d'SGRC",
+      descModal: "Description du projet SGRC.",
+      showGithub: true,
+      showLink: true,
+    },
+    {
+      title: "Installation d'un GLPI",
+      desc: "GLPI simplifie gestion informatique lycée. Suivi, tickets, inventaires, ressources. Open-source, convivial, productivité. Centralisez, supervisez, améliorez efficacement.",
+      imgUrl: "glpi.png",
+      link: "https://brodet.fr/SGRC/",
+      linkUrl: "https://github.com/y28lyn/sgrc",
+      titleModal: "Continuation d'SGRC",
+      descModal: "Description du projet SGRC.",
+      showGithub: false,
+      showLink: false,
     },
   ];
 
@@ -46,6 +85,8 @@ export default function CardArticle() {
               titleModal={project.titleModal}
               descModal={project.descModal}
               cardColor={index % 2 === 0 ? "bg-gray-700" : "bg-gray-800"}
+              showGitHubButton={project.showGithub}
+              showLinkButton={project.showLink}
             />
           ))}
         </div>
