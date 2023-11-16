@@ -1,4 +1,4 @@
-# <img width="30px" height="30px" alt="icone" src="https://github.com/y28lyn/portfolio-ilyes/assets/97447648/6793eec2-d3fd-4c70-a28f-b9346aec2afd"> Portfolio d'Ilyes
+# <img width="30px" height="30px" alt="icone" src="https://cdn-icons-png.flaticon.com/128/858/858814.png"> Portfolio d'Ilyes
 
 Bienvenue sur mon portfolio personnel ! Ce projet a été développé en utilisant React.js, TypeScript et Tailwind CSS. Vous pouvez le consulter en ligne à l'adresse portfolio-ilyes.vercel.app.
 
