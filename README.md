@@ -4,7 +4,7 @@ Bienvenue sur mon portfolio personnel ! Ce projet a été développé en utilisa
 
 ## Aperçu
 
-<img width="951" alt="image" src="https://github.com/y28lyn/portfolio-ilyes/assets/97447648/6e744b55-ba57-4515-aa1e-b3379109dd45">
+<img width="952" alt="image" src="https://github.com/y28lyn/portfolio-ilyes/assets/97447648/86bf16cd-e8d7-45e8-af15-67c0d9438d6f">
 
 ## Fonctionnalités
 
