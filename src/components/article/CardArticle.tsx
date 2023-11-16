@@ -83,12 +83,18 @@ export default function CardArticle() {
       link: "https://autoclean-lyon.fr/",
       linkUrl: "https://github.com/y28lyn/autoclean",
       titleModal: "Création d'Autoclean",
-      contexte: "",
-      besoin: "",
-      environnement: "",
-      realisation: "",
-      bilan: "",
-      competence: "",
+      contexte:
+        "J'ai eu le privilège de créer bénévolement le site web Autoclean, mettant en lumière les services de cette entreprise dédiée à la propreté et à l'entretien automobile et textile. Mon engagement bénévole visait à offrir à Autoclean une présence en ligne professionnelle pour présenter leurs activités et faciliter le contact avec leurs clients potentiels.",
+      besoin:
+        "L'objectif principal de la création du site web Autoclean était de fournir à l'entreprise une vitrine en ligne claire et accessible. Le site devait informer les visiteurs sur les services proposés par Autoclean, présenter les tarifs de manière transparente et offrir un moyen facile de les contacter pour plus d'informations.",
+      environnement:
+        "Le site a été développé en utilisant les technologies React.js, TypeScript et Tailwind CSS, des choix qui ont permis de créer une interface utilisateur moderne et réactive. Ces technologies ont été sélectionnées pour offrir une expérience utilisateur optimale tout en permettant une personnalisation facile du contenu.",
+      realisation:
+        "La création du site web Autoclean a suivi une approche méthodique, visant à répondre précisément aux besoins de l'entreprise. Après une analyse approfondie des exigences d'Autoclean, nous avons opté pour les technologies React.js, TypeScript et Tailwind CSS pour assurer une interface moderne et réactive. Le développement des fonctionnalités a été progressif, avec une page d'accueil attrayante mettant en avant les services, une section tarifs transparente, et une page de contact avec formulaire. L'intégration des images a été effectuée pour refléter visuellement les services d'Autoclean, et le contenu a été adapté pour une communication claire et concise. Des tests approfondis ont été menés pour garantir la fonctionnalité sur diverses plateformes. Un guide d'installation a été créé pour simplifier le déploiement du site, avec des instructions claires pour personnaliser le contenu. La collaboration continue avec Autoclean a été essentielle, avec des réunions régulières pour ajuster le site en fonction de leurs retours. Cette approche itérative a assuré une satisfaction continue d'Autoclean, concrétisant ainsi une vitrine en ligne professionnelle répondant pleinement à leurs besoins.",
+      bilan:
+        "La création bénévole du site web Autoclean a abouti à une plateforme en ligne professionnelle, offrant une vitrine attractive pour l'entreprise. La collaboration étroite avec Autoclean a permis de répondre de manière spécifique à leurs besoins, renforçant ainsi leur présence numérique et facilitant l'accès à leurs services.",
+      competence:
+        "Ce projet a mobilisé des compétences variées, notamment le développement web avec React.js, TypeScript et Tailwind CSS. La capacité à personnaliser le site en fonction des besoins d'Autoclean a démontré des compétences en conception d'interface utilisateur et en adaptation de solutions applicatives. La collaboration étroite avec Autoclean a mis en avant des compétences de communication et de compréhension des besoins clients, contribuant ainsi à la création d'une solution personnalisée et fonctionnelle. En résumé, cette expérience bénévole a permis d'appliquer de manière concrète les compétences acquises dans le domaine du développement web.",
       showGithub: true,
       showLink: true,
     },
@@ -101,12 +107,18 @@ export default function CardArticle() {
       link: "https://brodet.fr/SGRC/",
       linkUrl: "https://github.com/y28lyn/sgrc",
       titleModal: "Continuation d'SGRC",
-      contexte: "",
-      besoin: "",
-      environnement: "",
-      realisation: "",
-      bilan: "",
-      competence: "",
+      contexte:
+        "Au cours de ma deuxième année de BTS SIO, l'ensemble de ma classe a collaboré sur le projet La Table d'Hélène, une application PHP destinée à optimiser la gestion des commandes et des tables au lycée Hélène Boucher. Dans le cadre du projet SGRC, nous avons travaillé en équipe pour répondre aux besoins spécifiques de l'établissement, améliorant ainsi les processus de restauration.",
+      besoin:
+        "Le projet collectif visait à développer une application complète répondant aux exigences complexes du lycée Hélène Boucher en matière de gestion de commandes. L'objectif était de créer une solution unifiée pour coordonner les équipes de la cuisine à la caisse, tout en offrant une expérience utilisateur optimale.",
+      environnement:
+        "Le développement s'est déroulé dans un environnement collaboratif, avec l'utilisation de PHP pour la logique côté serveur et MySQL pour la base de données. Les tâches et responsabilités ont été réparties grâce à l'utilisation de Trello, un outil de gestion de projet en ligne. Les interfaces utilisateur ont été conçues pour refléter les différents rôles des utilisateurs, des administrateurs aux équipes de service, de cuisine, de bar et de caisse.",
+      realisation:
+        "L'équipe a adopté une approche méthodique en répartissant les tâches via Trello. Des réunions régulières ont été organisées pour discuter des avancées, résoudre les problèmes et assurer la cohérence globale du projet. Les interfaces dédiées à chaque équipe ont été développées en fonction de leurs besoins spécifiques, intégrant des fonctionnalités telles que la prise de commande, la gestion des tables et la transmission des commandes. Des interactions régulières avec le lycée ont eu lieu pour valider les choix de conception et s'assurer que l'application répondait aux besoins réels de l'établissement. Ces réunions ont permis de recueillir des retours précieux, assurant ainsi une adéquation optimale entre le projet et les attentes du lycée.",
+      bilan:
+        "La collaboration et la répartition des tâches ont conduit à la réalisation réussie de l'application La Table d'Hélène. L'utilisation de Trello a facilité la gestion du projet, tandis que les réunions régulières avec le lycée ont assuré une adaptation continue aux besoins réels. L'application a non seulement répondu aux attentes, mais elle a également contribué à améliorer de manière significative les processus de restauration au sein du lycée Hélène Boucher.",
+      competence:
+        "Ce projet collectif a mobilisé diverses compétences du référentiel BTS SIO. La répartition des tâches et la coordination ont illustré la capacité à concevoir et à maintenir des solutions informatiques. Le développement de l'application en PHP et la gestion de la base de données MySQL ont mis en œuvre des compétences en développement et adaptation de solutions applicatives. Les interactions avec le lycée ont démontré des compétences en communication et en gestion de projet. En résumé, ce projet a permis de mettre en pratique de manière intégrée les compétences du référentiel BTS SIO, renforçant ainsi notre compréhension globale du processus de développement logiciel en équipe.",
       showGithub: true,
       showLink: true,
     },
@@ -119,12 +131,18 @@ export default function CardArticle() {
       link: "#",
       linkUrl: "#",
       titleModal: "Installation d'un GLPI",
-      contexte: "",
-      besoin: "",
-      environnement: "",
-      realisation: "",
-      bilan: "",
-      competence: "",
+      contexte:
+        "En tant qu'étudiant en première année de BTS SIO, j'ai entrepris l'installation de GLPI sur un système Linux Debian 11. Mon objectif principal était d'acquérir une compréhension approfondie du processus d'installation de ce logiciel de gestion de parc informatique au sein d'un environnement Debian.",
+      besoin:
+        "Ce projet individuel a été initié dans le but d'acquérir des compétences pratiques en matière d'installation et de configuration de solutions logicielles sur des systèmes d'exploitation Linux. Le choix de GLPI s'est justifié par son importance dans le domaine de la gestion de parc informatique, offrant une opportunité idéale pour renforcer mes connaissances en administration système.",
+      environnement:
+        "L'ensemble du processus a été réalisé sur un système Linux Debian 11. J'ai utilisé les outils propres à Debian pour la gestion des paquets et des dépendances. Cette démarche m'a permis de développer une compréhension approfondie de l'écosystème Debian, notamment en matière d'installation et de configuration de logiciels.",
+      realisation:
+        "L'installation de GLPI a débuté par la recherche et le téléchargement des paquets nécessaires. J'ai ensuite procédé à l'installation des dépendances, en m'assurant que le système était correctement configuré pour accueillir GLPI. La configuration du serveur web, l'ajustement des paramètres de base de données, et la création des permissions appropriées ont été des étapes cruciales du processus. J'ai veillé à suivre les meilleures pratiques de sécurité pour garantir la stabilité et la fiabilité de l'installation.",
+      bilan:
+        "Cette expérience en solo m'a permis de développer une expertise pratique en matière d'installation de logiciels sur un système Linux Debian 11. En réussissant à mettre en place GLPI de manière autonome, j'ai acquis une confiance accrue dans mes compétences en administration système. Ce projet a également renforcé ma compréhension des interactions entre les composants logiciels et matériels dans un environnement Linux.",
+      competence:
+        "Dans le cadre du référentiel BTS SIO, cette expérience a mobilisé plusieurs compétences. La recherche et le téléchargement des paquets, l'installation des dépendances, et la configuration du serveur web relèvent du développement et de l'adaptation de solutions applicatives. La gestion des permissions et la mise en place des bonnes pratiques de sécurité sont des aspects de la conception et de la maintenance de solutions informatiques. En résumé, ce projet individuel a permis de concrétiser les compétences du référentiel BTS SIO en matière d'administration système, avec un focus particulier sur l'installation de GLPI dans un environnement Debian 11.",
       showGithub: false,
       showLink: false,
     },

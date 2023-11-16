@@ -204,20 +204,22 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                     </h2>
                     <p className="text-gray-300">{props.bilan}</p>
                   </li>
-
-                  <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl font-bold mb-2">
-                      Production associé
-                    </h2>
-                    <a
-                      href={props.link}
-                      target="blank"
-                      className="text-gray-300 underline"
-                    >
-                      {props.link}
-                    </a>
-                  </li>
-
+                  {props.showLinkButton && (
+                    <>
+                      <li className="mt-8">
+                        <h2 className="text-lg md:text-2xl font-bold mb-2">
+                          Production associé
+                        </h2>
+                        <a
+                          href={props.link}
+                          target="blank"
+                          className="underline text-blue-300 hover:text-blue-400"
+                        >
+                          {props.link}
+                        </a>
+                      </li>
+                    </>
+                  )}
                   <li className="mt-8">
                     <h2 className="text-lg md:text-2xl font-bold mb-2">
                       Compétence mis en œuvre
