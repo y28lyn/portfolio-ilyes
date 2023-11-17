@@ -70,7 +70,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
           <h2 className="text-lg md:text-xl text-white font-bold mb-2">
             {props.title}
           </h2>
-          <p className="text-gray-100">{props.desc}</p>
+          <p className="text-gray-200">{props.desc}</p>
           <div className="flex flex-row gap-2">
             <button
               onClick={openModal}
