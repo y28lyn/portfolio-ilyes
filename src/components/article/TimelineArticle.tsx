@@ -15,7 +15,7 @@ export default function TimelineArticle() {
       doodle:
         "https://doodleipsum.com/700x525/flat?i=d9e22222279c1e46487c4dc95a43baa3",
       description:
-        "À l'IUT Lyon 1 de septembre 2021 à juillet 2022, j'ai poursuivi le BUT Informatique. Mon programme a couvert les bases des réseaux, la programmation (C, Java, SQL/PLSQL, HTML/CSS), et la gestion de projets avec Git. J'ai développé un gestionnaire Excel, une application avec interface homme-machine, des sites vitrines, et acquis une compréhension approfondie de l'architecture informatique. Ma formation a renforcé mes compétences polyvalentes en informatique et ma capacité à gérer efficacement des projets.",
+        "À l'IUT Lyon 1 de septembre 2021 à juillet 2022, j'ai poursuivi le BUT Informatique. Mon programme a couvert les bases des réseaux, la programmation (C, Java, SQL/PLSQL, HTML/CSS), et la gestion de projets avec Git. J'ai développé un gestionnaire Excel, une application avec interface homme-machine, des sites vitrines, et acquis une compréhension approfondie de l'architecture informatique.",
     },
     {
       title: "Lycée Jacques Brel",
@@ -43,11 +43,11 @@ export default function TimelineArticle() {
                   />
                   <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1 space-x-4 md:space-x-6 lg:space-x-8 justify-items-center items-center">
                     <div
-                      className={`mb-8 mt-12 bg-[#000302] p-2 border-6 border-gray-500 border-solid ${
+                      className={`mb-8 mt-12 p-6 md:p-2 rounded-xl bg-[#000302] ${
                         isEven ? "md:col-start-1" : "md:col-start-2 row-start-1"
-                      }`}
+                      } border-2 border-gray-500`}
                     >
-                      <h2 className="flex-1 font-bold text-lg md:text-xl lg:text-2xl text-gray-400">
+                      <h2 className="flex-1 font-bold text-lg md:text-xl lg:text-2xl text-white">
                         {event.title}
                       </h2>
                       <img
