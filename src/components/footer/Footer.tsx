@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="flex justify-center mt-8 space-x-6">
             <a
               href="https://www.linkedin.com/in/ilyes-beirade-86920b222/"
-              className="text-gray-400 hover:text-gray-500"
+              className="text-gray-200 hover:text-gray-400"
             >
               <span className="sr-only">LinkedIn</span>
               <svg
@@ -49,7 +49,7 @@ const Footer = () => {
             </a>
             <a
               href="https://github.com/y28lyn"
-              className="text-gray-400 hover:text-gray-500"
+              className="text-gray-200 hover:text-gray-400"
             >
               <span className="sr-only">GitHub</span>
               <svg

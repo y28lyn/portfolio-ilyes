@@ -86,7 +86,7 @@ const Veille = () => {
               <h1 className="font-bold text-xl md:text-2xl lg:text-3xl text-white">
                 L'accessibilité numérique
               </h1>
-              <p className="text-gray-400 text-lg md:text-xl mt-2">
+              <p className="text-gray-200 text-lg md:text-xl mt-2">
                 Comment les nouvelles technologies peuvent-elles aider les
                 personnes handicapées au quotidien?
               </p>

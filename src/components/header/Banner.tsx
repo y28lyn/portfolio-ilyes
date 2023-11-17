@@ -25,7 +25,7 @@ const Banner: React.FC<BannerProps> = ({
   };
 
   return (
-    <div className="text-white bg-cover bg-center min-h-screen flex items-center overflow-hidden relative">
+    <div className="bg-cover bg-center min-h-screen flex items-center overflow-hidden relative">
       <div className="absolute inset-0">
         <img
           loading="lazy"
@@ -42,10 +42,10 @@ const Banner: React.FC<BannerProps> = ({
       <div className="absolute inset-0 block bg-black/60 md:hidden"></div>
 
       <div className="container mx-auto text-center relative">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 px-6 md:px-0">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 px-6 md:px-0 text-white">
           {title}
         </h1>
-        <p className="text-xl opacity-80 mb-8 px-6 md:px-64">{subtitle}</p>
+        <p className="text-xl text-gray-200 mb-8 px-6 md:px-64">{subtitle}</p>
         <div className="space-x-4">
           <button className="w-25 bg-white text-black p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300">
             <Link to={button1Link} className="p-5">
@@ -54,7 +54,7 @@ const Banner: React.FC<BannerProps> = ({
           </button>
           <button
             onClick={scrollToNextSection}
-            className="w-25 outline p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300"
+            className="text-white w-25 outline p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300"
           >
             <span className="p-5">{button2Label}</span>
           </button>

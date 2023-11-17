@@ -31,16 +31,16 @@ const VeilleArticle: React.FC<VeilleProps> = (props: VeilleProps) => {
               </span>
             </div>
           </div>
-          <span className="block mt-6 text-sm font-semibold tracking-widest text-white uppercase">
+          <span className="block mt-6 text-sm font-semibold tracking-widest text-gray-200 uppercase">
             {props.date}
           </span>
-          <span className="block mt-1 text-[0.53rem] font-semibold tracking-widest text-white uppercase">
+          <span className="block mt-1 text-[0.53rem] font-semibold tracking-widest text-gray-200 uppercase">
             Auteur: {props.author}
           </span>
           <p className="mt-3 text-2xl font-semibold text-white">
             {props.title}
           </p>
-          <p className="mt-1 text-base text-gray-100">{props.desc}</p>
+          <p className="mt-1 text-base text-gray-300">{props.desc}</p>
           <div className="flex flex-row gap-2 pt-3">
             <a href={props.linkUrl} target="_blank">
               <button className="w-25 bg-white text-black font-semibold p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300 px-6">

@@ -162,44 +162,44 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                     </svg>
                   </button>
                 </div>
-                <ul className="text-white">
+                <ul>
                   <li>
-                    <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                    <h2 className="text-2xl md:text-3xl text-white font-bold mb-2">
                       {props.titleModal}
                     </h2>
                     <div className="block w-full h-[1px] bg-white mx-auto"></div>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
                       Contexte
                     </h2>
                     <p className="text-gray-300">{props.contexte}</p>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
                       Besoin
                     </h2>
                     <p className="text-gray-300">{props.besoin}</p>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
                       Environnement
                     </h2>
                     <p className="text-gray-300">{props.environnement}</p>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
                       Réalisation
                     </h2>
                     <p className="text-gray-300">{props.realisation}</p>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
                       Bilan
                     </h2>
                     <p className="text-gray-300">{props.bilan}</p>
@@ -207,7 +207,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                   {props.showLinkButton && (
                     <>
                       <li className="mt-8">
-                        <h2 className="text-lg md:text-2xl font-bold mb-2">
+                        <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
                           Production associé
                         </h2>
                         <a
@@ -221,7 +221,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                     </>
                   )}
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
                       Compétence mis en œuvre
                     </h2>
                     <p className="text-gray-300">{props.competence}</p>

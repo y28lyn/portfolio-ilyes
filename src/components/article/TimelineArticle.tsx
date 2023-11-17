@@ -2,6 +2,8 @@ export default function TimelineArticle() {
   const timelineEvents = [
     {
       title: "Lycée La Martinière Monplaisir",
+      diplome: "Bac STI2D SIN",
+      date: "Septembre 2019 - Juillet 2021",
       image:
         "https://martiniere-monplaisir.ent.auvergnerhonealpes.fr/ressources-layout.do?ID_RESSOURCE=208&ID_PAGE=2",
       doodle:
@@ -11,6 +13,8 @@ export default function TimelineArticle() {
     },
     {
       title: "IUT Lyon 1",
+      diplome: "BUT Informatique",
+      date: "Septembre 2021 - Juillet 2022",
       image: "/iutlyon.jpg",
       doodle:
         "https://doodleipsum.com/700x525/flat?i=d9e22222279c1e46487c4dc95a43baa3",
@@ -19,6 +23,8 @@ export default function TimelineArticle() {
     },
     {
       title: "Lycée Jacques Brel",
+      diplome: "BTS SIO SLAM",
+      date: "Septembre 2022 - Juillet 2024",
       image:
         "https://www.expressions-venissieux.fr/wp-content/uploads/2014/08/Brel-1200x801.jpg",
       doodle:
@@ -45,11 +51,17 @@ export default function TimelineArticle() {
                     <div
                       className={`mb-8 mt-12 p-6 md:p-2 rounded-xl bg-[#000302] ${
                         isEven ? "md:col-start-1" : "md:col-start-2 row-start-1"
-                      } border-2 border-gray-500`}
+                      } border-2 md:border-0 border-gray-500`}
                     >
-                      <h2 className="flex-1 font-bold text-lg md:text-xl lg:text-2xl text-white">
+                      <h2 className="flex-1 font-bold text-xl md:text-2xl lg:text-3xl text-white">
                         {event.title}
                       </h2>
+                      <h3 className="flex-1 mt-2 font-bold text-lg md:text-xl lg:text-2xl text-gray-200">
+                        {event.diplome}
+                      </h3>
+                      <h4 className="flex-1 mt-2 font-bold text-sm md:text-md lg:text-lg text-gray-200">
+                        {event.date}
+                      </h4>
                       <img
                         alt={event.title}
                         className="my-4 h-[20vh] md:h-[40vh] w-[80vw] md:w-[35vw] rounded-md object-cover"
@@ -59,7 +71,7 @@ export default function TimelineArticle() {
                           objectFit: "cover",
                         }}
                       />
-                      <p className="text-gray-400 text-lg w-[80vw] md:w-[35vw] text-justify">
+                      <p className="text-gray-300 text-md w-[80vw] md:w-[35vw] text-justify">
                         {event.description}
                       </p>
                     </div>
