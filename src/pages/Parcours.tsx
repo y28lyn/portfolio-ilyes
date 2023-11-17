@@ -1,3 +1,4 @@
+import TimelineArticle from "../components/article/TimelineArticle";
 import Banner from "../components/header/Banner";
 
 const Parcours = () => {
@@ -13,7 +14,9 @@ const Parcours = () => {
           button2Label="Lire plus"
         />
       </header>
-      <main id="main"></main>
+      <main id="main">
+        <TimelineArticle />
+      </main>
     </>
   );
 };
