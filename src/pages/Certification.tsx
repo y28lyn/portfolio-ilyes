@@ -1,3 +1,4 @@
+import CerticiationCard from "../components/article/CertificationCard";
 import Banner from "../components/header/Banner";
 
 const Certification = () => {
@@ -13,7 +14,9 @@ const Certification = () => {
           button2Label="Lire plus"
         />
       </header>
-      <main id="main"></main>
+      <main id="main">
+        <CerticiationCard />
+      </main>
     </>
   );
 };
