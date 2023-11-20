@@ -34,8 +34,8 @@ export default function TimelineArticle() {
     },
   ];
   return (
-    <section className="pt-12 md:pt-24 lg:pt-32 bg-[#000302] overflow-hidden">
-      <div className="container px-4 md:px-6 lg:px-8">
+    <section className="pt-10 bg-[#000302] overflow-hidden">
+      <div className="container px-10">
         <div className="relative mx-8">
           <div className="border-r-2 border-gray-600 absolute h-full top-0 left-1/2" />
           <ul className="list-none m-0 p-0 space-y-16 md:space-y-24 lg:space-y-32">

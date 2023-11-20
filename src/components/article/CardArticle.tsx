@@ -149,8 +149,8 @@ export default function CardArticle() {
   ];
 
   return (
-    <div className="bg-[#000302]">
-      <div className="container mx-auto py-12 px-4 max-w-7xl">
+    <div className="bg-[#000302] p-10">
+      <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ContentCard
@@ -162,7 +162,7 @@ export default function CardArticle() {
               link={project.link}
               linkUrl={project.linkUrl}
               titleModal={project.titleModal}
-              cardColor={index % 2 === 0 ? "bg-gray-700" : "bg-gray-800"}
+              cardColor={index % 2 === 0 ? "bg-gray-900" : "bg-gray-800"}
               showGitHubButton={project.showGithub}
               showLinkButton={project.showLink}
               contexte={project.contexte}

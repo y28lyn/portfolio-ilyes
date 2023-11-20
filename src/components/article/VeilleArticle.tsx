@@ -14,7 +14,7 @@ const VeilleArticle: React.FC<VeilleProps> = (props: VeilleProps) => {
     <>
       <div
         className={`overflow-hidden rounded shadow ${
-          props.isEven ? "bg-gray-700" : "bg-gray-800"
+          props.isEven ? "bg-gray-900" : "bg-gray-800"
         }`}
       >
         <div className="p-5">

@@ -66,15 +66,15 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
           }}
           width="350"
         />
-        <div className="p-6">
+        <div className="p-6 md:h-[48vh] flex flex-col flex-grow">
           <h2 className="text-lg md:text-xl text-white font-bold mb-2">
             {props.title}
           </h2>
           <p className="text-gray-200">{props.desc}</p>
-          <div className="flex flex-row gap-2">
+          <div className="mt-6 md:mt-auto flex flex-row gap-2 items-end">
             <button
               onClick={openModal}
-              className="w-32 bg-white text-black font-semibold p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300 mt-6 px-6"
+              className="w-32 bg-white text-black font-semibold p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300"
             >
               Voir plus
             </button>
@@ -82,9 +82,9 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
               <>
                 <span className="sr-only">Github</span>
                 <a
-                  className="font-semibold p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300 mt-6"
                   href={props.linkUrl}
-                  target="blank"
+                  target="_blank"
+                  className="w-6 h-6 text-white hover:text-gray-400"
                 >
                   <svg
                     fill="#fff"
@@ -102,8 +102,8 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
               <>
                 <a
                   href={props.link}
-                  target="blank"
-                  className="font-semibold py-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300 mt-6"
+                  target="_blank"
+                  className="w-6 h-6 text-white hover:text-gray-400"
                 >
                   <svg
                     width="24"
