@@ -13,7 +13,7 @@ const VeilleArticle: React.FC<VeilleProps> = (props: VeilleProps) => {
   return (
     <>
       <div
-        className={`overflow-hidden rounded shadow ${
+        className={`overflow-hidden rounded ${
           props.isEven ? "bg-gray-900" : "bg-gray-800"
         }`}
       >
@@ -43,7 +43,7 @@ const VeilleArticle: React.FC<VeilleProps> = (props: VeilleProps) => {
           <p className="mt-1 text-base text-gray-300">{props.desc}</p>
           <div className="flex flex-row gap-2 pt-3">
             <a href={props.linkUrl} target="_blank">
-              <button className="w-25 bg-white text-black font-semibold p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300 px-6">
+              <button className="w-25 bg-white text-black font-semibold p-1 rounded transition ease-in-out delay-150 md:hover:scale-105 duration-300 px-6">
                 Lire plus
               </button>
             </a>

@@ -13,7 +13,7 @@ const CertificationCard: React.FC<CertificationProps> = (
 ) => {
   return (
     <div
-      className={`flex flex-col flex-grow h-[38vh] border text-card-foreground transform transition-transform duration-500 hover:scale-105 rounded-lg shadow-lg ${
+      className={`flex flex-col flex-grow md:h-[38vh] border text-card-foreground transform transition-transform duration-500 hover:scale-105 rounded-lg shadow-lg ${
         props.isEven ? "bg-gray-900" : "bg-gray-800"
       }`}
     >
@@ -26,7 +26,7 @@ const CertificationCard: React.FC<CertificationProps> = (
       <div className="p-6 mt-auto flex justify-between items-center pt-4">
         <p className="text-white">{props.date}</p>
         <div className="flex items-center space-x-2">
-          <button className="inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background h-10 px-4 py-2 text-xs text-white border-white hover:bg-transparent hover:border-white hover:text-white">
+          <button className="inline-flex items-center justify-center mr-2 rounded font-medium border bg-background h-10 px-4 py-2 text-xs text-white border-white transition ease-in-out delay-150 md:hover:scale-105 duration-300">
             Details
           </button>
           {props.svg}

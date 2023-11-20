@@ -74,7 +74,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
           <div className="mt-6 md:mt-auto flex flex-row gap-2 items-end">
             <button
               onClick={openModal}
-              className="w-32 bg-white text-black font-semibold p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300"
+              className="w-32 bg-white text-black font-semibold p-1 mr-1 rounded transition ease-in-out delay-150 md:hover:scale-105 duration-300"
             >
               Voir plus
             </button>
@@ -84,7 +84,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                 <a
                   href={props.linkUrl}
                   target="_blank"
-                  className="w-6 h-6 text-white hover:text-gray-400"
+                  className="w-7 h-7 text-white transition ease-in-out delay-150 md:hover:scale-110 duration-300"
                 >
                   <svg
                     fill="#fff"
@@ -103,7 +103,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                 <a
                   href={props.link}
                   target="_blank"
-                  className="w-6 h-6 text-white hover:text-gray-400"
+                  className="w-7 h-7 text-white transition ease-in-out delay-150 md:hover:scale-110 duration-300"
                 >
                   <svg
                     width="24"
