@@ -66,12 +66,12 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
           }}
           width="350"
         />
-        <div className="p-6 md:h-[48vh] flex flex-col flex-grow">
+        <div className="p-6 md:h-[16rem] flex flex-col flex-grow">
           <h2 className="text-lg md:text-xl text-white font-bold mb-2">
             {props.title}
           </h2>
           <p className="text-gray-200">{props.desc}</p>
-          <div className="mt-6 md:mt-auto flex flex-row gap-2 items-end">
+          <div className="md:mt-auto mt-5 flex flex-row gap-2 items-end">
             <button
               onClick={openModal}
               className="w-32 bg-white text-black font-semibold p-1 mr-1 rounded transition ease-in-out delay-150 md:hover:scale-105 duration-300"
