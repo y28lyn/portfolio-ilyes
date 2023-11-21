@@ -150,30 +150,28 @@ export default function CardArticle() {
 
   return (
     <div className="bg-[#000302] p-10">
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ContentCard
-              key={index}
-              title={project.title}
-              desc={project.desc}
-              imgUrl={project.imgUrl}
-              bannerUrl={project.bannerUrl}
-              link={project.link}
-              linkUrl={project.linkUrl}
-              titleModal={project.titleModal}
-              cardColor={index % 2 === 0 ? "bg-gray-900" : "bg-gray-800"}
-              showGitHubButton={project.showGithub}
-              showLinkButton={project.showLink}
-              contexte={project.contexte}
-              besoin={project.besoin}
-              environnement={project.environnement}
-              realisation={project.realisation}
-              bilan={project.besoin}
-              competence={project.competence}
-            />
-          ))}
-        </div>
+      <div className="grid max-w-md grid-cols-1 gap-6 mx-auto lg:grid-cols-3 lg:max-w-full">
+        {projects.map((project, index) => (
+          <ContentCard
+            key={index}
+            title={project.title}
+            desc={project.desc}
+            imgUrl={project.imgUrl}
+            bannerUrl={project.bannerUrl}
+            link={project.link}
+            linkUrl={project.linkUrl}
+            titleModal={project.titleModal}
+            cardColor={index % 2 === 0 ? "bg-gray-900" : "bg-gray-800"}
+            showGitHubButton={project.showGithub}
+            showLinkButton={project.showLink}
+            contexte={project.contexte}
+            besoin={project.besoin}
+            environnement={project.environnement}
+            realisation={project.realisation}
+            bilan={project.besoin}
+            competence={project.competence}
+          />
+        ))}
       </div>
     </div>
   );

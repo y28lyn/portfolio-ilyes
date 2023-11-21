@@ -57,7 +57,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
       >
         <img
           alt="Placeholder image"
-          className="w-full"
+          className="object-cover w-full h-[12rem]"
           height="200"
           src={props.imgUrl}
           style={{

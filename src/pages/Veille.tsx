@@ -80,7 +80,7 @@ const Veille = () => {
           button2Label="Lire plus"
         />
       </header>
-      <main id="main" className="bg-[#000302] p-10 md:p-20">
+      <main id="main" className="bg-[#000302] p-10">
         <div className="grid max-w-md grid-cols-1 gap-6 mx-auto lg:grid-cols-3 lg:max-w-full">
           {articlesData.map((article, index) => (
             <VeilleArticle
