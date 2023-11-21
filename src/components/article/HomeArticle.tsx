@@ -1,7 +1,7 @@
 const HomeArticle = () => {
   return (
     <>
-      <section className="overflow-hidden bg-[#000302] pt-28 px-10 -mt-24">
+      <section className="overflow-hidden bg-[#000302] pt-28 px-10 -mt-10">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid items-center grid-cols-1 md:grid-cols-2">
             <div>
