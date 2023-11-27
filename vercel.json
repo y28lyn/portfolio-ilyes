@@ -1,9 +1,3 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "builds": [
-    { "src": "contact.tsx", "use": "@vercel/static-build" },
-    { "src": "build/**", "use": "@vercel/static-build" },
-    { "src": "public/**", "use": "@vercel/static-build" },
-    { "src": "node_modules/**", "use": "@vercel/static-build" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
