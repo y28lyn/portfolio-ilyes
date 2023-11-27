@@ -1,4 +1,5 @@
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "files": ["contact.tsx", "build", "public", "node_modules"]
+  "builds": [{ "src": "contact.tsx", "use": "@vercel/static-build" }],
+  "include": ["build", "public", "node_modules"]
 }
