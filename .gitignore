@@ -1,7 +1,3 @@
-# .gitignore
-MentionLegales.tsx
-Contact.tsx
-
 # Logs
 logs
 *.log
