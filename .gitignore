@@ -1,5 +1,5 @@
 # gitignore
-Contact.tsx
+src/pages/Contact.tsx
 
 # Logs
 logs
