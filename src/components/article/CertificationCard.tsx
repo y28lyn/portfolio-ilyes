@@ -1,4 +1,40 @@
-import React, { ReactElement } from "react";
+import React, { useState, ReactElement, useRef } from "react";
+
+const Modal: React.FC<{
+  isOpen: boolean;
+  closeModal: () => void;
+  image: string;
+  dimensions: { width: number; height: number };
+}> = ({ isOpen, closeModal, image, dimensions }) => {
+  if (!isOpen) return null;
+
+  const { width, height } = dimensions;
+
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center"
+      onClick={closeModal}
+    >
+      <div
+        className="bg-white p-5 w-full h-full rounded shadow-lg overflow-hidden scale-95"
+        style={{ width: width, height: height }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <img
+          src={image}
+          alt="Certification"
+          className="w-full h-full object-contain"
+        />
+        <button
+          onClick={closeModal}
+          className="absolute top-0 right-0 mt-2 mr-2 text-black"
+        >
+          &times;
+        </button>
+      </div>
+    </div>
+  );
+};
 
 interface CertificationProps {
   title: string;
@@ -6,30 +42,57 @@ interface CertificationProps {
   date: string;
   svg: ReactElement;
   isEven: boolean;
+  image: string;
 }
 
-const CertificationCard: React.FC<CertificationProps> = (
-  props: CertificationProps
-) => {
+const CertificationCard: React.FC<CertificationProps> = ({
+  title,
+  issuer,
+  date,
+  svg,
+  isEven,
+  image,
+}) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const cardRef = useRef(null);
+
+  let cardStyle = { width: 0, height: 0 }; // or some default values
+
+  if (cardRef.current) {
+    // Si vous avez accès aux dimensions de la carte
+    const { offsetWidth, offsetHeight } = cardRef.current;
+    cardStyle = { width: offsetWidth, height: offsetHeight };
+  }
+
   return (
     <div
-      className={`flex flex-col flex-grow md:h-[38vh] border text-card-foreground transform transition-transform duration-500 hover:scale-105 rounded-lg shadow-lg ${
-        props.isEven ? "bg-gray-900" : "bg-gray-800"
+      ref={cardRef}
+      className={`flex flex-col flex-grow md:h-[38vh] border text-card-foreground transform transition-transform duration-500 md:hover:scale-105 rounded-lg shadow-lg ${
+        isEven ? "bg-gray-900" : "bg-gray-800"
       }`}
     >
       <div className="flex flex-col space-y-1.5 p-6">
         <h3 className="tracking-tight text-lg font-semibold text-white">
-          {props.title}
+          {title}
         </h3>
-        <p className="text-sm text-white">{props.issuer}</p>
+        <p className="text-sm text-white">{issuer}</p>
       </div>
       <div className="p-6 mt-auto flex justify-between items-center pt-4">
-        <p className="text-white">{props.date}</p>
+        <p className="text-white">{date}</p>
         <div className="flex items-center space-x-2">
-          <button className="inline-flex items-center justify-center mr-2 rounded font-medium border bg-background h-10 px-4 py-2 text-xs text-white border-white transition ease-in-out delay-150 md:hover:scale-105 duration-300">
+          <button
+            onClick={() => setModalOpen(true)}
+            className="inline-flex items-center justify-center mr-2 rounded font-medium border bg-background h-10 px-4 py-2 text-xs text-white border-white transition ease-in-out delay-150 md:hover:scale-105 duration-300"
+          >
             Details
           </button>
-          {props.svg}
+          {svg}
+          <Modal
+            isOpen={isModalOpen}
+            closeModal={() => setModalOpen(false)}
+            image={image}
+            dimensions={cardStyle}
+          />
         </div>
       </div>
     </div>
@@ -71,7 +134,7 @@ const CertificationSection: React.FC = () => {
     {
       title: "Cybersecurity Essentials",
       issuer: "Cisco Netacad",
-      date: "Sept 2022 & 2023",
+      date: "Sept 2022",
       svg: (
         <svg
           width="30px"
@@ -101,7 +164,7 @@ const CertificationSection: React.FC = () => {
     {
       title: "HTML / CSS",
       issuer: "Openclassroom",
-      date: "Sept 2019",
+      date: "Déc 2023",
       svg: (
         <svg
           height="30"
@@ -173,7 +236,7 @@ const CertificationSection: React.FC = () => {
       ),
     },
     {
-      title: "Contenu / Site web accessible",
+      title: "Site web accessible",
       issuer: "Openclassroom",
       date: "Mai 2023",
       svg: (
@@ -201,7 +264,7 @@ const CertificationSection: React.FC = () => {
     {
       title: "Python",
       issuer: "Openclassroom",
-      date: "Sept 2019",
+      date: "Nov 2020",
       svg: (
         <svg
           width="30px"
@@ -248,6 +311,9 @@ const CertificationSection: React.FC = () => {
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-[#000302] text-white p-10">
       {certificationData.map((certification, index) => (
         <CertificationCard
+          image={
+            "https://images.unsplash.com/photo-1701689980722-71e5e89852d2?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          }
           isEven={index % 2 === 0}
           key={index}
           {...certification}
