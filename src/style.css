@@ -49,3 +49,40 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(189, 191, 199); /* Couleur du curseur au survol */
 }
+
+/* Carousel */
+/* Styles pour les flèches de navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important; /* Nouvelle couleur du texte */
+  font-size: 1px !important; /* Nouvelle taille de police */
+  width: full !important; /* Nouvelle largeur */
+  height: full !important; /* Nouvelle hauteur */
+  border-radius: 10% !important; /* Pour arrondir les coins */
+  padding: 24px;
+  display: flex !important; /* Pour aligner le contenu au centre */
+  justify-content: center !important; /* Pour aligner le contenu horizontalement */
+  align-items: center !important; /* Pour aligner le contenu verticalement */
+  transition: background-color 0.3s, color 0.3s !important; /* Animation lors du survol */
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    color: grey !important; /* Nouvelle couleur du texte au survol */
+  }
+}
+
+/* Styles pour les bullets de pagination */
+.swiper-pagination-bullet {
+  background-color: #ffffff !important; /* Couleur de fond */
+  width: 10px !important; /* Largeur */
+  height: 10px !important; /* Hauteur */
+  margin: 0 8px !important; /* Marge entre les bullets */
+  border-radius: 50% !important; /* Bord arrondi */
+}
+
+/* Styles pour le bullet actif */
+.swiper-pagination-bullet-active {
+  background-color: white !important; /* Couleur de fond pour le bullet actif */
+}

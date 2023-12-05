@@ -1,33 +1,63 @@
-import React, { useState, ReactElement, useRef } from "react";
+import { useState, ReactElement, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "../../style.css";
 
 const Modal: React.FC<{
   isOpen: boolean;
   closeModal: () => void;
-  image: string;
+  images: string[];
   dimensions: { width: number; height: number };
-}> = ({ isOpen, closeModal, image, dimensions }) => {
-  if (!isOpen) return null;
+}> = ({ isOpen, closeModal, images, dimensions }) => {
+  if (!isOpen || !images.length) return null;
 
-  const { width, height } = dimensions;
+  // Swiper configuration
+  const swiperConfig = {
+    modules: [Pagination, Navigation],
+    pagination: {
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+    },
+  };
+
+  const swiperHeight = dimensions.height * 0.8;
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center"
+      className="absolute inset-0 z-50 -left-2 flex justify-center items-center rounded-lg bg-black bg-opacity-50"
       onClick={closeModal}
     >
-      <div
-        className="bg-white p-5 w-full h-full rounded shadow-lg overflow-hidden scale-95"
-        style={{ width: width, height: height }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <img
-          src={image}
-          alt="Certification"
-          className="w-full h-full object-contain"
-        />
+      <div onClick={(e) => e.stopPropagation()}>
+        <Swiper
+          {...swiperConfig}
+          className="w-96 h-full overflow-hidden flex flex-row gap-10"
+          style={{ height: swiperHeight, margin: "auto" }}
+        >
+          <div className="swiper-button-prev"></div>
+          {images.map((imageSrc, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={imageSrc}
+                alt={`Slide ${index + 1}`}
+                className="object-contain mx-auto h-full rounded"
+                style={{
+                  objectPosition: "center",
+                }}
+              />
+            </SwiperSlide>
+          ))}
+          <div className="swiper-button-next"></div>
+        </Swiper>
         <button
           onClick={closeModal}
-          className="absolute top-0 right-0 mt-2 mr-2 text-black"
+          className="absolute top-0 right-0 z-50 mt-2 mr-2 text-white text-3xl"
         >
           &times;
         </button>
@@ -42,7 +72,7 @@ interface CertificationProps {
   date: string;
   svg: ReactElement;
   isEven: boolean;
-  image: string;
+  images: string[];
 }
 
 const CertificationCard: React.FC<CertificationProps> = ({
@@ -51,7 +81,7 @@ const CertificationCard: React.FC<CertificationProps> = ({
   date,
   svg,
   isEven,
-  image,
+  images,
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const cardRef = useRef(null);
@@ -90,7 +120,7 @@ const CertificationCard: React.FC<CertificationProps> = ({
           <Modal
             isOpen={isModalOpen}
             closeModal={() => setModalOpen(false)}
-            image={image}
+            images={images}
             dimensions={cardStyle}
           />
         </div>
@@ -311,9 +341,7 @@ const CertificationSection: React.FC = () => {
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-[#000302] text-white p-10">
       {certificationData.map((certification, index) => (
         <CertificationCard
-          image={
-            "https://images.unsplash.com/photo-1701689980722-71e5e89852d2?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
+          images={["/AWS_Certif_1.png", "/AWS_Certif_2.png"]}
           isEven={index % 2 === 0}
           key={index}
           {...certification}
