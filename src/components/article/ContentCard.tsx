@@ -141,12 +141,12 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
           </div>
 
           {modalOpen && (
-            <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-80 flex items-center justify-center text-justify">
-              <div className="bg-gray-700 h-[75vh] w-[90%] md:h-[85vh] md:w-[98%] mt-10 rounded-lg shadow-lg mx-auto p-8 overflow-y-scroll">
+            <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex items-center justify-center text-justify">
+              <div className="bg-black bg-opacity-80 border text-card-foreground h-[75vh] w-[90%] md:h-[85vh] md:w-[98%] mt-10 rounded-lg shadow-lg mx-auto p-8 overflow-y-scroll">
                 <div className="flex justify-end">
                   <button onClick={closeModal}>
                     <svg
-                      className="text-white hover:text-gray-400 cursor-pointer"
+                      className="text-white hover:text-red-400 transition-colors duration-500 ease-in-out"
                       fill="none"
                       height="24"
                       stroke="currentColor"
