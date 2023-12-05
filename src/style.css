@@ -1,15 +1,6 @@
-/* Navbar */
-/* Ajoutez cette classe pour appliquer le flou */
 .menu-open-blur {
-  backdrop-filter: blur(
-    16px
-  ); /* Vous pouvez ajuster la valeur de flou selon vos préférences */
-  background-color: rgba(
-    0,
-    3,
-    2,
-    0.8
-  ); /* Couleur d'arrière-plan semi-transparente */
+  backdrop-filter: blur(16px);
+  background-color: rgba(0, 3, 2, 0.8);
 }
 
 .link-underline {
@@ -32,57 +23,48 @@
   background-position: 0 100%;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 7px; /* Largeur de la scrollbar */
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #000302; /* Couleur de fond de la scrollbar */
+  background-color: #000302;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(237, 239, 244); /* Couleur du curseur de la scrollbar */
-  border-radius: 3px; /* Coins arrondis du curseur */
+  background-color: rgb(237, 239, 244);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(189, 191, 199); /* Couleur du curseur au survol */
+  background-color: rgb(189, 191, 199);
 }
-
-/* Carousel */
-/* Styles pour les flèches de navigation */
-.swiper-button-next,
-.swiper-button-prev {
-  color: white !important; /* Nouvelle couleur du texte */
-  font-size: 1px !important; /* Nouvelle taille de police */
-  width: full !important; /* Nouvelle largeur */
-  height: full !important; /* Nouvelle hauteur */
-  border-radius: 10% !important; /* Pour arrondir les coins */
-  padding: 24px;
-  display: flex !important; /* Pour aligner le contenu au centre */
-  justify-content: center !important; /* Pour aligner le contenu horizontalement */
-  align-items: center !important; /* Pour aligner le contenu verticalement */
-  transition: background-color 0.3s, color 0.3s !important; /* Animation lors du survol */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+  padding: 40px;
+  transition: background-color 0.3s, color 0.3s !important;
+  transform: translateY(-20px);
 }
 
 @media screen and (min-width: 768px) {
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
-    color: grey !important; /* Nouvelle couleur du texte au survol */
+    color: grey !important;
   }
 }
 
-/* Styles pour les bullets de pagination */
-.swiper-pagination-bullet {
-  background-color: #ffffff !important; /* Couleur de fond */
-  width: 10px !important; /* Largeur */
-  height: 10px !important; /* Hauteur */
-  margin: 0 8px !important; /* Marge entre les bullets */
-  border-radius: 50% !important; /* Bord arrondi */
+.swiper-pagination {
+  transform: translateX(10px);
 }
 
-/* Styles pour le bullet actif */
+.swiper-pagination-bullet {
+  background-color: #000302 !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+}
+
 .swiper-pagination-bullet-active {
-  background-color: white !important; /* Couleur de fond pour le bullet actif */
+  background-color: rgb(31 41 55) !important;
 }

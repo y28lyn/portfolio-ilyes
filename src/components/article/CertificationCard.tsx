@@ -27,37 +27,37 @@ const Modal: React.FC<{
     },
   };
 
-  const swiperHeight = dimensions.height * 0.8;
+  const swiperHeight = dimensions.height * 0.9;
 
   return (
     <div
-      className="absolute inset-0 z-50 -left-2 flex justify-center items-center rounded-lg bg-black bg-opacity-50"
+      className="absolute inset-0 z-50 -left-2 flex justify-center items-center rounded-lg bg-black bg-opacity-80"
       onClick={closeModal}
     >
       <div onClick={(e) => e.stopPropagation()}>
         <Swiper
           {...swiperConfig}
-          className="w-96 h-full overflow-hidden flex flex-row gap-10"
+          className="w-[55vw] md:w-[33vw] overflow-hidden"
           style={{ height: swiperHeight, margin: "auto" }}
         >
           <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
           {images.map((imageSrc, index) => (
             <SwiperSlide key={index}>
               <img
                 src={imageSrc}
                 alt={`Slide ${index + 1}`}
-                className="object-contain mx-auto h-full rounded"
+                className="object-contain w-full h-full"
                 style={{
                   objectPosition: "center",
                 }}
               />
             </SwiperSlide>
           ))}
-          <div className="swiper-button-next"></div>
         </Swiper>
         <button
           onClick={closeModal}
-          className="absolute top-0 right-0 z-50 mt-2 mr-2 text-white text-3xl"
+          className="absolute top-0 right-0 z-50 mt-2 mr-2 text-white hover:text-red-400 transition-colors duration-500 ease-in-out text-3xl"
         >
           &times;
         </button>
