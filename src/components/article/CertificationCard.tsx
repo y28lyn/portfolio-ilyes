@@ -1,4 +1,4 @@
-import { useState, ReactElement, useRef } from "react";
+import { useState, ReactElement, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -14,7 +14,6 @@ const Modal: React.FC<{
 }> = ({ isOpen, closeModal, images, dimensions }) => {
   if (!isOpen || !images.length) return null;
 
-  // Swiper configuration
   const swiperConfig = {
     modules: [Pagination, Navigation],
     pagination: {
@@ -27,40 +26,43 @@ const Modal: React.FC<{
     },
   };
 
-  const swiperHeight = dimensions.height * 0.9;
+  const swiperHeight = dimensions.height * 1.9;
 
   return (
     <div
-      className="absolute inset-0 z-50 -left-2 flex justify-center items-center rounded-lg bg-black bg-opacity-80"
+      className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex items-center justify-center text-justify"
+      style={{ zIndex: 1000 }}
       onClick={closeModal}
     >
-      <div onClick={(e) => e.stopPropagation()}>
-        <Swiper
-          {...swiperConfig}
-          className="w-[55vw] md:w-[33vw] overflow-hidden"
-          style={{ height: swiperHeight, margin: "auto" }}
-        >
+      <div className="z-50 bg-black bg-opacity-80 border text-card-foreground h-[75vh] w-[90%] md:h-[85vh] md:w-[70%] mt-10 rounded-lg shadow-lg p-8 overflow-y-scroll">
+        <div onClick={(e) => e.stopPropagation()}>
+          <button
+            onClick={closeModal}
+            className="absolute z-50 mt-2 mr-2 text-white hover:text-red-500 transition-colors duration-500 ease-in-out text-3xl"
+          >
+            &times;
+          </button>
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>
-          {images.map((imageSrc, index) => (
-            <SwiperSlide key={index}>
-              <img
-                src={imageSrc}
-                alt={`Slide ${index + 1}`}
-                className="object-contain w-full h-full"
-                style={{
-                  objectPosition: "center",
-                }}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <button
-          onClick={closeModal}
-          className="absolute top-0 right-0 z-50 mt-2 mr-2 text-white hover:text-red-400 transition-colors duration-500 ease-in-out text-3xl"
-        >
-          &times;
-        </button>
+          <Swiper
+            {...swiperConfig}
+            className=" overflow-hidden"
+            style={{ height: swiperHeight, width: "100%", margin: "auto" }}
+          >
+            {images.map((imageSrc, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={imageSrc}
+                  alt={`Slide ${index + 1}`}
+                  className="object-contain w-full h-full"
+                  style={{
+                    objectPosition: "center",
+                  }}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   );
@@ -75,61 +77,105 @@ interface CertificationProps {
   images: string[];
 }
 
-const CertificationCard: React.FC<CertificationProps> = ({
+interface CertificationCardProps extends CertificationProps {
+  openModal: () => void;
+}
+
+const CertificationCard: React.FC<CertificationCardProps> = ({
   title,
   issuer,
   date,
   svg,
   isEven,
   images,
+  openModal,
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const cardRef = useRef(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [cardStyle, setCardStyle] = useState({ width: 0, height: 0 });
 
-  let cardStyle = { width: 0, height: 0 }; // or some default values
+  useEffect(() => {
+    if (cardRef.current) {
+      const { width, height } = cardRef.current.getBoundingClientRect();
+      setCardStyle({ width, height });
+    }
+  }, [cardRef]);
 
-  if (cardRef.current) {
-    // Si vous avez accès aux dimensions de la carte
-    const { offsetWidth, offsetHeight } = cardRef.current;
-    cardStyle = { width: offsetWidth, height: offsetHeight };
+  function closeModal(): void {
+    setModalOpen(false);
   }
 
   return (
-    <div
-      ref={cardRef}
-      className={`flex flex-col flex-grow md:h-[38vh] border text-card-foreground transform transition-transform duration-500 md:hover:scale-105 rounded-lg shadow-lg ${
-        isEven ? "bg-gray-900" : "bg-gray-800"
-      }`}
-    >
-      <div className="flex flex-col space-y-1.5 p-6">
-        <h3 className="tracking-tight text-lg font-semibold text-white">
-          {title}
-        </h3>
-        <p className="text-sm text-white">{issuer}</p>
-      </div>
-      <div className="p-6 mt-auto flex justify-between items-center pt-4">
-        <p className="text-white">{date}</p>
-        <div className="flex items-center space-x-2">
-          <button
-            onClick={() => setModalOpen(true)}
-            className="inline-flex items-center justify-center mr-2 rounded font-medium border bg-background h-10 px-4 py-2 text-xs text-white border-white transition ease-in-out delay-150 md:hover:scale-105 duration-300"
-          >
-            Details
-          </button>
-          {svg}
-          <Modal
-            isOpen={isModalOpen}
-            closeModal={() => setModalOpen(false)}
-            images={images}
-            dimensions={cardStyle}
-          />
+    <>
+      <div
+        ref={cardRef}
+        className={`flex flex-col flex-grow md:h-[38vh] border text-card-foreground transform rounded-lg shadow-lg ${
+          isEven ? "bg-gray-900" : "bg-gray-800"
+        }`}
+      >
+        <div className="flex flex-col space-y-1.5 p-6">
+          <h3 className="tracking-tight text-lg font-semibold text-white">
+            {title}
+          </h3>
+          <p className="text-sm text-white">{issuer}</p>
+        </div>
+        <div className="p-6 mt-auto flex justify-between items-center pt-4">
+          <p className="text-white">{date}</p>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => {
+                setModalOpen(true);
+                openModal();
+              }}
+              className="inline-flex items-center justify-center mr-2 rounded font-medium border bg-background h-10 px-4 py-2 text-xs text-white border-white transition ease-in-out delay-150 md:hover:scale-105 duration-300"
+            >
+              Details
+            </button>
+            {svg}
+          </div>
         </div>
       </div>
-    </div>
+      <Modal
+        isOpen={isModalOpen}
+        closeModal={closeModal}
+        images={images}
+        dimensions={cardStyle}
+      />
+    </>
   );
 };
 
 const CertificationSection: React.FC = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isModalOpen) {
+        closeModal();
+      }
+    };
+
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isModalOpen]);
+
   const certificationData = [
     {
       title: "AWS Academy Cloud Foundations",
@@ -344,6 +390,7 @@ const CertificationSection: React.FC = () => {
           images={["/AWS_Certif_1.png", "/AWS_Certif_2.png"]}
           isEven={index % 2 === 0}
           key={index}
+          openModal={openModal}
           {...certification}
         />
       ))}
