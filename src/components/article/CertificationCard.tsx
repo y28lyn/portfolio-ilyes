@@ -11,7 +11,7 @@ const Modal: React.FC<{
   closeModal: () => void;
   images: string[];
   dimensions: { width: number; height: number };
-}> = ({ isOpen, closeModal, images, dimensions }) => {
+}> = ({ isOpen, closeModal, images }) => {
   if (!isOpen || !images.length) return null;
 
   const swiperConfig = {
@@ -26,15 +26,13 @@ const Modal: React.FC<{
     },
   };
 
-  const swiperHeight = dimensions.height * 1.9;
-
   return (
     <div
       className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex items-center justify-center text-justify"
       style={{ zIndex: 1000 }}
       onClick={closeModal}
     >
-      <div className="z-50 bg-black bg-opacity-80 border text-card-foreground h-[75vh] w-[90%] md:h-[85vh] md:w-[70%] mt-10 rounded-lg shadow-lg p-8 overflow-y-scroll">
+      <div className="z-50 bg-black bg-opacity-80 border text-card-foreground h-[60vh] w-[90%] md:h-[83vh] md:w-[70%] mt-10 shadow-lg p-8 overflow-y-scroll">
         <div onClick={(e) => e.stopPropagation()}>
           <button
             onClick={closeModal}
@@ -47,7 +45,11 @@ const Modal: React.FC<{
           <Swiper
             {...swiperConfig}
             className=" overflow-hidden"
-            style={{ height: swiperHeight, width: "100%", margin: "auto" }}
+            style={{
+              height: "70vh",
+              width: "100%",
+              margin: "auto",
+            }}
           >
             {images.map((imageSrc, index) => (
               <SwiperSlide key={index}>
@@ -109,7 +111,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
     <>
       <div
         ref={cardRef}
-        className={`flex flex-col flex-grow md:h-[38vh] border text-card-foreground transform rounded-lg shadow-lg ${
+        className={`flex flex-col flex-grow md:h-[30vh] border text-card-foreground transform rounded shadow-lg ${
           isEven ? "bg-gray-900" : "bg-gray-800"
         }`}
       >
@@ -119,7 +121,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
           </h3>
           <p className="text-sm text-white">{issuer}</p>
         </div>
-        <div className="p-6 mt-auto flex justify-between items-center pt-4">
+        <div className="p-6 mt-auto flex justify-between items-center pt-1">
           <p className="text-white">{date}</p>
           <div className="flex items-center space-x-2">
             <button
@@ -168,6 +170,7 @@ const CertificationSection: React.FC = () => {
       window.addEventListener("keydown", handleKeyDown);
     } else {
       document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleKeyDown);
     }
 
     return () => {
