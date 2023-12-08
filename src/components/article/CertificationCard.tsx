@@ -41,7 +41,7 @@ const Modal: React.FC<{
         <div onClick={(e) => e.stopPropagation()} className="text-right">
           <button onClick={closeModal}>
             <svg
-              className="text-white hover:text-red-500 transition-colors duration-500 ease-in-out"
+              className="text-white hover:text-red-500 transition-colors duration-300 ease-in-out"
               fill="none"
               height="24"
               stroke="currentColor"

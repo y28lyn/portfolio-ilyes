@@ -47,7 +47,7 @@ const Banner: React.FC<BannerProps> = ({
         </h1>
         <p className="text-xl text-gray-200 mb-8 px-6 md:px-64">{subtitle}</p>
         <div className="space-x-4">
-          <button className="w-25 bg-white text-black p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300">
+          <button className="w-25 bg-white text-black outline outline-white p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300">
             <Link to={button1Link} className="p-5">
               {button1Label}
             </Link>
