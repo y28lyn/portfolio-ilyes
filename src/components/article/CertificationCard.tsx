@@ -1,4 +1,4 @@
-import { useState, ReactElement, useRef, useEffect } from "react";
+import { useState, ReactElement, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -10,7 +10,6 @@ const Modal: React.FC<{
   isOpen: boolean;
   closeModal: () => void;
   images: string[];
-  dimensions: { width: number; height: number };
 }> = ({ isOpen, closeModal, images }) => {
   if (!isOpen || !images.length) return null;
 
@@ -25,6 +24,21 @@ const Modal: React.FC<{
       nextEl: ".swiper-button-next",
     },
   };
+
+  // Handle key events for closing the modal
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.code === "Space") {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <div
@@ -79,9 +93,7 @@ interface CertificationProps {
   images: string[];
 }
 
-interface CertificationCardProps extends CertificationProps {
-  openModal: () => void;
-}
+interface CertificationCardProps extends CertificationProps {}
 
 const CertificationCard: React.FC<CertificationCardProps> = ({
   title,
@@ -90,18 +102,20 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
   svg,
   isEven,
   images,
-  openModal,
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-  const [cardStyle, setCardStyle] = useState({ width: 0, height: 0 });
 
+  // Define a method to toggle the body scroll
+  const toggleBodyScroll = (shouldScroll: boolean) => {
+    document.body.style.overflow = shouldScroll ? "auto" : "hidden";
+  };
+
+  // Use the useEffect hook to listen for changes to isModalOpen
   useEffect(() => {
-    if (cardRef.current) {
-      const { width, height } = cardRef.current.getBoundingClientRect();
-      setCardStyle({ width, height });
-    }
-  }, [cardRef]);
+    toggleBodyScroll(!isModalOpen);
+    // Clean up the toggle effect when the component unmounts or before next effect runs
+    return () => toggleBodyScroll(true);
+  }, [isModalOpen]); // Only re-run the effect if isModalOpen changes
 
   function closeModal(): void {
     setModalOpen(false);
@@ -110,7 +124,6 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
   return (
     <>
       <div
-        ref={cardRef}
         className={`flex flex-col flex-grow md:h-[30vh] border text-card-foreground transform rounded shadow-lg ${
           isEven ? "bg-gray-900" : "bg-gray-800"
         }`}
@@ -127,7 +140,6 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
             <button
               onClick={() => {
                 setModalOpen(true);
-                openModal();
               }}
               className="inline-flex items-center justify-center mr-2 rounded font-medium border bg-background h-10 px-4 py-2 text-xs text-white border-white transition ease-in-out delay-150 md:hover:scale-105 duration-300"
             >
@@ -137,48 +149,12 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
           </div>
         </div>
       </div>
-      <Modal
-        isOpen={isModalOpen}
-        closeModal={closeModal}
-        images={images}
-        dimensions={cardStyle}
-      />
+      <Modal isOpen={isModalOpen} closeModal={closeModal} images={images} />
     </>
   );
 };
 
 const CertificationSection: React.FC = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && isModalOpen) {
-        closeModal();
-      }
-    };
-
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
-    } else {
-      document.body.style.overflow = "auto";
-      window.removeEventListener("keydown", handleKeyDown);
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isModalOpen]);
-
   const certificationData = [
     {
       title: "AWS Academy Cloud Foundations",
@@ -393,7 +369,6 @@ const CertificationSection: React.FC = () => {
           images={["/AWS_Certif_1.png", "/AWS_Certif_2.png"]}
           isEven={index % 2 === 0}
           key={index}
-          openModal={openModal}
           {...certification}
         />
       ))}
