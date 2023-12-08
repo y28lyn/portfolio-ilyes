@@ -1,6 +1,6 @@
-import { useState, ReactElement, useEffect } from "react";
+import { useState, ReactElement, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -14,45 +14,47 @@ const Modal: React.FC<{
   if (!isOpen || !images.length) return null;
 
   const swiperConfig = {
-    modules: [Pagination, Navigation],
-    pagination: {
-      clickable: true,
-      dynamicBullets: true,
-    },
+    modules: [Navigation],
     navigation: {
       prevEl: ".swiper-button-prev",
       nextEl: ".swiper-button-next",
     },
   };
 
-  // Handle key events for closing the modal
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.code === "Space") {
-      closeModal();
-    }
-  };
-
   useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.code === "Escape") {
+        closeModal();
+      }
+    };
+
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [closeModal]);
 
   return (
-    <div
-      className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex items-center justify-center text-justify"
-      style={{ zIndex: 1000 }}
-      onClick={closeModal}
-    >
-      <div className="z-50 bg-black bg-opacity-80 border text-card-foreground h-[60vh] w-[90%] md:h-[83vh] md:w-[70%] mt-10 shadow-lg p-8 overflow-y-scroll">
-        <div onClick={(e) => e.stopPropagation()}>
-          <button
-            onClick={closeModal}
-            className="absolute z-50 mt-2 mr-2 text-white hover:text-red-500 transition-colors duration-500 ease-in-out text-3xl"
-          >
-            &times;
+    <div className="z-50 fixed top-0 left-0 right-0 bottom-0 bg-slate-700 bg-opacity-70 flex items-center justify-center text-justify">
+      <div className="z-50 bg-zinc-900 h-fit w-[90%] md:w-[70%] shadow-2xl p-8 overflow-y-scroll modal rounded-md">
+        <div onClick={(e) => e.stopPropagation()} className="text-right">
+          <button onClick={closeModal}>
+            <svg
+              className="text-white hover:text-red-500 transition-colors duration-500 ease-in-out"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
           </button>
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>
@@ -60,8 +62,8 @@ const Modal: React.FC<{
             {...swiperConfig}
             className=" overflow-hidden"
             style={{
-              height: "70vh",
-              width: "100%",
+              height: "fit-content",
+              width: "65%",
               margin: "auto",
             }}
           >
@@ -70,7 +72,7 @@ const Modal: React.FC<{
                 <img
                   src={imageSrc}
                   alt={`Slide ${index + 1}`}
-                  className="object-contain w-full h-full"
+                  className="object-contain rounded md:mt-0 mt-30"
                   style={{
                     objectPosition: "center",
                   }}
@@ -104,6 +106,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
   images,
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const openModalButtonRef = useRef<HTMLButtonElement>(null);
 
   // Define a method to toggle the body scroll
   const toggleBodyScroll = (shouldScroll: boolean) => {
@@ -119,6 +122,9 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
 
   function closeModal(): void {
     setModalOpen(false);
+    if (openModalButtonRef.current) {
+      openModalButtonRef.current.blur(); // Retirer le focus du bouton
+    }
   }
 
   return (
@@ -138,6 +144,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
           <p className="text-white">{date}</p>
           <div className="flex items-center space-x-2">
             <button
+              ref={openModalButtonRef}
               onClick={() => {
                 setModalOpen(true);
               }}

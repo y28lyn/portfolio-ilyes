@@ -31,6 +31,10 @@
   background-color: #000302;
 }
 
+.modal::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 ::-webkit-scrollbar-thumb {
   background-color: rgb(237, 239, 244);
   border-radius: 3px;
@@ -42,10 +46,9 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: white !important;
+  color: #f8fafc !important;
   padding: 40px;
   transition: background-color 0.3s, color 0.3s !important;
-  transform: translateY(-20px);
   position: absolute;
 }
 
@@ -60,21 +63,16 @@
 @media screen and (min-width: 768px) {
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
-    color: grey !important;
+    color: #bfdbfe !important;
   }
 }
 
-.swiper-pagination {
-  transform: translateX(10px);
-}
+@media screen and (max-width: 768px) {
+  .swiper-button-prev {
+    left: 6vw !important;
+  }
 
-.swiper-pagination-bullet {
-  background-color: #000000 !important;
-  width: 10px !important;
-  height: 10px !important;
-  border-radius: 50% !important;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: rgb(13, 13, 13) !important;
+  .swiper-button-next {
+    right: 6vw !important;
+  }
 }
