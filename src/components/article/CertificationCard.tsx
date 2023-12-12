@@ -150,7 +150,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
               }}
               className="inline-flex items-center justify-center mr-2 rounded font-medium border bg-background h-10 px-4 py-2 text-xs text-white border-white transition ease-in-out delay-150 md:hover:scale-105 duration-300"
             >
-              Details
+              Voir plus
             </button>
             {svg}
           </div>
@@ -192,6 +192,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
+      images: ["AWS_Certif_1.png", "AWS_Certif_2.png"],
     },
     {
       title: "Cybersecurity Essentials",
@@ -222,6 +223,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
+      images: ["Cyber_1.png"],
     },
     {
       title: "HTML / CSS",
@@ -252,6 +254,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
+      images: ["Openclassroom.png"],
     },
     {
       title: "Javascript",
@@ -296,6 +299,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
+      images: ["Openclassroom.png"],
     },
     {
       title: "Site web accessible",
@@ -322,6 +326,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
+      images: ["Openclassroom.png"],
     },
     {
       title: "Python",
@@ -366,6 +371,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
+      images: ["Openclassroom.png"],
     },
   ];
 
@@ -373,7 +379,6 @@ const CertificationSection: React.FC = () => {
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-[#000302] text-white p-10">
       {certificationData.map((certification, index) => (
         <CertificationCard
-          images={["/AWS_Certif_1.png", "/AWS_Certif_2.png"]}
           isEven={index % 2 === 0}
           key={index}
           {...certification}
