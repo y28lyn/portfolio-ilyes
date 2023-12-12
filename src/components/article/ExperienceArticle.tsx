@@ -18,7 +18,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => {
   return (
     <div className="p-6 w-fit h-fit bg-gray-800 text-white shadow-lg rounded">
-      <div className="items-center justify-between text-center">
+      <div className="items-center justify-between text-base md:text-center">
         <div className="flex flex-row items-center">
           <img
             alt=""
@@ -56,7 +56,7 @@ export const ExperienceArticle: React.FC<ExperienceArticleProps> = ({
 }) => {
   return (
     <section className="flex justify-center w-full">
-      <div className="container px-4 md:px-6">
+      <div className="container px-0 md:px-6">
         <div className="flex flex-col md:flex-row gap-6">
           {experiences.map((experience, index) => (
             <ExperienceItem key={index} {...experience} />
