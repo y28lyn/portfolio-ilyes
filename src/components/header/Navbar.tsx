@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
               <path d="M21.35 0H2.65C1.194 0 0 1.194 0 2.65v18.7C0 22.805 1.194 24 2.65 24h18.7c1.456 0 2.65-1.194 2.65-2.65V2.65C24 1.194 22.806 0 21.35 0zM7.647 20.994h-3.77V9.273h3.77v11.72zM5.262 8.262a2.192 2.192 0 110-4.384 2.192 2.192 0 010 4.384zM20.994 20.994h-3.773v-5.984c0-1.416-.026-3.24-1.974-3.24-1.975 0-2.275 1.54-2.275 3.126v6.098h-3.77V9.273h3.707v1.656h.049c.514-.977 1.77-2.013 3.659-2.013 3.92 0 4.635 2.578 4.635 5.94v6.138z"></path>
             </svg>
           </a>
-          <span className="block bg-white h-1 w-1 rounded-xl ml-2 my-auto"></span>
+          <span className="hidden md:block bg-white h-1 w-1 rounded-xl ml-2 my-auto"></span>
           <a
             className="text-white hover:text-gray-200 transition ease-in-out duration-300 ml-2 md:block hidden"
             href="https://github.com/y28lyn"

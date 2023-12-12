@@ -1,3 +1,4 @@
+import ExperienceArticle from "../components/article/ExperienceArticle";
 import Banner from "../components/header/Banner";
 
 const Experience = () => {
@@ -13,7 +14,9 @@ const Experience = () => {
           button2Label="Lire plus"
         />
       </header>
-      <main id="main"></main>
+      <main id="main" className="p-10 bg-[#000302]">
+        <ExperienceArticle />
+      </main>
     </>
   );
 };
