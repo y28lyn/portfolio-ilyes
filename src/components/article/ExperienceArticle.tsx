@@ -18,7 +18,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => {
   return (
     <div className="p-6 w-fit h-fit bg-gray-800 text-white shadow-lg rounded">
-      <div className="items-center justify-between text-base md:text-center">
+      <div className="items-center justify-between text-base">
         <div className="flex flex-row items-center">
           <img
             alt=""
