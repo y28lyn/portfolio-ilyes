@@ -1,3 +1,7 @@
+interface ExperienceArticleProps {
+  experiences: ExperienceItemProps[];
+}
+
 interface ExperienceItemProps {
   position: string;
   company: string;
@@ -9,15 +13,37 @@ interface ExperienceItemProps {
   logoUrl: string;
 }
 
-const ExperienceItem: React.FC<ExperienceItemProps> = ({
+export const ExperienceArticle: React.FC<ExperienceArticleProps> = ({
+  experiences,
+}) => {
+  return (
+    <section className="flex justify-center w-full">
+      <div className="container px-0 md:px-6">
+        <div className="flex flex-col md:flex-row gap-6">
+          {experiences.map((experience, index) => (
+            <ExperienceItem
+              key={index}
+              {...experience}
+              invert={index % 2 === 1}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ExperienceItem: React.FC<ExperienceItemProps & { invert?: boolean }> = ({
   position,
   company,
   timePeriod,
   description,
   logoUrl,
+  invert = false,
 }) => {
+  const bgClass = invert ? "bg-gray-800" : "bg-gray-900";
   return (
-    <div className="p-6 w-fit h-fit bg-gray-800 text-white shadow-lg rounded">
+    <div className={`p-6 w-fit h-fit shadow-lg rounded ${bgClass} text-white`}>
       <div className="items-center justify-between text-base">
         <div className="flex flex-row items-center">
           <img
@@ -30,12 +56,12 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
             }}
           />
           <div className="ml-6">
-            <h3 className="text-xl font-semibold text-white">{position}</h3>
-            <p className="text-gray-200 text-left">{company}</p>
+            <h3 className="text-xl font-semibold">{position}</h3>
+            <p className="text-white">{company}</p>
           </div>
         </div>
         <div
-          className={`text-sm md:text-center py-1 px-2 rounded text-white mb-2 mt-2 ${timePeriod.color}`}
+          className={`text-sm md:text-center py-1 px-2 rounded mb-2 mt-2 ${timePeriod.color}`}
         >
           {timePeriod.year}
         </div>
@@ -44,26 +70,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         <p>{description}</p>
       </div>
     </div>
-  );
-};
-
-interface ExperienceArticleProps {
-  experiences: ExperienceItemProps[];
-}
-
-export const ExperienceArticle: React.FC<ExperienceArticleProps> = ({
-  experiences,
-}) => {
-  return (
-    <section className="flex justify-center w-full">
-      <div className="container px-0 md:px-6">
-        <div className="flex flex-col md:flex-row gap-6">
-          {experiences.map((experience, index) => (
-            <ExperienceItem key={index} {...experience} />
-          ))}
-        </div>
-      </div>
-    </section>
   );
 };
 
