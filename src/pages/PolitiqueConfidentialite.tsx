@@ -35,15 +35,6 @@ const PolitiqueConfidentialite = () => {
             navigation.
           </p>
         </section>
-
-        <section className="mt-6">
-          <h2 className="text-xl font-bold">Contact</h2>
-          <p>
-            Si vous avez des questions ou des préoccupations concernant notre
-            politique de confidentialité, n'hésitez pas à me contacter sur
-            LinkedIn.
-          </p>
-        </section>
       </div>
     </>
   );

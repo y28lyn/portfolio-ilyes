@@ -4,7 +4,7 @@ const MentionLegales = () => {
       <div className="bg-[#000302] text-white pb-10 pt-20 px-10 md:p-28">
         <h1 className="text-3xl font-bold">Mentions Légales</h1>
         <p className="text-sm">
-          <strong>Date de la Dernière Mise à Jour :</strong> 19/10/2023
+          <strong>Date de la Dernière Mise à Jour :</strong> 12/12/2023
         </p>
 
         <section className="mt-6">
@@ -17,41 +17,10 @@ const MentionLegales = () => {
 
         <section className="mt-6">
           <h2 className="text-xl font-bold">Hébergeur du Site Web</h2>
-          <p>Nom de l'hébergeur : #</p>
-          <p>Siège social : #</p>
-          <p>Téléphone : #</p>
-        </section>
-
-        <section className="mt-6">
-          <h2 className="text-xl font-bold">
-            Aucune Collecte de Données Personnelles
-          </h2>
-          <p>
-            Nous n'effectuons aucune collecte de données personnelles sur notre
-            site web. Vous pouvez naviguer sur notre site en toute
-            confidentialité sans que vos informations personnelles ne soient
-            collectées ou stockées.
-          </p>
-        </section>
-
-        <section className="mt-6">
-          <h2 className="text-xl font-bold">Aucun Usage de Cookies</h2>
-          <p>
-            Notre site web n'utilise pas de cookies pour collecter des
-            informations sur les utilisateurs. Votre expérience de navigation
-            est entièrement libre de tout suivi via des cookies.
-          </p>
-        </section>
-
-        <section className="mt-6">
-          <h2 className="text-xl font-bold">
-            Utilisation de Composants de Tailbits
-          </h2>
-          <p>
-            Certaines parties de ce site web utilisent des composants de l'UI
-            kit "Celebration" créés par Tailbits. Ces composants sont utilisés
-            conformément à la licence applicable de Tailbits.
-          </p>
+          <p>Nom de l'hébergeur : Vercel Inc.</p>
+          <p>Raison social : Incorporation</p>
+          <p>Siège social : 440 N Barranca Ave #4133 Covina, CA 91723</p>
+          <p>Téléphone : (951) 383-6898</p>
         </section>
 
         <section className="mt-6">
