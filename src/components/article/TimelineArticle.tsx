@@ -5,7 +5,7 @@ export default function TimelineArticle() {
       diplome: "Bac STI2D SIN",
       date: "Septembre 2019 - Juillet 2021",
       image:
-        "https://martiniere-monplaisir.ent.auvergnerhonealpes.fr/ressources-layout.do?ID_RESSOURCE=208&ID_PAGE=2",
+        "https://www.wicona.com/globalassets/wiconafinder-references/france/lycee-la-martiniere/p1-p2-p5-la-martiniere-001.jpg?ts=637888962920000000&w=1440&quality=90&format=jpeg",
       doodle:
         "https://doodleipsum.com/700x525/flat?i=acc5d19ce1cb073d842f312aa884f1d5",
       description:
@@ -78,7 +78,7 @@ export default function TimelineArticle() {
                     <div className="md:block hidden">
                       <img
                         alt=""
-                        className={`my-4 h-[70vh] w-[100vw] rounded-md object-cover ${
+                        className={`my-4 h-[90vh] w-[100vw] rounded-md object-cover ${
                           isEven ? "" : "-ml-20"
                         }`}
                         src={event.doodle}
