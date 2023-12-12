@@ -34,9 +34,9 @@ export default function TimelineArticle() {
     },
   ];
   return (
-    <section className="pt-10 bg-[#000302] overflow-hidden">
-      <div className="container px-10">
-        <div className="relative mx-8">
+    <section className="pt-10 bg-[#000302] overflow-hidden flex justify-center">
+      <div className="container">
+        <div className="relative">
           <div className="border-r-2 border-gray-600 absolute h-full top-0 left-1/2" />
           <ul className="list-none m-0 p-0 space-y-16 md:space-y-24 lg:space-y-32">
             {timelineEvents.map((event, index) => {
@@ -75,10 +75,12 @@ export default function TimelineArticle() {
                         {event.description}
                       </p>
                     </div>
-                    <div className={`md:block hidden`}>
+                    <div className="md:block hidden">
                       <img
                         alt=""
-                        className="my-4 h-[70vh] w-[100vw] rounded-md object-cover"
+                        className={`my-4 h-[70vh] w-[100vw] rounded-md object-cover ${
+                          isEven ? "" : "-ml-20"
+                        }`}
                         src={event.doodle}
                         style={{
                           aspectRatio: "200/200",

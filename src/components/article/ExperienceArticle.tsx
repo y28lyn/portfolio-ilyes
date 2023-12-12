@@ -35,7 +35,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
           </div>
         </div>
         <div
-          className={`text-sm py-1 px-2 rounded text-white mb-2 mt-2 ${timePeriod.color}`}
+          className={`text-sm md:text-center py-1 px-2 rounded text-white mb-2 mt-2 ${timePeriod.color}`}
         >
           {timePeriod.year}
         </div>
