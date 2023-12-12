@@ -76,3 +76,8 @@
     right: 6vw !important;
   }
 }
+
+::selection {
+  color: #fff;
+  background-color: rgba(244, 63, 94, 0.8);
+}
