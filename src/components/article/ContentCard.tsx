@@ -74,7 +74,7 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
           <div className="md:mt-auto mt-5 flex flex-row gap-2 items-end">
             <button
               onClick={openModal}
-              className="w-32 bg-white text-black font-semibold p-1 mr-1 rounded transition ease-in-out delay-150 md:hover:scale-105 duration-300"
+              className="w-32 p-1 mr-1 inline-flex items-center justify-center rounded font-medium border bg-background px-4 py-2 text-xs text-white border-white transition ease-in-out delay-150 md:hover:scale-105 duration-300"
             >
               Voir plus
             </button>
