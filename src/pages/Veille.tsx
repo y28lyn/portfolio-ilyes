@@ -6,7 +6,7 @@ const Veille = () => {
     {
       source: "Playstation",
       date: "12 Octobre, 2023",
-      author: "SID SHUMAN | SENIOR DIRECTOR",
+      author: "SID SHUMAN",
       title: "Contrôleur Access PS5",
       desc: "La manette Access pour la PS5 sortira le 6 décembre 2023 et permettra aux joueurs en situation de handicap de jouer plus confortablement et plus longtemps...",
       imgUrl:
@@ -26,44 +26,15 @@ const Veille = () => {
         "https://hacavie.fr/aides-techniques/articles/wyes-des-lunettes-qui-font-parler/",
     },
     {
-      source: "Décembre",
-      date: "1 Décembre, 2023",
-      author: "BEIRADE Ilyes",
-      title: "Article de Décembre",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo quis voluptatibus cumque incidunt quia necessitatibus placeat vero...",
+      source: "France Bleu Orléans",
+      date: "4 Décembre, 2023",
+      author: "François Guéroult",
+      title: "Audiospot",
+      desc: "La ville d'Orléans a adapté l'application numérique 'Audiospot' à son espace public : 48 sites répertoriés fournissant descriptions et informations pratiques, déclenchées par balise GPS.",
       imgUrl:
-        "https://images.unsplash.com/photo-1699794369704-bfdaa57cd8df?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D",
-      linkUrl: "#",
-    },
-    {
-      source: "Janvier",
-      date: "1 Janvier, 2023",
-      author: "BEIRADE Ilyes",
-      title: "Article de Janvier",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo quis voluptatibus cumque incidunt quia necessitatibus placeat vero...",
-      imgUrl:
-        "https://images.unsplash.com/photo-1682687220208-22d7a2543e88?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8",
-      linkUrl: "#",
-    },
-    {
-      source: "Février",
-      date: "1 Février, 2023",
-      author: "BEIRADE Ilyes",
-      title: "Article de Février",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo quis voluptatibus cumque incidunt quia necessitatibus placeat vero...",
-      imgUrl:
-        "https://images.unsplash.com/photo-1699803895016-72cabdd79107?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHx8",
-      linkUrl: "#",
-    },
-    {
-      source: "Mars",
-      date: "1 Mars, 2023",
-      author: "BEIRADE Ilyes",
-      title: "Article de Mars",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo quis voluptatibus cumque incidunt quia necessitatibus placeat vero...",
-      imgUrl:
-        "https://images.unsplash.com/photo-1699918477547-bc6c99d639cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D",
-      linkUrl: "#",
+        "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      linkUrl:
+        "https://www.francebleu.fr/infos/societe/orleans-lance-une-application-numerique-pour-rendre-la-ville-accessible-a-tous-1496977",
     },
   ];
 
