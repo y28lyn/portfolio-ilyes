@@ -130,7 +130,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
   return (
     <>
       <div
-        className={`flex flex-col flex-grow md:h-[30vh] border text-card-foreground transform rounded shadow-lg ${
+        className={`flex flex-col flex-grow md:h-[30vh] text-card-foreground transform rounded shadow-lg ${
           isEven ? "bg-gray-900" : "bg-gray-800"
         }`}
       >
