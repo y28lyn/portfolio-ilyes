@@ -181,7 +181,7 @@ export default function CardArticle() {
 
   return (
     <div className="bg-[#000302] p-10">
-      <div className="w-fit mx-auto p-1 rounded flex gap-3 justify-center bg-slate-800 text-white mb-4">
+      <div className="w-fit mx-auto p-1 rounded grid md:grid-cols-4 grid-cols-2 gap-3 justify-center bg-slate-800 text-white mb-4">
         <button
           onClick={resetCategory}
           className={`px-4 py-2 rounded bg-blue-500 text-white font-bold ${
