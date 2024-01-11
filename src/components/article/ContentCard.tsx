@@ -17,6 +17,7 @@ interface ContentCardProps {
   cardColor: string;
   showGitHubButton?: boolean;
   showLinkButton?: boolean;
+  category: string;
 }
 
 const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {

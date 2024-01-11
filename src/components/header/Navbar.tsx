@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
             </span>
           </Link>
         </div>
-        <div className="flex flex-row font-medium md:py-1 md:mt-1 md:border-0 md:order-2 md:text-[11px] -ml-6">
+        <div className="flex flex-row font-medium md:py-1 md:mt-1 md:border-0 md:order-2 md:text-[11px]">
           <a
             className="text-white hover:text-gray-200 transition ease-in-out duration-300 ml-2 md:block hidden"
             href="https://www.linkedin.com/in/ilyes-beirade-86920b222/"
@@ -181,7 +181,7 @@ const Navbar: React.FC = () => {
                     to="/experience"
                     className="block py-2 pl-3 pr-4 md:link md:link-underline md:link-underline-black"
                   >
-                    Expérience professionnelle
+                    Expériences professionnelles
                   </Link>
                 </li>
                 <li>
@@ -189,7 +189,7 @@ const Navbar: React.FC = () => {
                     to="/situation"
                     className="block py-2 pl-3 pr-4 md:link md:link-underline md:link-underline-black"
                   >
-                    Situation professionnelle
+                    Situations professionnelles
                   </Link>
                 </li>
                 <li>
@@ -263,7 +263,7 @@ const Navbar: React.FC = () => {
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-sticky"
         >
-          <ul className="text-[1.1vw] flex flex-row p-4 md:p-0 mt-4 font-medium md:space-x-4 md:mt-1 md:border-0">
+          <ul className="text-[1vw] flex flex-row p-4 md:p-0 mt-4 font-medium md:space-x-4 md:mt-1 md:border-0">
             <li>
               <Link
                 to="/"
@@ -285,7 +285,7 @@ const Navbar: React.FC = () => {
                 to="/experience"
                 className="py-2 pl-3 pr-4 text-white link link-underline link-underline-black"
               >
-                Expérience professionnelle
+                Expériences professionnelles
               </Link>
             </li>
             <li>
@@ -293,7 +293,7 @@ const Navbar: React.FC = () => {
                 to="/situation"
                 className="py-2 pl-3 pr-4 text-white link link-underline link-underline-black"
               >
-                Situation professionnelle
+                Situations professionnelles
               </Link>
             </li>
             <li>

@@ -56,7 +56,7 @@ const Contact = () => {
             Prenez contact avec moi
           </h2>
           <p className="text-center text-lg">
-            Je serrais toujours ravis de vous entendre !
+            Je serrais ravis de vous entendre !
           </p>
           <form
             action="#"

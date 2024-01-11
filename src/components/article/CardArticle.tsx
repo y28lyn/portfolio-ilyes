@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ContentCard from "./ContentCard";
 
 export default function CardArticle() {
@@ -25,6 +26,7 @@ export default function CardArticle() {
         "Dans ce projet, j'ai appliqué des compétences du référentiel BTS SIO, mettant en avant ma polyvalence et mon adaptation aux exigences techniques. La conception et la maintenance des solutions informatiques ont été au cœur de mon engagement, avec des ajustements visant à améliorer la performance du site. Le développement des solutions applicatives a été essentiel, impliquant la maîtrise des frameworks ReactJS (QwikJS) et Typescript pour des améliorations réussies. La gestion de configuration via GIT a favorisé une collaboration fluide, et les plateformes dédiées ont facilité la gestion méthodique du projet. L'intégration harmonieuse des images fournies par l'équipe design a été assurée, respectant les directives artistiques pour une cohérence visuelle optimale. La programmation avec Visual Studio Code et la maîtrise de langages comme ReactJS (QwikJS) et TailwindCSS ont apporté une dimension technique aboutie. Enfin, ma veille technologique constante a renforcé ma capacité à m'adapter rapidement aux évolutions, attestant ainsi de ma polyvalence au service du projet.",
       showGithub: true,
       showLink: true,
+      category: "Web",
     },
     {
       title: "Création d'InoFormation",
@@ -49,6 +51,7 @@ export default function CardArticle() {
         "Dans le cadre de ce projet aligné sur le référentiel BTS SIO, mes compétences en développement web ont été mises en avant. J'ai créé un site dédié à la formation en accessibilité numérique, utilisant des langages tels que HTML, CSS, JavaScript, et des frameworks comme ReactJS, Typescript, et TailwindCSS, tout en respectant les bonnes pratiques. La gestion de projet a été une étape clé, menée de manière autonome sur une semaine, avec la définition d'objectifs, la planification des tâches, la gestion du temps et des ressources. En ce qui concerne la conception et la maintenance de solutions applicatives, j'ai analysé les besoins des utilisateurs, conçu une interface conviviale, et assuré la maintenance du site. Les compétences en communication et gestion de la relation client ont également été démontrées à travers des interactions fluides avec les membres de l'entreprise en tant que clients internes. Enfin, la veille technologique et réglementaire a été essentielle pour garantir la conformité du site aux normes en vigueur dans le domaine de l'accessibilité numérique.",
       showGithub: true,
       showLink: true,
+      category: "Web",
     },
     {
       title: "Création d'Inotest",
@@ -73,6 +76,7 @@ export default function CardArticle() {
         "Dans ce projet aligné sur le référentiel BTS SIO, diverses compétences ont été mises en œuvre. La planification et la conceptualisation du site web, ainsi que le développement de la librairie de composants accessibles, relèvent de la conception et de la maintenance de solutions informatiques. Le développement des composants de test pour l'accessibilité numérique, l'utilisation de technologies modernes comme VS Code, ReactJS, Typescript et TailwindCSS, ainsi que la gestion du code source avec GIT, illustrent le développement et l'adaptation de solutions applicatives, tout en assurant des tests approfondis pour garantir la fiabilité des composants. La mise en place de l'architecture et de la structure de base du site web, ainsi que l'intégration des évolutions des normes d'accessibilité, reflètent la gestion de configurations, les tests et la validation de solutions. Ces compétences ont été mobilisées de manière cohérente tout au long du projet, assurant la conception, le développement, les tests et le déploiement d'une solution complète et accessible pour les sites web destinés au grand public.",
       showGithub: true,
       showLink: true,
+      category: "Web",
     },
     {
       title: "Création d'Autoclean",
@@ -97,6 +101,7 @@ export default function CardArticle() {
         "Ce projet a mobilisé des compétences variées, notamment le développement web avec React.js, TypeScript et Tailwind CSS. La capacité à personnaliser le site en fonction des besoins d'Autoclean a démontré des compétences en conception d'interface utilisateur et en adaptation de solutions applicatives. La collaboration étroite avec Autoclean a mis en avant des compétences de communication et de compréhension des besoins clients, contribuant ainsi à la création d'une solution personnalisée et fonctionnelle. En résumé, cette expérience bénévole a permis d'appliquer de manière concrète les compétences acquises dans le domaine du développement web.",
       showGithub: true,
       showLink: true,
+      category: "Web",
     },
     {
       title: "Continuation d'SGRC",
@@ -121,6 +126,26 @@ export default function CardArticle() {
         "Ce projet collectif a mobilisé diverses compétences du référentiel BTS SIO. La répartition des tâches et la coordination ont illustré la capacité à concevoir et à maintenir des solutions informatiques. Le développement de l'application en PHP et la gestion de la base de données MySQL ont mis en œuvre des compétences en développement et adaptation de solutions applicatives. Les interactions avec le lycée ont démontré des compétences en communication et en gestion de projet. En résumé, ce projet a permis de mettre en pratique de manière intégrée les compétences du référentiel BTS SIO, renforçant ainsi notre compréhension globale du processus de développement logiciel en équipe.",
       showGithub: true,
       showLink: true,
+      category: "Web",
+    },
+    {
+      title: "Renaissance Urbaine",
+      desc: "Renaissance Urbaine est un projet PHP simulant des inscriptions aux activités d'une manifestation proposée par une association, comportant des profils de participants, de responsables et d'administrateurs.",
+      imgUrl: "manif.png",
+      bannerUrl:
+        "https://images.unsplash.com/photo-1619359059287-9d024d7081ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGlwYWQlMjBwcm8lMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D",
+      link: "https://manif-ilyes.000webhostapp.com/",
+      linkUrl: "https://github.com/y28lyn/manif",
+      titleModal: "Renaissance Urbaine",
+      contexte: "",
+      besoin: "",
+      environnement: "",
+      realisation: "",
+      bilan: "",
+      competence: "",
+      showGithub: true,
+      showLink: true,
+      category: "Web",
     },
     {
       title: "Installation d'un GLPI",
@@ -145,13 +170,39 @@ export default function CardArticle() {
         "Dans le cadre du référentiel BTS SIO, cette expérience a mobilisé plusieurs compétences. La recherche et le téléchargement des paquets, l'installation des dépendances, et la configuration du serveur web relèvent du développement et de l'adaptation de solutions applicatives. La gestion des permissions et la mise en place des bonnes pratiques de sécurité sont des aspects de la conception et de la maintenance de solutions informatiques. En résumé, ce projet individuel a permis de concrétiser les compétences du référentiel BTS SIO en matière d'administration système, avec un focus particulier sur l'installation de GLPI dans un environnement Debian 11.",
       showGithub: false,
       showLink: false,
+      category: "Web",
     },
   ];
 
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  const handleCategoryChange = (category: string | null) => {
+    setActiveCategory(category);
+  };
+
+  const filterProjectsByCategory = (project: any) => {
+    if (!activeCategory) {
+      return true; // Afficher tous les projets si aucune catégorie active
+    }
+    return project.category === activeCategory;
+  };
+
+  const filteredProjects = projects.filter(filterProjectsByCategory);
+
   return (
     <div className="bg-[#000302] p-10">
+      <div className="flex justify-center text-white mb-4">
+        <button onClick={() => handleCategoryChange("React")} className="mr-2">
+          ReactJS
+        </button>
+        <button onClick={() => handleCategoryChange("PHP")} className="mr-2">
+          PHP
+        </button>
+        <button onClick={() => handleCategoryChange("Reseau")}>Réseau</button>
+      </div>
+
       <div className="grid max-w-md grid-cols-1 gap-6 mx-auto lg:grid-cols-3 lg:max-w-full">
-        {projects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <ContentCard
             key={index}
             title={project.title}
@@ -170,6 +221,7 @@ export default function CardArticle() {
             realisation={project.realisation}
             bilan={project.besoin}
             competence={project.competence}
+            category={project.category}
           />
         ))}
       </div>
