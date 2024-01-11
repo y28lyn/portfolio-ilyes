@@ -7,8 +7,6 @@ export default function CardArticle() {
       title: "Refactoring d'Inolib",
       desc: "Optimisation du site INOLIB post-lancement. Améliorations d'images et de style avec TailwindCSS. Collaboration cruciale pour renforcer la réputation et l'expérience utilisateur.",
       imgUrl: "/inolib.png",
-      bannerUrl:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "https://www.inolib.com/",
       linkUrl: "https://github.com/inolib/website",
       titleModal: "Refactoring d'Inolib",
@@ -26,14 +24,12 @@ export default function CardArticle() {
         "Dans ce projet, j'ai appliqué des compétences du référentiel BTS SIO, mettant en avant ma polyvalence et mon adaptation aux exigences techniques. La conception et la maintenance des solutions informatiques ont été au cœur de mon engagement, avec des ajustements visant à améliorer la performance du site. Le développement des solutions applicatives a été essentiel, impliquant la maîtrise des frameworks ReactJS (QwikJS) et Typescript pour des améliorations réussies. La gestion de configuration via GIT a favorisé une collaboration fluide, et les plateformes dédiées ont facilité la gestion méthodique du projet. L'intégration harmonieuse des images fournies par l'équipe design a été assurée, respectant les directives artistiques pour une cohérence visuelle optimale. La programmation avec Visual Studio Code et la maîtrise de langages comme ReactJS (QwikJS) et TailwindCSS ont apporté une dimension technique aboutie. Enfin, ma veille technologique constante a renforcé ma capacité à m'adapter rapidement aux évolutions, attestant ainsi de ma polyvalence au service du projet.",
       showGithub: true,
       showLink: true,
-      category: "Web",
+      category: "React",
     },
     {
       title: "Création d'InoFormation",
       desc: "Création d'une plateforme de formation interne sur l'accessibilité numérique. Utilisation de ReactJS, Typescript, TailwindCSS, et GIT. Renforcement de la réputation de l'entreprise.",
       imgUrl: "inoformation.png",
-      bannerUrl:
-        "https://images.unsplash.com/photo-1550025899-5f8a06b1b3a8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D",
       link: "https://inolib-formation.vercel.app/",
       linkUrl: "https://github.com/y28lyn/inolib-formation",
       titleModal: "Création d'InoFormation",
@@ -51,14 +47,12 @@ export default function CardArticle() {
         "Dans le cadre de ce projet aligné sur le référentiel BTS SIO, mes compétences en développement web ont été mises en avant. J'ai créé un site dédié à la formation en accessibilité numérique, utilisant des langages tels que HTML, CSS, JavaScript, et des frameworks comme ReactJS, Typescript, et TailwindCSS, tout en respectant les bonnes pratiques. La gestion de projet a été une étape clé, menée de manière autonome sur une semaine, avec la définition d'objectifs, la planification des tâches, la gestion du temps et des ressources. En ce qui concerne la conception et la maintenance de solutions applicatives, j'ai analysé les besoins des utilisateurs, conçu une interface conviviale, et assuré la maintenance du site. Les compétences en communication et gestion de la relation client ont également été démontrées à travers des interactions fluides avec les membres de l'entreprise en tant que clients internes. Enfin, la veille technologique et réglementaire a été essentielle pour garantir la conformité du site aux normes en vigueur dans le domaine de l'accessibilité numérique.",
       showGithub: true,
       showLink: true,
-      category: "Web",
+      category: "React",
     },
     {
       title: "Création d'Inotest",
       desc: "Projet majeur sur les tests d'accessibilité numérique et création d'une librairie de composants avec ReactJS, Typescript, TailwindCSS et GIT.",
       imgUrl: "inotest.png",
-      bannerUrl:
-        "https://images.unsplash.com/photo-1502899576159-f224dc2349fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D",
       link: "https://inotest.vercel.app/",
       linkUrl: "https://github.com/Dindonix/InoTest",
       titleModal: "Création d'InoTest",
@@ -76,14 +70,12 @@ export default function CardArticle() {
         "Dans ce projet aligné sur le référentiel BTS SIO, diverses compétences ont été mises en œuvre. La planification et la conceptualisation du site web, ainsi que le développement de la librairie de composants accessibles, relèvent de la conception et de la maintenance de solutions informatiques. Le développement des composants de test pour l'accessibilité numérique, l'utilisation de technologies modernes comme VS Code, ReactJS, Typescript et TailwindCSS, ainsi que la gestion du code source avec GIT, illustrent le développement et l'adaptation de solutions applicatives, tout en assurant des tests approfondis pour garantir la fiabilité des composants. La mise en place de l'architecture et de la structure de base du site web, ainsi que l'intégration des évolutions des normes d'accessibilité, reflètent la gestion de configurations, les tests et la validation de solutions. Ces compétences ont été mobilisées de manière cohérente tout au long du projet, assurant la conception, le développement, les tests et le déploiement d'une solution complète et accessible pour les sites web destinés au grand public.",
       showGithub: true,
       showLink: true,
-      category: "Web",
+      category: "React",
     },
     {
       title: "Création d'Autoclean",
       desc: "Le site web Autoclean est une vitrine en ligne destinée à présenter l'entreprise et ses services. Il a été développé en utilisant les technologies React.js, TypeScript et Tailwind CSS.",
       imgUrl: "autoclean.png",
-      bannerUrl:
-        "https://images.unsplash.com/photo-1555448248-2571daf6344b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aXBhZCUyMHBybyUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D",
       link: "https://autoclean-lyon.fr/",
       linkUrl: "https://github.com/y28lyn/autoclean",
       titleModal: "Création d'Autoclean",
@@ -101,14 +93,12 @@ export default function CardArticle() {
         "Ce projet a mobilisé des compétences variées, notamment le développement web avec React.js, TypeScript et Tailwind CSS. La capacité à personnaliser le site en fonction des besoins d'Autoclean a démontré des compétences en conception d'interface utilisateur et en adaptation de solutions applicatives. La collaboration étroite avec Autoclean a mis en avant des compétences de communication et de compréhension des besoins clients, contribuant ainsi à la création d'une solution personnalisée et fonctionnelle. En résumé, cette expérience bénévole a permis d'appliquer de manière concrète les compétences acquises dans le domaine du développement web.",
       showGithub: true,
       showLink: true,
-      category: "Web",
+      category: "React",
     },
     {
       title: "Continuation d'SGRC",
       desc: "La Table d'Hélène est une application PHP simplifiant la prise de commandes et la gestion des tables, plats, boissons, et menus pour le lycée Hélène Boucher.",
       imgUrl: "sgrc.png",
-      bannerUrl:
-        "https://images.unsplash.com/photo-1551509134-eb7c5ea9ad2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGlwYWQlMjBwcm8lMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D",
       link: "https://brodet.fr/SGRC/",
       linkUrl: "https://github.com/y28lyn/sgrc",
       titleModal: "Continuation d'SGRC",
@@ -126,14 +116,12 @@ export default function CardArticle() {
         "Ce projet collectif a mobilisé diverses compétences du référentiel BTS SIO. La répartition des tâches et la coordination ont illustré la capacité à concevoir et à maintenir des solutions informatiques. Le développement de l'application en PHP et la gestion de la base de données MySQL ont mis en œuvre des compétences en développement et adaptation de solutions applicatives. Les interactions avec le lycée ont démontré des compétences en communication et en gestion de projet. En résumé, ce projet a permis de mettre en pratique de manière intégrée les compétences du référentiel BTS SIO, renforçant ainsi notre compréhension globale du processus de développement logiciel en équipe.",
       showGithub: true,
       showLink: true,
-      category: "Web",
+      category: "PHP",
     },
     {
       title: "Renaissance Urbaine",
       desc: "Renaissance Urbaine est un projet PHP simulant des inscriptions aux activités d'une manifestation proposée par une association, comportant des profils de participants, de responsables et d'administrateurs.",
       imgUrl: "manif.png",
-      bannerUrl:
-        "https://images.unsplash.com/photo-1619359059287-9d024d7081ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGlwYWQlMjBwcm8lMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D",
       link: "https://manif-ilyes.000webhostapp.com/",
       linkUrl: "https://github.com/y28lyn/manif",
       titleModal: "Renaissance Urbaine",
@@ -145,14 +133,12 @@ export default function CardArticle() {
       competence: "",
       showGithub: true,
       showLink: true,
-      category: "Web",
+      category: "PHP",
     },
     {
       title: "Installation d'un GLPI",
       desc: "GLPI simplifie la gestion informatique. Suivi des actifs, gestion des tickets, inventaires simples. Open-source, convivial, optimisez la productivité dès l'installation.",
       imgUrl: "glpi.png",
-      bannerUrl:
-        "https://images.unsplash.com/photo-1619359059287-9d024d7081ef?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGlwYWQlMjBwcm8lMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D",
       link: "#",
       linkUrl: "#",
       titleModal: "Installation d'un GLPI",
@@ -170,7 +156,7 @@ export default function CardArticle() {
         "Dans le cadre du référentiel BTS SIO, cette expérience a mobilisé plusieurs compétences. La recherche et le téléchargement des paquets, l'installation des dépendances, et la configuration du serveur web relèvent du développement et de l'adaptation de solutions applicatives. La gestion des permissions et la mise en place des bonnes pratiques de sécurité sont des aspects de la conception et de la maintenance de solutions informatiques. En résumé, ce projet individuel a permis de concrétiser les compétences du référentiel BTS SIO en matière d'administration système, avec un focus particulier sur l'installation de GLPI dans un environnement Debian 11.",
       showGithub: false,
       showLink: false,
-      category: "Web",
+      category: "Reseau",
     },
   ];
 
@@ -178,6 +164,10 @@ export default function CardArticle() {
 
   const handleCategoryChange = (category: string | null) => {
     setActiveCategory(category);
+  };
+
+  const resetCategory = () => {
+    setActiveCategory(null);
   };
 
   const filterProjectsByCategory = (project: any) => {
@@ -191,14 +181,39 @@ export default function CardArticle() {
 
   return (
     <div className="bg-[#000302] p-10">
-      <div className="flex justify-center text-white mb-4">
-        <button onClick={() => handleCategoryChange("React")} className="mr-2">
+      <div className="w-fit mx-auto p-1 rounded flex gap-3 justify-center bg-slate-800 text-white mb-4">
+        <button
+          onClick={resetCategory}
+          className={`px-4 py-2 rounded bg-blue-500 text-white font-bold ${
+            activeCategory === null && "bg-blue-700"
+          }`}
+        >
+          Voir tous
+        </button>
+        <button
+          onClick={() => handleCategoryChange("React")}
+          className={`px-4 py-2 rounded bg-blue-500 text-white font-bold ${
+            activeCategory === "React" && "bg-blue-700"
+          }`}
+        >
           ReactJS
         </button>
-        <button onClick={() => handleCategoryChange("PHP")} className="mr-2">
+        <button
+          onClick={() => handleCategoryChange("PHP")}
+          className={`px-4 py-2 rounded bg-blue-500 text-white font-bold ${
+            activeCategory === "PHP" && "bg-blue-700"
+          }`}
+        >
           PHP
         </button>
-        <button onClick={() => handleCategoryChange("Reseau")}>Réseau</button>
+        <button
+          onClick={() => handleCategoryChange("Reseau")}
+          className={`px-4 py-2 rounded bg-blue-500 text-white font-bold ${
+            activeCategory === "Reseau" && "bg-blue-700"
+          }`}
+        >
+          Réseau
+        </button>
       </div>
 
       <div className="grid max-w-md grid-cols-1 gap-6 mx-auto lg:grid-cols-3 lg:max-w-full">
@@ -208,7 +223,6 @@ export default function CardArticle() {
             title={project.title}
             desc={project.desc}
             imgUrl={project.imgUrl}
-            bannerUrl={project.bannerUrl}
             link={project.link}
             linkUrl={project.linkUrl}
             titleModal={project.titleModal}

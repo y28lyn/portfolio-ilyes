@@ -11,7 +11,6 @@ interface ContentCardProps {
   bilan: string;
   competence: string;
   imgUrl: string;
-  bannerUrl: string;
   link: string;
   linkUrl: string;
   cardColor: string;
