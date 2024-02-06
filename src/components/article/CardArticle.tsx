@@ -1,15 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import ContentCard from "./ContentCard";
 
 export default function CardArticle() {
   const projects = [
     {
-      title: "Refactoring d'Inolib",
+      title: "Inolib",
       desc: "Optimisation du site INOLIB post-lancement. Améliorations d'images et de style avec TailwindCSS. Collaboration cruciale pour renforcer la réputation et l'expérience utilisateur.",
       imgUrl: "/inolib.png",
       link: "https://www.inolib.com/",
       linkUrl: "https://github.com/inolib/website",
-      titleModal: "Refactoring d'Inolib",
+      titleModal: "Inolib",
       contexte:
         "J'ai intégré le projet d'INOLIB après que le site web ait été lancé, dès mon deuxième jour. Ma contribution principale a été d'effectuer des améliorations sur l'implémentation des images et la rédaction du style en utilisant TailwindCSS. J'ai collaboré sur ce projet avec Matthieu GEORGE et Quentin FERRARI.",
       besoin:
@@ -27,12 +28,12 @@ export default function CardArticle() {
       category: "React",
     },
     {
-      title: "Création d'InoFormation",
+      title: "InoFormation",
       desc: "Création d'une plateforme de formation interne sur l'accessibilité numérique. Utilisation de ReactJS, Typescript, TailwindCSS, et GIT. Renforcement de la réputation de l'entreprise.",
       imgUrl: "inoformation.png",
       link: "https://inolib-formation.vercel.app/",
       linkUrl: "https://github.com/y28lyn/inolib-formation",
-      titleModal: "Création d'InoFormation",
+      titleModal: "InoFormation",
       contexte:
         "J'ai entrepris seul ce projet qui s'est étendu sur une semaine et avait pour objectif d'être utilisé en interne au sein de l'entreprise. Mon travail consistait à développer un site dédié à la formation en accessibilité numérique. J'ai investi temps et efforts pour créer une plateforme qui permettrait à nos employés de maîtriser les principes essentielles de l'accessibilité en ligne.",
       besoin:
@@ -50,12 +51,12 @@ export default function CardArticle() {
       category: "React",
     },
     {
-      title: "Création d'Inotest",
+      title: "InoTest",
       desc: "Projet majeur sur les tests d'accessibilité numérique et création d'une librairie de composants avec ReactJS, Typescript, TailwindCSS et GIT.",
       imgUrl: "inotest.png",
       link: "https://inotest.vercel.app/",
       linkUrl: "https://github.com/Dindonix/InoTest",
-      titleModal: "Création d'InoTest",
+      titleModal: "InoTest",
       contexte:
         "J'ai collaboré avec Matthieu GEORGE, l'un des deux développeurs full stack, sur ce projet passionnant. Notre objectif principal était de réaliser des tests d'accessibilité numérique sur différents composants de sites web destiné au grand public. De plus, nous avons travaillé sur la création d'une librairie de composants accessibles spécialement conçue pour les développeurs. Cette initiative visait à promouvoir l'accessibilité pour tous. Grâce à notre collaboration étroite, nous avons pu mettre en place des mesures concrètes pour rendre l'expérience en ligne plus inclusive. Notre projet représente une avancée significative dans le domaine de l'accessibilité numérique, offrant des solutions accessibles et conviviales pour tous.",
       besoin:
@@ -73,12 +74,12 @@ export default function CardArticle() {
       category: "React",
     },
     {
-      title: "Création d'Autoclean",
+      title: "Autoclean",
       desc: "Le site web Autoclean est une vitrine en ligne destinée à présenter l'entreprise et ses services. Il a été développé en utilisant les technologies React.js, TypeScript et Tailwind CSS.",
       imgUrl: "autoclean.png",
       link: "https://autoclean-lyon.fr/",
       linkUrl: "https://github.com/y28lyn/autoclean",
-      titleModal: "Création d'Autoclean",
+      titleModal: "Autoclean",
       contexte:
         "J'ai eu le privilège de créer bénévolement le site web Autoclean, mettant en lumière les services de cette entreprise dédiée à la propreté et à l'entretien automobile et textile. Mon engagement bénévole visait à offrir à Autoclean une présence en ligne professionnelle pour présenter leurs activités et faciliter le contact avec leurs clients potentiels.",
       besoin:
@@ -96,12 +97,12 @@ export default function CardArticle() {
       category: "React",
     },
     {
-      title: "Continuation d'SGRC",
+      title: "SGRC",
       desc: "La Table d'Hélène est une application PHP simplifiant la prise de commandes et la gestion des tables, plats, boissons, et menus pour le lycée Hélène Boucher.",
       imgUrl: "sgrc.png",
       link: "https://brodet.fr/SGRC/",
       linkUrl: "https://github.com/y28lyn/sgrc",
-      titleModal: "Continuation d'SGRC",
+      titleModal: "SGRC",
       contexte:
         "Au cours de ma deuxième année de BTS SIO, l'ensemble de ma classe a collaboré sur le projet La Table d'Hélène, une application PHP destinée à optimiser la gestion des commandes et des tables au lycée Hélène Boucher. Dans le cadre du projet SGRC, nous avons travaillé en équipe pour répondre aux besoins spécifiques de l'établissement, améliorant ainsi les processus de restauration.",
       besoin:
@@ -136,12 +137,12 @@ export default function CardArticle() {
       category: "PHP",
     },
     {
-      title: "Installation d'un GLPI",
+      title: "GLPI",
       desc: "GLPI simplifie la gestion informatique. Suivi des actifs, gestion des tickets, inventaires simples. Open-source, convivial, optimisez la productivité dès l'installation.",
       imgUrl: "glpi.png",
       link: "#",
       linkUrl: "#",
-      titleModal: "Installation d'un GLPI",
+      titleModal: "GLPI",
       contexte:
         "En tant qu'étudiant en première année de BTS SIO, j'ai entrepris l'installation de GLPI sur un système Linux Debian 11. Mon objectif principal était d'acquérir une compréhension approfondie du processus d'installation de ce logiciel de gestion de parc informatique au sein d'un environnement Debian.",
       besoin:
