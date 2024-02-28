@@ -28,29 +28,6 @@ export default function CardArticle() {
       category: "React",
     },
     {
-      title: "InoFormation",
-      desc: "Création d'une plateforme de formation interne sur l'accessibilité numérique. Utilisation de ReactJS, Typescript, TailwindCSS, et GIT. Renforcement de la réputation de l'entreprise.",
-      imgUrl: "inoformation.png",
-      link: "https://inolib-formation.vercel.app/",
-      linkUrl: "https://github.com/y28lyn/inolib-formation",
-      titleModal: "InoFormation",
-      contexte:
-        "J'ai entrepris seul ce projet qui s'est étendu sur une semaine et avait pour objectif d'être utilisé en interne au sein de l'entreprise. Mon travail consistait à développer un site dédié à la formation en accessibilité numérique. J'ai investi temps et efforts pour créer une plateforme qui permettrait à nos employés de maîtriser les principes essentielles de l'accessibilité en ligne.",
-      besoin:
-        "J'ai développé ce projet pour promouvoir l'accessibilité numérique dans notre entreprise. En une semaine, j'ai créé un site de formation interne dédié à cette cause. L'objectif était d'enseigner les bonnes pratiques et les normes pour garantir un accès équitable aux ressources en ligne, renforçant ainsi notre engagement envers l'inclusion et notre réputation en tant qu'entreprise soucieuse de l'accessibilité.",
-      environnement:
-        "Pendant le dernier projet, j'ai appris à utiliser les frameworks ReactJS, Typescript, TailwindCSS et GIT. J'ai utilisé l'environnement de développement Visual Studio Code pour travailler avec ces outils. Cette expérience m'a permis d'approfondir mes connaissances et de me familiariser davantage avec ces frameworks, ce qui a été bénéfique pour la réussite du projet.",
-      realisation:
-        "Ce projet a suivi une progression en plusieurs étapes, chaque phase étant déterminante pour atteindre les objectifs fixés. Initialement, j'ai consacré du temps à assimiler les exigences et attentes du projet, englobant les besoins des utilisateurs, les spécifications techniques, et les contraintes d'accessibilité numérique. Ensuite, la réflexion s'est orientée vers l'approche stylistique, prenant en compte les principes de design, l'identité visuelle de l'entreprise, et l'expérience utilisateur désirée. Une étape cruciale a été la structuration claire du contenu, veillant à sa pertinence et à sa compréhension facile. Enfin, une attention particulière a été portée à l'accessibilité, avec l'utilisation de techniques conformes aux normes pour garantir une expérience équitable, notamment en considérant le contraste visuel, l'utilisation de balises appropriées, et la compatibilité avec les technologies d'assistance. En résumé, ce projet a combiné stratégie réfléchie, conception esthétique, création de contenu pertinent, et un engagement fort envers l'accessibilité numérique, visant à offrir une expérience utilisateur optimale tout en répondant aux besoins spécifiques de l'entreprise.",
-      bilan:
-        "La réalisation de ce projet interne a été gratifiante, contribuant à promouvoir l'accessibilité numérique au sein de notre entreprise. En développant des compétences techniques avec des frameworks tels que ReactJS, Typescript et TailwindCSS, j'ai renforcé ma confiance et élargi mes compétences. En envisageant l'avenir, l'expansion de la plateforme de formation vers un public plus large et des collaborations avec des experts externes pourrait renforcer notre leadership en accessibilité numérique. Des sessions de formation régulières pour les employés maintiendraient et approfondiraient les connaissances, consolidant notre engagement envers l'inclusion et notre position en tant qu'entreprise axée sur l'accessibilité.",
-      competence:
-        "Dans le cadre de ce projet aligné sur le référentiel BTS SIO, mes compétences en développement web ont été mises en avant. J'ai créé un site dédié à la formation en accessibilité numérique, utilisant des langages tels que HTML, CSS, JavaScript, et des frameworks comme ReactJS, Typescript, et TailwindCSS, tout en respectant les bonnes pratiques. La gestion de projet a été une étape clé, menée de manière autonome sur une semaine, avec la définition d'objectifs, la planification des tâches, la gestion du temps et des ressources. En ce qui concerne la conception et la maintenance de solutions applicatives, j'ai analysé les besoins des utilisateurs, conçu une interface conviviale, et assuré la maintenance du site. Les compétences en communication et gestion de la relation client ont également été démontrées à travers des interactions fluides avec les membres de l'entreprise en tant que clients internes. Enfin, la veille technologique et réglementaire a été essentielle pour garantir la conformité du site aux normes en vigueur dans le domaine de l'accessibilité numérique.",
-      showGithub: true,
-      showLink: true,
-      category: "React",
-    },
-    {
       title: "InoTest",
       desc: "Projet majeur sur les tests d'accessibilité numérique et création d'une librairie de composants avec ReactJS, Typescript, TailwindCSS et GIT.",
       imgUrl: "inotest.png",
