@@ -65,7 +65,7 @@ const Veille = () => {
         <Banner
           title="Ma veille technologique sur l'accessibilité numérique"
           subtitle="Comment les nouvelles technologies peuvent-elles aider les
-          personnes handicapées au quotidien?"
+          personnes en situation de handicap au quotidien?"
           backgroundImageUrl="https://images.unsplash.com/photo-1640693039636-a13ea2dd9139?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           button1Label="Contactez-moi"
           button1Link="/contact"
