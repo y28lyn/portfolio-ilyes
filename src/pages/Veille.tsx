@@ -50,7 +50,7 @@ const Veille = () => {
       source: "Vie publique",
       date: "7 février, 2024",
       author: "La Rédaction",
-      title: "Politique du handicap : qu'a changé la loi de 2005 ?",
+      title: "Qu'a changé la loi de 2005 ?",
       desc: "Depuis le 1er janvier 2024, les sites de l'internet public non accessibles aux personnes handicapées peuvent être sanctionnés à hauteur de 50 000 euros. Le but est que les démarches en ligne les plus courantes soient accessibles fin 2025.",
       imgUrl:
         "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

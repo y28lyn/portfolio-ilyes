@@ -50,8 +50,13 @@ const Contact = () => {
 
   return (
     <>
-      <main className="bg-[#000302] p-10 pt-20">
-        <section className="bg-[#fbfcf8] text-black p-8 rounded-lg space-y-6 max-w-md mx-auto">
+      <main className="bg-[#000302] p-10 pt-20 flex flex-col md:flex-row justify-center gap-6">
+        <img
+          className="rounded-lg shadow-lg h-[10vh] md:h-auto w-full md:w-[50%] object-cover"
+          src="https://images.unsplash.com/photo-1707343848723-bd87dea7b118?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+        <section className="bg-[#fbfcf8] text-black p-8 rounded-lg space-y-6">
           <h2 className="text-3xl font-bold text-center">
             Prenez contact avec moi
           </h2>
