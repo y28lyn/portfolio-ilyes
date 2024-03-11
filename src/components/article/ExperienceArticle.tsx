@@ -96,7 +96,7 @@ const experienceData: ExperienceItemProps[] = [
     position: "Développeur web",
     company: "INOLIB",
     timePeriod: {
-      year: "Mai 2023 - Juin 2023 | Jan. 2024 - Fév. 2024",
+      year: "Mai 2023 - Juin 2023 & Jan. 2024 - Fév. 2024",
       color: "bg-blue-500",
     },
     description:
