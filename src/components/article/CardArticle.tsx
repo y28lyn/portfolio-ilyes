@@ -57,11 +57,16 @@ export default function CardArticle() {
       link: "https://accessible-component.vercel.app/",
       linkUrl: "https://github.com/y28lyn/accessible-components",
       titleModal: "Accessible Components",
-      contexte: "",
-      besoin: "",
-      environnement: "",
-      realisation: "",
-      bilan: "",
+      contexte:
+        "Pendant mon stage professionnel à INOLIB, j'ai eu le privilège de contribuer au projet 'Accessible Components' - une tentative naissante d'assembler une collection de composants accessibles en utilisant ReactJS et Typescript. Cette initiative a été alimentée par l'engagement d'adhérer aux normes d'accessibilité du W3C et de créer un répertoire d'éléments d'interface utilisateur qui sont inclusifs de par leur conception.",
+      besoin:
+        "L'objectif principal de la bibliothèque était de combler le fossé entre les interfaces utilisateur fonctionnelles et la conformité aux normes d'accessibilité. La communauté des développeurs est souvent confrontée aux défis de l'intégration de l'accessibilité dans leurs projets basés sur React. 'Accessible Components' vise à résoudre ce problème en fournissant des éléments d'interface utilisateur prêts à l'emploi et conformes.",
+      environnement:
+        "L'environnement de développement de la bibliothèque 'Accessible Components' était tout à fait moderne, tirant parti de technologies frontales puissantes telles que ReactJS et Typescript. Cette sélection de technologies a permis de garantir que les composants seraient non seulement conformes aux normes industrielles actuelles, mais aussi à l'épreuve du temps et facilement incorporables dans divers projets.",
+      realisation:
+        "Les principales réalisations dans le cadre du développement comprennent le respect rigoureux des lignes directrices du W3C pour garantir la conformité aux normes d'accessibilité mondiales. Ces composants sont créés avec ReactJS, ce qui facilite leur intégration dans l'écosystème React. L'implémentation de Typescript a amélioré l'expérience du développeur grâce à la sécurité des types et à la robustesse du codage. Les composants ont été développés dans une optique de personnalisation, ce qui permet aux développeurs d'adapter le design à l'esthétique spécifique de leurs projets. Enfin, les efforts se poursuivent pour élargir la bibliothèque avec une variété de composants accessibles qui répondent à un large éventail d'exigences en matière d'interface utilisateur.",
+      bilan:
+        "Ce projet de stage à INOLIB représente une contribution significative au monde du développement d'applications web, en ciblant spécifiquement l'aspect essentiel de l'accessibilité. La bibliothèque présente une fusion transparente de la fonctionnalité, de l'esthétique et de l'inclusivité.",
       competence: "",
       showGithub: true,
       showLink: true,
@@ -120,12 +125,18 @@ export default function CardArticle() {
       link: "https://manif-ilyes.000webhostapp.com/",
       linkUrl: "https://github.com/y28lyn/manif",
       titleModal: "Renaissance Urbaine",
-      contexte: "",
-      besoin: "",
-      environnement: "",
-      realisation: "",
-      bilan: "",
-      competence: "",
+      contexte:
+        "En quête d'une gestion efficace des événements, j'ai développer une application conçue pour simplifier la tâche complexe de gestion des activités événementielles, lors de mon dernier trimestre de BTS SIO. Ce projet visait à fournir une solution robuste aux défis administratifs auxquels les associations sont confrontées lors d'événements.",
+      besoin:
+        "L'objectif du projet était d'aborder le processus complexe et chronophage de la gestion des activités événementielles. Il visait à fournir une plateforme web facilement navigable et riche en fonctionnalités pour l'enregistrement et la coordination de diverses activités lors d'événements.",
+      environnement:
+        "L'application a été développée en utilisant PHP pour la logique de base et MySQL pour les interactions avec la base de données. Des méthodologies agiles ont été adoptées pour un processus de développement structuré, avec des expériences administratives et d'utilisateurs finaux au premier plan des considérations de conception.",
+      realisation:
+        "Le développement de cette application a été centré sur la création d'une interface utilisateur intuitive qui répond aux différents rôles au sein d'un événement - administrateurs, participants et responsables d'activités. La plateforme qui en résulte offre un éventail de fonctionnalités pour gérer les activités, superviser les inscriptions, contrôler les créneaux horaires et rationaliser l'ensemble du processus d'un point de vue administratif. Les participants bénéficient d'une interface conviviale pour l'inscription aux activités, ce qui garantit une expérience fluide et sans tracas.",
+      bilan:
+        "Des projets comme 'Manif' témoignent de la capacité à construire une application complète qui réponde à des exigences détaillées et rigoureuses en matière de gestion d'événements, en accordant la priorité absolue à la facilité d'utilisation.",
+      competence:
+        "Le développement de 'Manif' est révélateur d'une myriade de compétences issues du programme du BTS SIO. Cela inclut la conception d'interfaces centrées sur l'utilisateur, le développement de backend avec PHP, la gestion complète de bases de données et l'autogestion d'un projet informatique complexe. Le déploiement de cette application démontre une compréhension approfondie et une application pratique des solutions de technologie de l'information dans un contexte professionnel.",
       showGithub: true,
       showLink: true,
       category: "PHP",
@@ -137,14 +148,20 @@ export default function CardArticle() {
       link: "",
       linkUrl: "https://github.com/y28lyn/dcs",
       titleModal: "DCS",
-      contexte: "",
-      besoin: "",
-      environnement: "",
-      realisation: "",
-      bilan: "",
-      competence: "",
+      contexte:
+        "Durant ma deuxième année de BTS SIO SLAM, nous avons entrepris un projet pour l'ICOF. Ce projet en PHP et TailwindCSS comprend une étude de cas de Business Intelligence (BI) pour l'infrastructure DSI d'un groupe important dans le secteur de la banque/finance/assurance, visant à forger une solution d'hébergement informatique rentable avec une approche analytique des coûts et des métriques associées.",
+      besoin:
+        "La mission principale de ce projet collectif était la création d'une plateforme analytique adaptée aux besoins complexes de l'infrastructure DSI du secteur banque/finance/assurance. L'objectif principal était de concevoir une application qui facilite l'analyse méticuleuse et le reporting de l'hébergement et des coûts associés, en fournissant des informations exploitables aux parties prenantes.",
+      environnement:
+        "Le projet s'est déroulé dans un cadre collaboratif, en s'appuyant sur PHP pour la logique côté serveur et sur le logiciel moderne TailwindCSS pour le style de l'interface utilisateur. L'équipe a divisé les tâches de manière efficace, en utilisant des outils comme Github pour la gestion de projet.",
+      realisation:
+        "En adoptant un flux de travail méthodique, les tâches ont été assignées et les progrès ont été contrôlés. Du travail en groupe a permis de discuter des progrès, de résoudre les problèmes et d'assurer la cohérence globale du projet. Les interfaces de l'application ont répondu aux exigences, en incorporant des fonctionnalités telles que la visualisation des données pour l'analyse des coûts et des volumes de produits. Les engagements avec l'ICOF ont été essentiels pour valider les choix de conception, confirmant l'alignement de l'application sur les exigences du monde réel.",
+      bilan:
+        "En conclusion, la collaboration a abouti à une application informée, capable de présenter la BI pour les solutions d'hébergement, ainsi que l'analyse des coûts et des métriques pour le secteur de la banque, de la finance et de l'assurance. La synergie entre les membres de l'équipe a permis d'unir les efforts pour atteindre les objectifs du projet et offrir une expérience utilisateur exceptionnelle.",
+      competence:
+        "L'effort du groupe a mis en évidence un large éventail de compétences décrites dans le programme d'études du BTS SIO. La répartition et la coordination des tâches ont mis en évidence notre capacité à concevoir et à maintenir des solutions d'information. Le développement de l'application PHP et la gestion d'une base de données MariaDB ont consolidé nos prouesses techniques. Les interactions tout au long du projet ont démontré nos compétences en matière de communication et de gestion de projet. Essentiellement, ce projet était une application complète des compétences du BTS SIO, amplifiant notre compréhension générale du travail d'équipe dans le développement de logiciels.",
       showGithub: true,
-      showLink: true,
+      showLink: false,
       category: "PHP",
     },
     {
