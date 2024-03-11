@@ -132,7 +132,7 @@ export default function CardArticle() {
     },
     {
       title: "DCS",
-      desc: "Ce projet contient une étude de cas en Business Intelligence (BI). L'objectif est de créer une solution d'hébergement informatique et de réaliser une analyse des coûts et des métriques associées.",
+      desc: "Ce projet PHP contient une étude de cas en Business Intelligence (BI). L'objectif est de créer une solution d'hébergement informatique et de réaliser une analyse des coûts et des métriques associées.",
       imgUrl: "dcs.png",
       link: "",
       linkUrl: "https://github.com/y28lyn/dcs",
