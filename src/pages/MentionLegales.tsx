@@ -10,9 +10,9 @@ const MentionLegales = () => {
         <section className="mt-6">
           <h2 className="text-xl font-bold">Responsable du Site Web</h2>
           <p>Responsable éditorial : Ilyes BEIRADE</p>
-          <p>Adresse : #</p>
-          <p>Téléphone : #</p>
-          <p>E-mail : #</p>
+          <p>Adresse : 210 Avenue Franklin Roosevelt</p>
+          <p>Téléphone : +3377890744</p>
+          <p>E-mail : i.beirade@gmail.com</p>
         </section>
 
         <section className="mt-6">
