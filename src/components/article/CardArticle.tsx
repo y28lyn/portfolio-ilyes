@@ -146,7 +146,7 @@ export default function CardArticle() {
       title: "DCS",
       desc: "Ce projet PHP contient une étude de cas en Business Intelligence (BI). L'objectif est de créer une solution d'hébergement informatique et de réaliser une analyse des coûts et des métriques associées.",
       imgUrl: "dcs.png",
-      link: "",
+      link: "http://dcs.infinityfreeapp.com/",
       linkUrl: "https://github.com/y28lyn/dcs",
       titleModal: "DCS",
       contexte:
@@ -162,7 +162,7 @@ export default function CardArticle() {
       competence:
         "L'effort du groupe a mis en évidence un large éventail de compétences décrites dans le programme d'études du BTS SIO. La répartition et la coordination des tâches ont mis en évidence notre capacité à concevoir et à maintenir des solutions d'information. Le développement de l'application PHP et la gestion d'une base de données MariaDB ont consolidé nos prouesses techniques. Les interactions tout au long du projet ont démontré nos compétences en matière de communication et de gestion de projet. Essentiellement, ce projet était une application complète des compétences du BTS SIO, amplifiant notre compréhension générale du travail d'équipe dans le développement de logiciels.",
       showGithub: true,
-      showLink: false,
+      showLink: true,
       category: "PHP",
     },
     {
