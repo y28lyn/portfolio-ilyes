@@ -43,7 +43,7 @@ const ExperienceItem: React.FC<ExperienceItemProps & { invert?: boolean }> = ({
 }) => {
   const bgClass = invert ? "bg-gray-800" : "bg-gray-900";
   return (
-    <div className={`p-6 w-fit h-fit shadow-lg rounded ${bgClass} text-white`}>
+    <div className={`p-6 h-auto shadow-lg rounded ${bgClass} text-white`}>
       <div className="items-center justify-between text-base">
         <div className="flex flex-row items-center">
           <img
@@ -61,7 +61,7 @@ const ExperienceItem: React.FC<ExperienceItemProps & { invert?: boolean }> = ({
           </div>
         </div>
         <div
-          className={`text-sm md:text-center py-1 px-2 rounded mb-2 mt-2 ${timePeriod.color}`}
+          className={`text-[13px] md:text-sm md:text-center py-1 px-2 rounded mb-2 mt-2 ${timePeriod.color}`}
         >
           {timePeriod.year}
         </div>
