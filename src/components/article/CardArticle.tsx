@@ -211,35 +211,39 @@ export default function CardArticle() {
 
   return (
     <div className="bg-[#000302] p-10">
-      <div className="w-fit mx-auto p-3 rounded grid md:grid-cols-4 grid-cols-2 gap-3 justify-center bg-slate-800 text-white mb-4">
+      <div className="w-fit mx-auto p-1 rounded grid md:grid-cols-4 grid-cols-2 gap-3 justify-center bg-slate-800 text-white mb-4">
         <button
           onClick={resetCategory}
-          className={`px-4 py-2 rounded bg-blue-500 text-white font-bold ${
-            activeCategory === null && "bg-blue-700"
+          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+            activeCategory === null &&
+            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
           }`}
         >
           Voir tous
         </button>
         <button
           onClick={() => handleCategoryChange("React")}
-          className={`px-4 py-2 rounded bg-blue-500 text-white font-bold ${
-            activeCategory === "React" && "bg-blue-700"
+          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+            activeCategory === "React" &&
+            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
           }`}
         >
           ReactJS
         </button>
         <button
           onClick={() => handleCategoryChange("PHP")}
-          className={`px-4 py-2 rounded bg-blue-500 text-white font-bold ${
-            activeCategory === "PHP" && "bg-blue-700"
+          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+            activeCategory === "PHP" &&
+            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
           }`}
         >
           PHP
         </button>
         <button
           onClick={() => handleCategoryChange("Reseau")}
-          className={`px-4 py-2 rounded bg-blue-500 text-white font-bold ${
-            activeCategory === "Reseau" && "bg-blue-700"
+          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+            activeCategory === "Reseau" &&
+            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
           }`}
         >
           Réseau

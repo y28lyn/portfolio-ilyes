@@ -53,11 +53,11 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
   return (
     <>
       <div
-        className={`${props.cardColor} rounded-lg overflow-hidden shadow-lg`}
+        className={`${props.cardColor} rounded-lg overflow-hidden shadow-lg flex-grow flex flex-col`}
       >
         <img
           alt="Placeholder image"
-          className="object-cover w-full h-[12rem]"
+          className="object-cover w-full h-auto"
           height="200"
           src={props.imgUrl}
           style={{
@@ -66,12 +66,12 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
           }}
           width="350"
         />
-        <div className="p-6 md:h-[16rem] flex flex-col flex-grow">
+        <div className="p-6 h-auto flex flex-col flex-grow">
           <h2 className="text-lg md:text-xl text-white font-bold mb-2">
             {props.title}
           </h2>
           <p className="text-gray-200">{props.desc}</p>
-          <div className="md:mt-auto mt-5 flex flex-row gap-2 items-end">
+          <div className="mt-5 flex flex-row gap-2 items-end flex-grow">
             <button
               onClick={openModal}
               className="w-32 p-1 mr-1 inline-flex items-center justify-center rounded font-medium border bg-background px-4 py-2 text-xs text-white border-white transition ease-in-out delay-150 md:hover:scale-105 duration-300"

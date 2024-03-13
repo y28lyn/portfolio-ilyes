@@ -22,8 +22,12 @@ const VeilleArticle: React.FC<VeilleProps> = (props: VeilleProps) => {
         <div className="relative">
           <a href={props.linkUrl} target="_blank" rel="noopener noreferrer">
             <img
-              className="object-cover w-full h-[12rem]"
+              className="object-cover w-full h-auto"
               src={props.imgUrl}
+              style={{
+                aspectRatio: "350/200",
+                objectFit: "cover",
+              }}
               alt=""
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-100 md:opacity-0 md:hover:opacity-100 transition-opacity">
