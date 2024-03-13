@@ -45,7 +45,9 @@ const ExperienceItem: React.FC<ExperienceItemProps & { invert?: boolean }> = ({
 }) => {
   const bgClass = invert ? "bg-gray-800" : "bg-gray-900";
   return (
-    <div className={`p-6 w-1/3 h-auto shadow-lg rounded ${bgClass} text-white`}>
+    <div
+      className={`p-6 w-full md:w-1/3 h-auto shadow-lg rounded ${bgClass} text-white`}
+    >
       <div className="items-center justify-between text-base">
         <div className="flex flex-row items-center">
           <img
