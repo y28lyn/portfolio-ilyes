@@ -65,7 +65,7 @@ const ExperienceItem: React.FC<ExperienceItemProps & { invert?: boolean }> = ({
           </div>
         </div>
         <div
-          className={`text-[10px] md:text-sm md:text-center py-1 px-2 rounded mb-2 mt-2 ${timePeriod.color}`}
+          className={`text-[10px] md:text-sm md:text-center py-0 md:py-1 px-2 rounded mb-2 mt-2 ${timePeriod.color}`}
         >
           {timePeriod.year}
         </div>
