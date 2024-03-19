@@ -166,6 +166,23 @@ export default function CardArticle() {
       category: "PHP",
     },
     {
+      title: "Track It",
+      desc: "Track It est une application qui permet aux utilisateurs de suivre leur prise de médicaments afin de ne pas oublier s'ils les ont pris ou non. Les utilisateurs peuvent enregistrer, modifier et supprimer les médicaments pris.",
+      imgUrl: "https://jinoh.co/wp-content/uploads/2022/01/netMauiLogo.webp",
+      link: "",
+      linkUrl: "",
+      titleModal: "Track It",
+      contexte: "",
+      besoin: "",
+      environnement: "",
+      realisation: "",
+      bilan: "",
+      competence: "",
+      showGithub: false,
+      showLink: false,
+      category: ".NET",
+    },
+    {
       title: "GLPI",
       desc: "GLPI simplifie la gestion informatique. Suivi des actifs, gestion des tickets, inventaires simples. Open-source, convivial, optimisez la productivité dès l'installation.",
       imgUrl: "glpi.png",
@@ -211,7 +228,7 @@ export default function CardArticle() {
 
   return (
     <div className="bg-[#000302] p-10">
-      <div className="w-fit mx-auto p-1 rounded grid md:grid-cols-4 grid-cols-2 gap-3 justify-center bg-slate-800 text-white mb-4">
+      <div className="w-fit mx-auto p-1 rounded grid md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-slate-800 text-white mb-8">
         <button
           onClick={resetCategory}
           className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
@@ -219,7 +236,7 @@ export default function CardArticle() {
             "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
           }`}
         >
-          Voir tous
+          Tous
         </button>
         <button
           onClick={() => handleCategoryChange("React")}
@@ -238,6 +255,15 @@ export default function CardArticle() {
           }`}
         >
           PHP
+        </button>
+        <button
+          onClick={() => handleCategoryChange(".NET")}
+          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+            activeCategory === ".NET" &&
+            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
+          }`}
+        >
+          .NET
         </button>
         <button
           onClick={() => handleCategoryChange("Reseau")}
