@@ -57,6 +57,17 @@ const Veille = () => {
       linkUrl:
         "https://www.vie-publique.fr/eclairage/19410-politique-du-handicap-qua-change-la-loi-de-2005",
     },
+    {
+      source: "01net",
+      date: "8 Mars, 2024",
+      author: "Mickaël Bazoge",
+      title: "Accessibilité sur iOS 18",
+      desc: "Apple a à cœur d’intégrer l’accessibilité dans ses systèmes d’exploitation, afin que tout le monde puisse utiliser ses appareils — y compris ceux qui ont un handicap, peu importe sa nature. iOS 18 devrait apporter des nouveautés dans ce domaine.",
+      imgUrl:
+        "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      linkUrl:
+        "https://www.01net.com/actualites/de-nouvelles-fonctions-daccessibilite-dans-ios-18-et-macos-15.html",
+    },
   ];
 
   return (
