@@ -41,7 +41,7 @@ const Veille = () => {
       date: "6 Janvier, 2024",
       author: "F. Rihouay",
       title: "Contrôler son environnement par la pensée",
-      desc: "À Toronto, une technologie inédite permet à de jeunes enfants lourdement handicapés de jouer, peindre ou encore d’écouter de la musique comme n’importe quel autre enfant.",
+      desc: "À Toronto, une technologie inédite permet à de jeunes enfants lourdement handicapés de jouer, peindre ou encore d'écouter de la musique comme n'importe quel autre enfant.",
       imgUrl: "arte.png",
       linkUrl:
         "https://www.arte.tv/fr/videos/118414-000-A/handicap-controler-son-environnement-par-la-pensee/",
@@ -62,7 +62,7 @@ const Veille = () => {
       date: "8 Mars, 2024",
       author: "Mickaël Bazoge",
       title: "Accessibilité sur iOS 18",
-      desc: "Apple a à cœur d’intégrer l’accessibilité dans ses systèmes d’exploitation, afin que tout le monde puisse utiliser ses appareils — y compris ceux qui ont un handicap, peu importe sa nature. iOS 18 devrait apporter des nouveautés dans ce domaine.",
+      desc: "Apple a à cœur d'intégrer l'accessibilité dans ses systèmes d'exploitation, afin que tout le monde puisse utiliser ses appareils — y compris ceux qui ont un handicap, peu importe sa nature. iOS 18 devrait apporter des nouveautés dans ce domaine.",
       imgUrl:
         "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       linkUrl:
