@@ -99,7 +99,7 @@ const Veille = () => {
             />
           ))}
         </div>
-        <div>
+        <div className="mt-20">
           <Article
             title="Ma réponse à la problématique"
             subtitle="Comment les nouvelles technologies peuvent-elles aider les personnes en situation de handicap au quotidien ?"

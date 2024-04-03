@@ -12,7 +12,7 @@ const Article: React.FC<ArticleProps> = ({
   backgroundImageUrl,
 }) => {
   return (
-    <section className="overflow-hidden bg-white dark:bg-[#000302] pt-28 px-10 -mt-10">
+    <section className="bg-white dark:bg-[#000302]">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid items-center grid-cols-1 md:grid-cols-2">
           <div>
@@ -27,9 +27,9 @@ const Article: React.FC<ArticleProps> = ({
             </p>
           </div>
 
-          <div className="ml-10 md:mt-0 mt-8">
+          <div className="ml-0 md:ml-10 md:mt-0 mt-8">
             <img
-              className="w-full h-[110vh] xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110 rounded shadow object-cover"
+              className="hidden md:block w-full h-[35rem] xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110 rounded shadow object-cover"
               src={backgroundImageUrl}
               alt=""
             />
