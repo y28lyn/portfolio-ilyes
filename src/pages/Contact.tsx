@@ -132,7 +132,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="w-full lg:w-1/2 xl:w-5/12">
-                <div className="relative rounded-[10px] border-[1px] border-gray-200 p-6 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#101314] dark:bg-slate-800 dark:text-white dark:shadow-none">
+                <div className="relative rounded border-[1px] border-gray-200 p-6 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#101314] dark:bg-slate-800 dark:text-white dark:shadow-none">
                   <form onSubmit={handleSubmit}>
                     <div className="mb-6">
                       <input
