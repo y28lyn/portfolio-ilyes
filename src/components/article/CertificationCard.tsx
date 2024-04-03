@@ -142,7 +142,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
         </div>
         <div className="p-6 mt-auto flex md:flex-row gap-6 flex-col justify-start items-start md:justify-between md:items-center pt-1">
           <div className="flex flex-row gap-2 items-center">
-            <div className="p-2 rounded-lg bg-[#101314] dark:bg-transparent">
+            <div className="p-2 rounded-lg bg-[#101314] dark:bg-slate-950">
               {svg}
             </div>
             <p className="text-white">{date}</p>
