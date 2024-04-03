@@ -228,48 +228,48 @@ export default function CardArticle() {
 
   return (
     <div className="bg-white dark:bg-[#000302] p-10">
-      <div className="w-fit mx-auto p-2 rounded grid md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-blue-300 dark:bg-slate-800 text-[#000302] dark:text-white mb-8">
+      <div className="w-fit mx-auto p-2 rounded grid md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-blue-300 dark:bg-slate-800 text-white mb-8">
         <button
           onClick={resetCategory}
-          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
+          className={`px-4 py-2 rounded bg-blue-400 hover:bg-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out font-bold ${
             activeCategory === null &&
-            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
+            "bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           Tous
         </button>
         <button
           onClick={() => handleCategoryChange("React")}
-          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
+          className={`px-4 py-2 rounded bg-blue-400 hover:bg-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out font-bold ${
             activeCategory === "React" &&
-            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
+            "bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           ReactJS
         </button>
         <button
           onClick={() => handleCategoryChange("PHP")}
-          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
+          className={`px-4 py-2 rounded bg-blue-400 hover:bg-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out  font-bold ${
             activeCategory === "PHP" &&
-            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
+            "bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           PHP
         </button>
         <button
           onClick={() => handleCategoryChange(".NET")}
-          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
+          className={`px-4 py-2 rounded bg-blue-400 hover:bg-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out font-bold ${
             activeCategory === ".NET" &&
-            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
+            "bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           .NET
         </button>
         <button
           onClick={() => handleCategoryChange("Reseau")}
-          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
+          className={`px-4 py-2 rounded bg-blue-400 hover:bg-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out font-bold ${
             activeCategory === "Reseau" &&
-            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
+            "bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           Réseau

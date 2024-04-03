@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface NavLink {
   to: string;
@@ -38,6 +38,7 @@ const NavItem: React.FC<NavItemProps & { onClick?: () => void }> = ({
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const location = useLocation();
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -80,7 +81,10 @@ const Navbar = () => {
     <section>
       <div
         className={`fixed w-full top-0 left-0 transition duration-300 ease-in-out z-50 ${
-          hasScrolled
+          hasScrolled ||
+          location.pathname === "/politique_confidentialite" ||
+          location.pathname === "/conditions_utilisation" ||
+          location.pathname === "/mention_legales"
             ? "bg-black bg-opacity-75 backdrop-filter backdrop-blur-lg"
             : ""
         }`}

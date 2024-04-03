@@ -1,7 +1,7 @@
 const PolitiqueConfidentialite = () => {
   return (
     <>
-      <div className="bg-[#000302] text-white pb-10 pt-20 px-10 md:p-28">
+      <div className="bg-white text-[#000302] dark:bg-[#000302] dark:text-white pb-10 pt-20 px-10 md:p-28">
         <h1 className="text-3xl font-bold">Politique de Confidentialité</h1>
         <p className="text-sm">
           <strong>Date de la Dernière Mise à Jour :</strong> 19/10/2023

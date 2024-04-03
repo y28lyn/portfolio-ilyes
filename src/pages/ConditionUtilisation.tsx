@@ -1,7 +1,7 @@
 const ConditionUtilisation = () => {
   return (
     <>
-      <div className="bg-[#000302] text-white pb-10 pt-20 px-10 md:p-28">
+      <div className="bg-white text-[#000302] dark:bg-[#000302] dark:text-white pb-10 pt-20 px-10 md:p-28">
         <h1 className="text-3xl font-bold">Conditions d'utilisation</h1>
         <p className="text-sm">
           <strong>Date de la Dernière Mise à Jour :</strong> 12/12/2023
@@ -19,7 +19,7 @@ const ConditionUtilisation = () => {
               href="https://www.tailbits.com/legal/licensing-agreement"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline ml-1 hover:text-gray-200"
+              className="underline ml-1 hover:text-gray-500 dark:hover:text-gray-200"
             >
               licence applicable de Tailbits
             </a>
@@ -60,7 +60,7 @@ const ConditionUtilisation = () => {
               href="https://www.tailbits.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline ml-1 hover:text-gray-200"
+              className="underline ml-1 hover:text-gray-500 dark:hover:text-gray-200"
             >
               le site officiel de Tailbits
             </a>
