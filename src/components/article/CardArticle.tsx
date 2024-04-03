@@ -7,7 +7,7 @@ export default function CardArticle() {
     {
       title: "Inolib",
       desc: "Optimisation du site INOLIB post-lancement. Améliorations d'images et de style avec TailwindCSS. Collaboration cruciale pour renforcer la réputation et l'expérience utilisateur.",
-      imgUrl: "/inolib.png",
+      imgUrl: "/inolib.webp",
       link: "https://www.inolib.com/",
       linkUrl: "https://github.com/inolib/website",
       titleModal: "Inolib",
@@ -30,7 +30,7 @@ export default function CardArticle() {
     {
       title: "InoTest",
       desc: "Projet majeur sur les tests d'accessibilité numérique et création d'une librairie de composants avec ReactJS, Typescript, TailwindCSS et GIT.",
-      imgUrl: "inotest.png",
+      imgUrl: "inotest.webp",
       link: "https://inotest.vercel.app/",
       linkUrl: "https://github.com/Dindonix/InoTest",
       titleModal: "InoTest",
@@ -53,7 +53,7 @@ export default function CardArticle() {
     {
       title: "Accessible Components",
       desc: "Accessible Components est une mini-librairie, en cours de création, que je développe en ReactJS / Typescript de composants accessibles aux personnes handicapées respectant les paternes W3C.",
-      imgUrl: "accessiblecomponents.png",
+      imgUrl: "accessiblecomponents.webp",
       link: "https://accessible-component.vercel.app/",
       linkUrl: "https://github.com/y28lyn/accessible-components",
       titleModal: "Accessible Components",
@@ -76,7 +76,7 @@ export default function CardArticle() {
     {
       title: "Autoclean",
       desc: "Le site web Autoclean est une vitrine en ligne destinée à présenter l'entreprise et ses services. Il a été développé en utilisant les technologies React.js, TypeScript et Tailwind CSS.",
-      imgUrl: "autoclean.png",
+      imgUrl: "autoclean.webp",
       link: "https://autoclean-lyon.fr/",
       linkUrl: "https://github.com/y28lyn/autoclean",
       titleModal: "Autoclean",
@@ -99,7 +99,7 @@ export default function CardArticle() {
     {
       title: "SGRC",
       desc: "La Table d'Hélène est une application PHP simplifiant la prise de commandes et la gestion des tables, plats, boissons, et menus pour le lycée Hélène Boucher.",
-      imgUrl: "sgrc.png",
+      imgUrl: "sgrc.webp",
       link: "https://brodet.fr/SGRC/",
       linkUrl: "https://github.com/y28lyn/sgrc",
       titleModal: "SGRC",
@@ -122,7 +122,7 @@ export default function CardArticle() {
     {
       title: "Renaissance Urbaine",
       desc: "Renaissance Urbaine est un projet PHP simulant des inscriptions aux activités d'une manifestation proposée par une association, comportant des profils de participants, de responsables et d'administrateurs.",
-      imgUrl: "manif.png",
+      imgUrl: "manif.webp",
       link: "https://manif-ilyes.000webhostapp.com/",
       linkUrl: "https://github.com/y28lyn/manif",
       titleModal: "Renaissance Urbaine",
@@ -145,7 +145,7 @@ export default function CardArticle() {
     {
       title: "DCS",
       desc: "Ce projet PHP contient une étude de cas en Business Intelligence (BI). L'objectif est de créer une solution d'hébergement informatique et de réaliser une analyse des coûts et des métriques associées.",
-      imgUrl: "dcs.png",
+      imgUrl: "dcs.webp",
       link: "http://dcs.infinityfreeapp.com/",
       linkUrl: "https://github.com/y28lyn/dcs",
       titleModal: "DCS",
@@ -185,7 +185,7 @@ export default function CardArticle() {
     {
       title: "GLPI",
       desc: "GLPI simplifie la gestion informatique. Suivi des actifs, gestion des tickets, inventaires simples. Open-source, convivial, optimisez la productivité dès l'installation.",
-      imgUrl: "glpi.png",
+      imgUrl: "glpi.webp",
       link: "#",
       linkUrl: "#",
       titleModal: "GLPI",
@@ -219,7 +219,7 @@ export default function CardArticle() {
 
   const filterProjectsByCategory = (project: any) => {
     if (!activeCategory) {
-      return true; // Afficher tous les projets si aucune catégorie active
+      return true;
     }
     return project.category === activeCategory;
   };
@@ -227,49 +227,49 @@ export default function CardArticle() {
   const filteredProjects = projects.filter(filterProjectsByCategory);
 
   return (
-    <div className="bg-[#000302] p-10">
-      <div className="w-fit mx-auto p-1 rounded grid md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-slate-800 text-white mb-8">
+    <div className="bg-white dark:bg-[#000302] p-10">
+      <div className="w-fit mx-auto p-2 rounded grid md:grid-cols-5 grid-cols-3 gap-3 justify-center bg-blue-300 dark:bg-slate-800 text-[#000302] dark:text-white mb-8">
         <button
           onClick={resetCategory}
-          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
             activeCategory === null &&
-            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
+            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           Tous
         </button>
         <button
           onClick={() => handleCategoryChange("React")}
-          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
             activeCategory === "React" &&
-            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
+            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           ReactJS
         </button>
         <button
           onClick={() => handleCategoryChange("PHP")}
-          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
             activeCategory === "PHP" &&
-            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
+            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           PHP
         </button>
         <button
           onClick={() => handleCategoryChange(".NET")}
-          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
             activeCategory === ".NET" &&
-            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
+            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           .NET
         </button>
         <button
           onClick={() => handleCategoryChange("Reseau")}
-          className={`px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 duration-200 ease-in-out text-white font-bold ${
+          className={`px-4 py-2 rounded bg-slate-200 hover:bg-slate-400 dark:bg-blue-500 dark:hover:bg-blue-600 duration-200 ease-in-out text-[#000302] dark:text-white font-bold ${
             activeCategory === "Reseau" &&
-            "bg-blue-700 hover:bg-blue-800 duration-200 ease-in-out"
+            "bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 dark:hover:bg-blue-700 duration-200 ease-in-out"
           }`}
         >
           Réseau
@@ -286,7 +286,11 @@ export default function CardArticle() {
             link={project.link}
             linkUrl={project.linkUrl}
             titleModal={project.titleModal}
-            cardColor={index % 2 === 0 ? "bg-gray-900" : "bg-gray-800"}
+            cardColor={
+              index % 2 === 0
+                ? "bg-blue-500 dark:bg-gray-900"
+                : "bg-blue-400 dark:bg-gray-800"
+            }
             showGitHubButton={project.showGithub}
             showLinkButton={project.showLink}
             contexte={project.contexte}

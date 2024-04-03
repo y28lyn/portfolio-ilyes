@@ -43,7 +43,9 @@ const ExperienceItem: React.FC<ExperienceItemProps & { invert?: boolean }> = ({
   logoUrl,
   invert = false,
 }) => {
-  const bgClass = invert ? "bg-gray-800" : "bg-gray-900";
+  const bgClass = invert
+    ? "bg-blue-400 dark:bg-gray-800"
+    : "bg-blue-500 dark:bg-gray-900";
   return (
     <div
       className={`p-6 w-full md:w-1/3 h-auto shadow-lg rounded ${bgClass} text-white`}
@@ -60,7 +62,7 @@ const ExperienceItem: React.FC<ExperienceItemProps & { invert?: boolean }> = ({
             }}
           />
           <div className="ml-6">
-            <h3 className="text-xl font-semibold">{position}</h3>
+            <h3 className="text-sm font-semibold">{position}</h3>
             <p className="text-white">{company}</p>
           </div>
         </div>
@@ -70,7 +72,7 @@ const ExperienceItem: React.FC<ExperienceItemProps & { invert?: boolean }> = ({
           {timePeriod.year}
         </div>
       </div>
-      <div className="mt-2 text-gray-300">
+      <div className="mt-2 text-gray-200">
         <p>{description}</p>
       </div>
     </div>

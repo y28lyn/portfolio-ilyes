@@ -1,329 +1,179 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import "../../style.css";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-const Navbar: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isNavbarBlack, setIsNavbarBlack] = useState(false);
-  const location = useLocation();
+interface NavLink {
+  to: string;
+  title: string;
+}
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-    // Ajouter ou supprimer la classe 'overflow-hidden' lorsque le menu est ouvert ou fermé
-    if (!menuOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
+const navLinks: NavLink[] = [
+  { to: "/", title: "Accueil" },
+  { to: "/parcours", title: "Parcours scolaire" },
+  { to: "/experience", title: "Expériences professionnelles" },
+  { to: "/situation", title: "Situations professionnelles" },
+  { to: "/certification", title: "Certification" },
+  { to: "/veille", title: "Veille technologique" },
+  { to: "/contact", title: "Contact" },
+];
+
+interface NavItemProps {
+  to: string;
+  title: string;
+}
+
+const NavItem: React.FC<NavItemProps & { onClick?: () => void }> = ({
+  to,
+  title,
+  onClick,
+}) => (
+  <Link
+    to={to}
+    className="text-sm font-semibold pb-[0.3rem] md:link link-underline link-underline-black"
+    onClick={onClick}
+  >
+    {title}
+  </Link>
+);
+
+const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    setHasScrolled(offset > 30);
   };
 
-  // Fermer le menu et rétablir le défilement lorsque l'emplacement change
   useEffect(() => {
-    setMenuOpen(false); // Fermer le menu lorsque la page change
-    document.body.classList.remove("overflow-hidden"); // Rétablir le défilement
-  }, [location]);
-
-  useEffect(() => {
-    // Ajoutez une classe CSS pour le fond noir lorsque vous descendez de 50 pixels
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsNavbarBlack(true);
-      } else {
-        setIsNavbarBlack(false);
-      }
-    };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      document.body.classList.remove("overflow-hidden");
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  useEffect(() => {
+    const body = document.body;
+    const originalStyle = window.getComputedStyle(body).overflow;
+    body.style.overflow = isMobileMenuOpen ? "hidden" : originalStyle;
+
+    return () => {
+      body.style.overflow = originalStyle;
+    };
+  }, [isMobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prevState) => !prevState);
+    if (!isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  };
+
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false);
+    document.body.style.overflow = "";
+  };
+
   return (
-    <nav
-      className={`fixed w-full z-50 top-0 left-0 text-white transition ease-in-out duration-300 ${
-        isNavbarBlack
-          ? menuOpen
-            ? "" // Si le menu est ouvert, ne pas appliquer de flou
-            : "bg-[#000302] bg-opacity-50 backdrop-blur-lg" // Appliquer le flou si le menu est fermé
-          : "bg-transparent"
-      }`}
-    >
+    <section>
       <div
-        className={` flex items-center justify-between mx-auto p-3 relative ${
-          menuOpen ? "menu-open-blur" : "" // Classe conditionnelle pour le flou
+        className={`fixed w-full top-0 left-0 transition duration-300 ease-in-out z-50 ${
+          hasScrolled
+            ? "bg-black bg-opacity-75 backdrop-filter backdrop-blur-lg"
+            : ""
         }`}
       >
-        <div className="flex items-center text-white hover:text-gray-200 transition ease-in-out duration-300">
-          <Link to="/" className="flex items-center">
-            <img
-              src="portfolio-icon.png"
-              className="h-8 mr-3"
-              alt="Portfolio Logo"
-            />
-            <span className="self-center text-2xl md:text-xl font-semibold whitespace-nowrap">
-              Portfolio
-            </span>
-          </Link>
-        </div>
-        <div className="flex flex-row font-medium md:py-1 md:mt-1 md:border-0 md:order-2 md:text-[11px]">
-          <a
-            className="text-white hover:text-gray-200 transition ease-in-out duration-300 ml-2 md:block hidden"
-            href="https://www.linkedin.com/in/ilyes-beirade-86920b222/"
-            target="blank"
-          >
-            <span className="sr-only">LinkedIn</span>
-            <svg
-              height="24"
-              width="24"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M21.35 0H2.65C1.194 0 0 1.194 0 2.65v18.7C0 22.805 1.194 24 2.65 24h18.7c1.456 0 2.65-1.194 2.65-2.65V2.65C24 1.194 22.806 0 21.35 0zM7.647 20.994h-3.77V9.273h3.77v11.72zM5.262 8.262a2.192 2.192 0 110-4.384 2.192 2.192 0 010 4.384zM20.994 20.994h-3.773v-5.984c0-1.416-.026-3.24-1.974-3.24-1.975 0-2.275 1.54-2.275 3.126v6.098h-3.77V9.273h3.707v1.656h.049c.514-.977 1.77-2.013 3.659-2.013 3.92 0 4.635 2.578 4.635 5.94v6.138z"></path>
-            </svg>
-          </a>
-          <span className="hidden md:block bg-white h-1 w-1 rounded-xl ml-2 my-auto"></span>
-          <a
-            className="text-white hover:text-gray-200 transition ease-in-out duration-300 ml-2 md:block hidden"
-            href="https://github.com/y28lyn"
-            target="blank"
-          >
-            <span className="sr-only">Github</span>
-            <svg
-              height="24"
-              width="24"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
+        <div className="px-4 mx-auto sm:px-6 lg:px-8">
+          <nav className="relative flex items-center justify-between h-16 md:h-[12vh]">
+            <div className="hidden md:flex flex-row gap-2">
+              <Link to="/" className="flex flex-row gap-2">
+                <img src="/portfolio-icon.webp" alt="" className="w-8 h-8" />
+                <h2 className="text-white text-2xl font-bold">Portfolio</h2>
+              </Link>
+            </div>
 
-          <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden"
-            aria-controls="navbar-sticky"
-            aria-expanded={menuOpen ? "true" : "false"}
-            onClick={toggleMenu}
-          >
-            <span className="sr-only">Ouvrir le menu</span>
-            {menuOpen ? (
-              // Afficher la croix lorsque le menu est ouvert
+            <div className="hidden lg:flex lg:items-center lg:space-x-10 text-lg text-white">
+              {navLinks.map((link) => (
+                <NavItem key={link.title} {...link} />
+              ))}
+            </div>
+
+            <div className="md:hidden block">
+              <Link to="/" className="flex flex-row gap-2">
+                <img src="/portfolio-icon.webp" alt="" className="w-8 h-8" />
+                <h2 className="text-white text-2xl font-bold">Portfolio</h2>
+              </Link>
+            </div>
+
+            <button
+              type="button"
+              className="inline-flex p-2 ml-5 text-white transition-all duration-200 rounded-md lg:hidden"
+              onClick={toggleMobileMenu}
+            >
               <svg
-                className="w-5 h-5"
-                aria-hidden="true"
+                className="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-label="Open Menu"
               >
                 <path
-                  stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
+                  d="M4 6h16M4 12h16m-7 6h7"
                 />
               </svg>
-            ) : (
-              // Afficher les lignes lorsque le menu est fermé
-              <svg
-                className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
-            )}
-          </button>
-          {menuOpen && (
-            // Afficher le menu mobile sous forme de carré blanc en bas de la croix
-            <div
-              className="absolute bottom-0 left-0 top-16 w-full h-screen bg-[#000302] bg-opacity-80 backdrop-blur-lg py-8 px-2 z-50"
-              id="navbar-sticky"
-            >
-              <ul className="flex flex-col font-medium bg-transpaent text-white rounded shadow-sm -mt-4">
-                <li>
-                  <Link
-                    to="/"
-                    className="block py-2 pl-3 pr-4 md:link md:link-underline md:link-underline-black"
-                    aria-current="page"
-                  >
-                    Accueil
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/parcours"
-                    className="block py-2 pl-3 pr-4 md:link md:link-underline md:link-underline-black"
-                  >
-                    Parcours scolaire
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/experience"
-                    className="block py-2 pl-3 pr-4 md:link md:link-underline md:link-underline-black"
-                  >
-                    Expériences professionnelles
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/situation"
-                    className="block py-2 pl-3 pr-4 md:link md:link-underline md:link-underline-black"
-                  >
-                    Situations professionnelles
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/certification"
-                    className="block py-2 pl-3 pr-4 md:link md:link-underline md:link-underline-black"
-                  >
-                    Certification
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/veille"
-                    className="block py-2 pl-3 pr-4 md:link md:link-underline md:link-underline-black"
-                  >
-                    Veille technologique
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contact"
-                    className="block py-2 pl-3 pr-4 md:link md:link-underline md:link-underline-black"
-                  >
-                    Contact
-                  </Link>
-                </li>
-                <span className="w-[98%] bg-white h-[1px] px-2 mx-auto"></span>
-                <div className="flex flex-row">
-                  <li>
-                    <span className="sr-only">LinkedIn</span>
-                    <a
-                      className="block py-2 pr-4 ml-2 "
-                      href="https://www.linkedin.com/in/ilyes-beirade-86920b222/"
-                      target="blank"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="#fff"
-                      >
-                        <path d="M21.35 0H2.65C1.194 0 0 1.194 0 2.65v18.7C0 22.805 1.194 24 2.65 24h18.7c1.456 0 2.65-1.194 2.65-2.65V2.65C24 1.194 22.806 0 21.35 0zM7.647 20.994h-3.77V9.273h3.77v11.72zM5.262 8.262a2.192 2.192 0 110-4.384 2.192 2.192 0 010 4.384zM20.994 20.994h-3.773v-5.984c0-1.416-.026-3.24-1.974-3.24-1.975 0-2.275 1.54-2.275 3.126v6.098h-3.77V9.273h3.707v1.656h.049c.514-.977 1.77-2.013 3.659-2.013 3.92 0 4.635 2.578 4.635 5.94v6.138z"></path>
-                      </svg>
-                    </a>
-                  </li>
-                  <li className="-ml-2">
-                    <span className="sr-only">Github</span>
-                    <a
-                      className="block py-2 pr-4 ml-2 "
-                      href="https://github.com/y28lyn"
-                      target="blank"
-                    >
-                      <svg
-                        fill="#fff"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 32 32"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M16 0C7.164 0 0 7.163 0 16c0 7.069 4.577 13.07 10.943 15.165.8.148 1.092-.348 1.092-.77 0-.382-.014-1.389-.02-2.72-4.45.97-5.391-2.148-5.391-2.148-.727-1.848-1.776-2.34-1.776-2.34-1.452-.991.11-.973.11-.973 1.605.113 2.448 1.65 2.448 1.65 1.425 2.44 3.743 1.737 4.656 1.328.145-1.033.562-1.738 1.022-2.135-3.572-.408-7.33-1.787-7.33-7.966 0-1.758.627-3.192 1.65-4.313-.16-.41-.717-2.046.157-4.262 0 0 1.35-.434 4.42 1.654a14.53 14.53 0 014.11 0c3.066-2.088 4.416-1.654 4.416-1.654.874 2.216.317 3.852.157 4.262 1.024 1.121 1.647 2.554 1.647 4.313 0 6.192-3.762 7.555-7.34 7.958.577.496 1.088 1.478 1.088 2.974 0 2.147-.02 3.879-.02 4.407 0 .426.287.923 1.1.768 6.365-2.097 10.941-8.1 10.941-15.167C32 7.163 24.836 0 16 0"></path>
-                      </svg>
-                    </a>
-                  </li>
-                </div>
-              </ul>
-            </div>
-          )}
-        </div>
-        <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-sticky"
-        >
-          <ul className="text-[1vw] flex flex-row p-4 md:p-0 mt-4 font-medium md:space-x-4 md:mt-1 md:border-0">
-            <li>
-              <Link
-                to="/"
-                className="py-2 pl-3 pr-4 text-white link link-underline link-underline-black"
-              >
-                Accueil
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/parcours"
-                className="py-2 pl-3 pr-4 text-white link link-underline link-underline-black"
-              >
-                Parcours scolaire
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/experience"
-                className="py-2 pl-3 pr-4 text-white link link-underline link-underline-black"
-              >
-                Expériences professionnelles
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/situation"
-                className="py-2 pl-3 pr-4 text-white link link-underline link-underline-black"
-              >
-                Situations professionnelles
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/certification"
-                className="py-2 pl-3 pr-4 text-white link link-underline link-underline-black"
-              >
-                Certification
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/veille"
-                className="py-2 pl-3 pr-4 text-white link link-underline link-underline-black"
-              >
-                Veille technologique
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="py-2 pl-3 pr-4 text-white link link-underline link-underline-black"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
+            </button>
+          </nav>
         </div>
       </div>
-    </nav>
+
+      {isMobileMenuOpen && (
+        <nav className="py-4 fixed w-full h-full bg-white dark:bg-[#101314] lg:hidden z-50">
+          <div className="px-4 mx-auto sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between">
+              <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
+                Menu
+              </p>
+
+              <button
+                type="button"
+                className="inline-flex p-2 text-black dark:text-white transition-all duration-200 rounded-md"
+                onClick={toggleMobileMenu}
+                aria-label="Close Menu"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div className="mt-6">
+              <div className="flex flex-col space-y-2 gap-2 text-black dark:text-white">
+                {navLinks.map((link) => (
+                  <NavItem key={link.title} {...link} onClick={closeMenu} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </nav>
+      )}
+    </section>
   );
 };
 

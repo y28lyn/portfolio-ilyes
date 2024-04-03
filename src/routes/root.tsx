@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { ScrollRestoration } from "react-router-dom";
 import Navbar from "../components/header/Navbar";
 import Footer from "../components/footer/Footer";
+import SwitchButton from "../components/SwitchButton";
 
 const Root = () => {
   return (
@@ -9,6 +10,7 @@ const Root = () => {
       <Navbar />
       <ScrollRestoration />
       <Outlet />
+      <SwitchButton />
       <Footer />
     </div>
   );

@@ -42,7 +42,7 @@ const Veille = () => {
       author: "F. Rihouay",
       title: "Contrôler son environnement par la pensée",
       desc: "À Toronto, une technologie inédite permet à de jeunes enfants lourdement handicapés de jouer, peindre ou encore d'écouter de la musique comme n'importe quel autre enfant.",
-      imgUrl: "arte.png",
+      imgUrl: "arte.webp",
       linkUrl:
         "https://www.arte.tv/fr/videos/118414-000-A/handicap-controler-son-environnement-par-la-pensee/",
     },
@@ -83,7 +83,7 @@ const Veille = () => {
           button2Label="Lire plus"
         />
       </header>
-      <main id="main" className="bg-[#000302] p-10">
+      <main id="main" className="p-10 bg-white dark:bg-[#000302]">
         <div className="grid max-w-md grid-cols-1 gap-6 mx-auto lg:grid-cols-3 lg:max-w-full">
           {articlesData.map((article, index) => (
             <VeilleArticle

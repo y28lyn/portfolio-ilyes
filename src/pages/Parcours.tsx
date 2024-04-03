@@ -8,7 +8,7 @@ const Parcours = () => {
       company: "Bac STI2D SIN",
       timePeriod: {
         year: "Sept. 2019 - Juil. 2021",
-        color: "bg-rose-500",
+        color: "bg-rose-300 dark:bg-rose-500",
       },
       logoUrl:
         "https://www.wicona.com/globalassets/wiconafinder-references/france/lycee-la-martiniere/p1-p2-p5-la-martiniere-001.jpg?ts=637888962920000000&w=1440&quality=90&format=jpeg",
@@ -20,9 +20,9 @@ const Parcours = () => {
       company: "BUT Informatique",
       timePeriod: {
         year: "Sept. 2021 - Juil. 2022",
-        color: "bg-emerald-500",
+        color: "bg-emerald-300 dark:bg-emerald-500",
       },
-      logoUrl: "/iutlyon.jpg",
+      logoUrl: "/iutlyon.webp",
       description:
         "À l'IUT Lyon 1 de septembre 2021 à juillet 2022, j'ai poursuivi le BUT Informatique. Mon programme a couvert les bases des réseaux, la programmation (C, Java, SQL/PLSQL, HTML/CSS), et la gestion de projets avec Git. J'ai développé un gestionnaire Excel, une application avec interface homme-machine, des sites vitrines, et acquis une compréhension approfondie de l'architecture informatique.",
     },
@@ -31,7 +31,7 @@ const Parcours = () => {
       company: "BTS SIO SLAM",
       timePeriod: {
         year: "Sept. 2022 - Juil. 2024",
-        color: "bg-blue-500",
+        color: "bg-blue-300 dark:bg-blue-500",
       },
       logoUrl:
         "https://www.expressions-venissieux.fr/wp-content/uploads/2014/08/Brel-1200x801.jpg",
@@ -52,7 +52,7 @@ const Parcours = () => {
           button2Label="Lire plus"
         />
       </header>
-      <main id="main" className="p-10 bg-[#000302]">
+      <main id="main" className="p-10 bg-white dark:bg-[#000302]">
         <ExperienceArticle experiences={parcoursData} />
       </main>
     </>

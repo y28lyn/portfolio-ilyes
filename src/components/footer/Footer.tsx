@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <section className="bg-[#000302]">
-        <div className="block w-[95%] h-[1px] bg-white mx-auto"></div>
+      <section className="bg-white dark:bg-[#000302]">
+        <div className="block w-[95%] h-[1px] bg-[#000302] dark:bg-white mx-auto"></div>
         <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
           <nav className="flex flex-col md:flex-row md:flex-wrap md:items-start items-center justify-center -mx-5 -my-2">
             <div className="px-5 py-2">
               <Link
                 to="/conditions_utilisation"
-                className="text-base leading-6 text-white hover:text-gray-300"
+                className="text-base leading-6 text-[#000302] hover:text-gray-800 dark:text-white dark:hover:text-gray-300"
               >
                 Conditions d'utilisation
               </Link>
@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="px-5 py-2">
               <Link
                 to="/politique_confidentialite"
-                className="text-base leading-6 text-white hover:text-gray-300"
+                className="text-base leading-6 text-[#000302] hover:text-gray-800 dark:text-white dark:hover:text-gray-300"
               >
                 Politique de confidentialité
               </Link>
@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="px-5 py-2">
               <Link
                 to="/mention_legales"
-                className="text-base leading-6 text-white hover:text-gray-300"
+                className="text-base leading-6 text-[#000302] hover:text-gray-800 dark:text-white dark:hover:text-gray-300"
               >
                 Mention légales
               </Link>
@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="flex justify-center mt-8 space-x-6">
             <a
               href="https://www.linkedin.com/in/ilyes-beirade-86920b222/"
-              className="text-gray-200 hover:text-gray-400"
+              className="text-[#000302] hover:text-gray-800 dark:text-white dark:hover:text-gray-300"
             >
               <span className="sr-only">LinkedIn</span>
               <svg
@@ -49,7 +49,7 @@ const Footer = () => {
             </a>
             <a
               href="https://github.com/y28lyn"
-              className="text-gray-200 hover:text-gray-400"
+              className="text-[#000302] hover:text-gray-800 dark:text-white dark:hover:text-gray-300"
             >
               <span className="sr-only">GitHub</span>
               <svg
@@ -66,7 +66,7 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <p className="mt-8 text-base leading-6 text-center text-gray-400">
+          <p className="mt-8 text-base leading-6 text-center text-gray-900 dark:text-gray-400">
             © 2024 BEIRADE Ilyes
           </p>
         </div>

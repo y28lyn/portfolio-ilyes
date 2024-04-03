@@ -4,8 +4,8 @@ interface BannerProps {
   title: string;
   subtitle: string;
   backgroundImageUrl: string;
-  button1Label: string;
-  button1Link: string;
+  button1Label?: string; // Rendre le bouton 1 optionnel
+  button1Link?: string; // Rendre le bouton 1 optionnel
   button2Label: string;
 }
 
@@ -18,7 +18,7 @@ const Banner: React.FC<BannerProps> = ({
   button2Label,
 }) => {
   const scrollToNextSection = () => {
-    const nextSection = document.getElementById("main"); // Remplacez par l'ID de la section suivante
+    const nextSection = document.getElementById("main");
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -37,7 +37,7 @@ const Banner: React.FC<BannerProps> = ({
         />
       </div>
 
-      <div className="absolute inset-0 block bg-black/70 md:block"></div>
+      <div className="absolute inset-0 block bg-black/50 dark:bg-black/70 md:block"></div>
 
       <div className="container mx-auto text-center relative">
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 px-6 md:px-0 text-white">
@@ -45,11 +45,17 @@ const Banner: React.FC<BannerProps> = ({
         </h1>
         <p className="text-xl text-gray-200 mb-8 px-6 md:px-64">{subtitle}</p>
         <div className="space-x-4">
-          <button className="w-25 bg-white text-black outline outline-white p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300">
-            <Link to={button1Link} className="p-5">
-              {button1Label}
-            </Link>
-          </button>
+          {button1Label && button1Link && (
+            <button
+              className={`w-25 bg-white text-black outline outline-white p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300 ${
+                button1Label ? "" : "hidden"
+              }`}
+            >
+              <Link to={button1Link} className="p-5">
+                {button1Label}
+              </Link>
+            </button>
+          )}
           <button
             onClick={scrollToNextSection}
             className="text-white w-25 outline p-1 rounded transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-105 duration-300"

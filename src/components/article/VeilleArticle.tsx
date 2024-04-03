@@ -16,7 +16,9 @@ const VeilleArticle: React.FC<VeilleProps> = (props: VeilleProps) => {
     <>
       <div
         className={`flex flex-col overflow-hidden rounded ${
-          props.isEven ? "bg-gray-900" : "bg-gray-800"
+          props.isEven
+            ? "bg-blue-500 dark:bg-gray-900"
+            : "bg-blue-400 dark:bg-gray-800"
         }`}
       >
         <div className="relative">
@@ -65,7 +67,7 @@ const VeilleArticle: React.FC<VeilleProps> = (props: VeilleProps) => {
           </a>
 
           <div className="absolute top-4 left-4">
-            <span className="px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-gray-700 rounded-sm opacity-90">
+            <span className="px-4 py-2 text-xs font-semibold tracking-widest text-white uppercase bg-blue-300 dark:bg-gray-700 rounded-sm opacity-90">
               {props.source}
             </span>
           </div>

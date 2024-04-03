@@ -24,24 +24,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #000302;
-}
-
-.modal::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(237, 239, 244);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(189, 191, 199);
+  display: none;
 }
 
 .swiper-button-prev,

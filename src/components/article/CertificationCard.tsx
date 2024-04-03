@@ -38,11 +38,11 @@ const Modal: React.FC<{
 
   return (
     <div className="z-50 fixed top-0 left-0 right-0 bottom-0 bg-slate-700 bg-opacity-70 flex items-center justify-center text-justify">
-      <div className="z-50 bg-zinc-900 h-fit w-[90%] md:w-[60%] shadow-2xl p-8 overflow-y-scroll modal rounded-md">
+      <div className="z-50 bg-white dark:bg-[#000302] h-fit w-[90%] md:w-[60%] shadow-2xl p-8 overflow-y-scroll modal rounded-md">
         <div onClick={(e) => e.stopPropagation()} className="text-right">
           <button onClick={closeModal}>
             <svg
-              className="text-white hover:text-red-500 transition-colors duration-300 ease-in-out"
+              className="text-[#000302] dark:text-white hover:text-red-500 dark:hover:text-red-600 transition-colors duration-300 ease-in-out"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -109,22 +109,19 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
   const [isModalOpen, setModalOpen] = useState(false);
   const openModalButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Define a method to toggle the body scroll
   const toggleBodyScroll = (shouldScroll: boolean) => {
     document.body.style.overflow = shouldScroll ? "auto" : "hidden";
   };
 
-  // Use the useEffect hook to listen for changes to isModalOpen
   useEffect(() => {
     toggleBodyScroll(!isModalOpen);
-    // Clean up the toggle effect when the component unmounts or before next effect runs
     return () => toggleBodyScroll(true);
-  }, [isModalOpen]); // Only re-run the effect if isModalOpen changes
+  }, [isModalOpen]);
 
   function closeModal(): void {
     setModalOpen(false);
     if (openModalButtonRef.current) {
-      openModalButtonRef.current.blur(); // Retirer le focus du bouton
+      openModalButtonRef.current.blur();
     }
   }
 
@@ -132,7 +129,9 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
     <>
       <div
         className={`flex flex-col flex-grow h-auto text-card-foreground transform rounded shadow-lg ${
-          isEven ? "bg-gray-900" : "bg-gray-800"
+          isEven
+            ? "bg-blue-500 dark:bg-gray-900"
+            : "bg-blue-400 dark:bg-gray-800"
         }`}
       >
         <div className="flex flex-col space-y-1.5 p-6">
@@ -142,7 +141,12 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
           <p className="text-sm text-white">{issuer}</p>
         </div>
         <div className="p-6 mt-auto flex md:flex-row gap-6 flex-col justify-start items-start md:justify-between md:items-center pt-1">
-          <p className="text-white">{date}</p>
+          <div className="flex flex-row gap-2 items-center">
+            <div className="p-2 rounded-lg bg-[#101314] dark:bg-transparent">
+              {svg}
+            </div>
+            <p className="text-white">{date}</p>
+          </div>
           <div className="flex items-center space-x-2">
             <button
               ref={openModalButtonRef}
@@ -153,7 +157,6 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
             >
               Voir plus
             </button>
-            {svg}
           </div>
         </div>
       </div>
@@ -193,7 +196,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
-      images: ["AWS_Certif_1.png", "AWS_Certif_2.png"],
+      images: ["AWS_Certif_1.webp", "AWS_Certif_2.webp"],
     },
     {
       title: "Cybersecurity Essentials",
@@ -224,7 +227,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
-      images: ["Cyber_1.png"],
+      images: ["Cyber_1.webp"],
     },
     {
       title: "Apprenez à programmer en Python",
@@ -269,7 +272,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
-      images: ["Openclassroom.png"],
+      images: ["Openclassroom.webp"],
     },
     {
       title: "Créez votre site web avec HTML5 et CSS3",
@@ -300,7 +303,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
-      images: ["Openclassroom.png"],
+      images: ["Openclassroom.webp"],
     },
     {
       title: "Apprenez à programmer avec JavaScript",
@@ -345,7 +348,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
-      images: ["Openclassroom.png"],
+      images: ["Openclassroom.webp"],
     },
     {
       title: "Créez une application React complète",
@@ -379,7 +382,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
-      images: ["Openclassroom.png"],
+      images: ["Openclassroom.webp"],
     },
     {
       title: "Codez un site web accessible avec HTML & CSS",
@@ -406,7 +409,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
-      images: ["Openclassroom.png"],
+      images: ["Openclassroom.webp"],
     },
     {
       title: "Concevez un contenu web accessible",
@@ -434,7 +437,7 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
-      images: ["Openclassroom.png"],
+      images: ["Openclassroom.webp"],
     },
     {
       title: "Utilisez ChatGPT pour améliorer votre productivité",
@@ -463,12 +466,12 @@ const CertificationSection: React.FC = () => {
           </g>
         </svg>
       ),
-      images: ["Openclassroom.png"],
+      images: ["Openclassroom.webp"],
     },
   ];
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-[#000302] text-white p-10">
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-white dark:bg-[#000302] text-[#000302] dark:text-white p-10">
       {certificationData.map((certification, index) => (
         <CertificationCard
           isEven={index % 2 === 0}

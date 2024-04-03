@@ -142,11 +142,11 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
 
           {modalOpen && (
             <div className="z-50 fixed top-0 left-0 right-0 bottom-0 bg-slate-900 bg-opacity-70 flex items-center justify-center text-justify">
-              <div className="z-50 bg-zinc-900 h-[70%] w-[90%] md:w-[70%] shadow-2xl p-8 overflow-y-scroll modal rounded-md">
+              <div className="z-50 bg-white dark:bg-[#000302] h-[70%] w-[90%] md:w-[70%] shadow-2xl p-8 overflow-y-scroll modal rounded-md">
                 <div className="flex justify-end mb-5">
                   <button onClick={closeModal}>
                     <svg
-                      className="text-white hover:text-red-500 transition-colors duration-300 ease-in-out"
+                      className="text-[#000302] dark:text-white hover:text-red-500 dark:hover:text-red-600 transition-colors duration-300 ease-in-out"
                       fill="none"
                       height="24"
                       stroke="currentColor"
@@ -164,50 +164,60 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                 </div>
                 <ul>
                   <li>
-                    <h2 className="text-2xl md:text-3xl text-white font-bold mb-2">
+                    <h2 className="text-2xl md:text-3xl text-[#000302] dark:text-white font-bold mb-2">
                       {props.titleModal}
                     </h2>
-                    <div className="block w-full h-[1px] bg-white mx-auto"></div>
+                    <div className="block w-full h-[1px] bg-[#000302] dark:bg-white mx-auto"></div>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-2">
                       Contexte
                     </h2>
-                    <p className="text-gray-300">{props.contexte}</p>
+                    <p className="text-gray-900 dark:text-gray-300">
+                      {props.contexte}
+                    </p>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-2">
                       Besoin
                     </h2>
-                    <p className="text-gray-300">{props.besoin}</p>
+                    <p className="text-gray-900 dark:text-gray-300">
+                      {props.besoin}
+                    </p>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-2">
                       Environnement
                     </h2>
-                    <p className="text-gray-300">{props.environnement}</p>
+                    <p className="text-gray-900 dark:text-gray-300">
+                      {props.environnement}
+                    </p>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-2">
                       Réalisation
                     </h2>
-                    <p className="text-gray-300">{props.realisation}</p>
+                    <p className="text-gray-900 dark:text-gray-300">
+                      {props.realisation}
+                    </p>
                   </li>
 
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-2">
                       Bilan
                     </h2>
-                    <p className="text-gray-300">{props.bilan}</p>
+                    <p className="text-gray-900 dark:text-gray-300">
+                      {props.bilan}
+                    </p>
                   </li>
                   {props.showLinkButton && (
                     <>
                       <li className="mt-8">
-                        <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
+                        <h2 className="text-lg md:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-2">
                           Production associé
                         </h2>
                         <a
@@ -221,10 +231,12 @@ const ContentCard: React.FC<ContentCardProps> = (props: ContentCardProps) => {
                     </>
                   )}
                   <li className="mt-8">
-                    <h2 className="text-lg md:text-2xl text-gray-200 font-bold mb-2">
+                    <h2 className="text-lg md:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-2">
                       Compétence mis en œuvre
                     </h2>
-                    <p className="text-gray-300">{props.competence}</p>
+                    <p className="text-gray-900 dark:text-gray-300">
+                      {props.competence}
+                    </p>
                   </li>
                 </ul>
               </div>

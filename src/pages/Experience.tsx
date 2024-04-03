@@ -6,7 +6,7 @@ const Experience = () => {
     {
       position: "Employé polyvalent",
       company: "Cinéma Les Alizées",
-      timePeriod: { year: "Oct. 2021", color: "bg-rose-500" },
+      timePeriod: { year: "Oct. 2021", color: "bg-rose-300 dark:bg-rose-500" },
       description:
         "Au cinéma de Bron, j'ai pu joué un rôle central durant mes études en accueillant les visiteurs, en assurant le contrôle du pass sanitaire, et en gérant l'ouverture/fermeture des salles. Cette expérience a renforcé ma polyvalence et ma volonté de contribuer à une atmosphère conviviale, tout en participant au succès du cinéma.",
       logoUrl:
@@ -15,7 +15,10 @@ const Experience = () => {
     {
       position: "Agent de nettoiement",
       company: "Grand Lyon",
-      timePeriod: { year: "Juil. 2023", color: "bg-emerald-500" },
+      timePeriod: {
+        year: "Juil. 2023",
+        color: "bg-emerald-300 dark:bg-emerald-500",
+      },
       description:
         "J'ai occupé le poste d'agent de nettoiement saisonnier au sein d'une équipe. Mon rôle consistait à assurer la propreté et l'entretien des espaces publics, contribuant ainsi à créer un environnement agréable pour les résidents et les visiteurs. J'ai acquis une expérience dans les tâches de nettoyage et d'entretien des espaces extérieurs.",
       logoUrl:
@@ -26,7 +29,7 @@ const Experience = () => {
       company: "INOLIB",
       timePeriod: {
         year: "Mai 2023 - Juin 2023 & Jan. 2024 - Fév. 2024",
-        color: "bg-blue-500",
+        color: "bg-blue-300 dark:bg-blue-500",
       },
       description:
         "En tant que stagiaire chez Inolib, j'ai eu le privilège de contribuer au développement de diverse site web de l'entreprise, en mettant l'accent sur l'accessibilité et l'expérience utilisateur. Pendant cette expérience transformatrice, j'ai travaillé en étroite collaboration avec une équipe dynamique de professionnels.",
@@ -47,7 +50,7 @@ const Experience = () => {
           button2Label="Lire plus"
         />
       </header>
-      <main id="main" className="p-10 bg-[#000302]">
+      <main id="main" className="p-10 bg-white dark:bg-[#000302]">
         <ExperienceArticle experiences={experienceData} />
       </main>
     </>
