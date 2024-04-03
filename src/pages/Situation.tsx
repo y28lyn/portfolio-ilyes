@@ -17,7 +17,7 @@ const Situation = () => {
       <main id="main">
         <CardArticle />
       </main>
-      <button className="z-50 text-sm md:text-md fixed bottom-4 right-20 border border-[#101314] dark:border-white bg-white hover:bg-gray-200 dark:bg-[#101314] dark:hover:bg-black text-[#000302] dark:text-white font-bold p-3 rounded shadow-lg">
+      <button className="z-50 text-[10px] md:text-base fixed bottom-4 right-20 border border-[#101314] dark:border-white bg-white hover:bg-gray-200 dark:bg-[#101314] dark:hover:bg-black text-[#000302] dark:text-white font-bold p-3 rounded shadow-lg">
         <a href="/Tableau des compétences.xlsx">
           Télécharger mon tableau des compétences
         </a>
