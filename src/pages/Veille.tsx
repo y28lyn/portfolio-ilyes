@@ -1,3 +1,4 @@
+import Article from "../components/article/Article";
 import VeilleArticle from "../components/article/VeilleArticle";
 import Banner from "../components/header/Banner";
 
@@ -75,8 +76,7 @@ const Veille = () => {
       <header>
         <Banner
           title="Ma veille technologique sur l'accessibilité numérique"
-          subtitle="Comment les nouvelles technologies peuvent-elles aider les
-          personnes en situation de handicap au quotidien?"
+          subtitle="Comment les nouvelles technologies peuvent-elles aider les personnes en situation de handicap au quotidien ?"
           backgroundImageUrl="https://images.unsplash.com/photo-1640693039636-a13ea2dd9139?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           button1Label="Contactez-moi"
           button1Link="/contact"
@@ -98,6 +98,14 @@ const Veille = () => {
               isEven={index % 2 === 0}
             />
           ))}
+        </div>
+        <div>
+          <Article
+            title="Ma réponse à la problématique"
+            subtitle="Comment les nouvelles technologies peuvent-elles aider les personnes en situation de handicap au quotidien ?"
+            desc="En conclusion, les nouvelles technologies offrent des solutions innovantes pour améliorer le quotidien des personnes en situation de handicap, telles que la manette Access pour la PS5, les lunettes WYES, l'application Audiospot, ou le contrôle de l'environnement par la pensée. Ces avancées favorisent l'autonomie, facilitent la communication et l'accès à l'information, contribuant ainsi à une société plus inclusive. Bien que la législation soutienne également ces efforts, il est nécessaire de poursuivre les recherches et les développements technologiques pour répondre aux besoins spécifiques de chaque personne en situation de handicap et promouvoir une accessibilité universelle."
+            backgroundImageUrl="https://images.unsplash.com/photo-1619882774786-5b312adddb5f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
         </div>
       </main>
     </>
