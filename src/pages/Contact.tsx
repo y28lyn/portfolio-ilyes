@@ -120,13 +120,7 @@ const Contact = () => {
                       href="mailto:i.beirade@gmail.com"
                       className="text-base leading-relaxed mb-9 transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline"
                     >
-                      i.beirade@gmail.com
-                    </a>
-                    <a
-                      href="tel:+33778907444"
-                      className="text-base leading-relaxed mb-9 transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline"
-                    >
-                      07 78 90 74 44
+                      ibeirade.pro@gmail.com
                     </a>
                   </div>
                 </div>

@@ -4,15 +4,13 @@ const MentionLegales = () => {
       <div className="bg-white text-[#000302] dark:bg-[#000302] dark:text-white pb-10 pt-20 px-10 md:p-28">
         <h1 className="text-3xl font-bold">Mentions Légales</h1>
         <p className="text-sm">
-          <strong>Date de la Dernière Mise à Jour :</strong> 11/03/2024
+          <strong>Date de la Dernière Mise à Jour :</strong> 12/03/2025
         </p>
 
         <section className="mt-6">
           <h2 className="text-xl font-bold">Responsable du Site Web</h2>
           <p>Responsable éditorial : Ilyes BEIRADE</p>
-          <p>Adresse : 210 Avenue Franklin Roosevelt</p>
-          <p>Téléphone : +3377890744</p>
-          <p>E-mail : i.beirade@gmail.com</p>
+          <p>E-mail : ibeirade.pro@gmail.com</p>
         </section>
 
         <section className="mt-6">

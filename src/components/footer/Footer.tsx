@@ -67,7 +67,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="mt-8 text-base leading-6 text-center text-gray-900 dark:text-gray-400">
-            © 2024 BEIRADE Ilyes
+            © 2025 BEIRADE Ilyes
           </p>
         </div>
       </section>

@@ -147,7 +147,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
             </div>
             <p className="text-white">{date}</p>
           </div>
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <button
               ref={openModalButtonRef}
               onClick={() => {
@@ -157,7 +157,7 @@ const CertificationCard: React.FC<CertificationCardProps> = ({
             >
               Voir plus
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
       <Modal isOpen={isModalOpen} closeModal={closeModal} images={images} />

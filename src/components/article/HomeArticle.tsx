@@ -10,7 +10,7 @@ const HomeArticle = () => {
                 BEIRADE Ilyes
               </h2>
               <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-800 dark:text-gray-200 md:mt-8">
-                Étudiant en BTS SIO 2ème année, passionné par le développement
+                Volontaire en service civique à l'AFEV, titulaire d'un BTS SIO option SLAM, passionné par le développement
                 web avec React, TypeScript, et Tailwind CSS, et un intérêt pour
                 le PHP.
               </p>

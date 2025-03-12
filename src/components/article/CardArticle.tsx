@@ -168,16 +168,22 @@ export default function CardArticle() {
     {
       title: "Track It",
       desc: "Track It est une application qui permet aux utilisateurs de suivre leur prise de médicaments afin de ne pas oublier s'ils les ont pris ou non. Les utilisateurs peuvent enregistrer, modifier et supprimer les médicaments pris.",
-      imgUrl: "https://jinoh.co/wp-content/uploads/2022/01/netMauiLogo.webp",
+      imgUrl: "https://img-c.udemycdn.com/course/750x422/5716958_b335_2.jpg",
       link: "",
       linkUrl: "https://github.com/y28lyn/track-it",
       titleModal: "Track It",
-      contexte: "",
-      besoin: "",
-      environnement: "",
-      realisation: "",
-      bilan: "",
-      competence: "",
+      contexte: 
+      "Ce projet a été développé dans le cadre d'une initiative visant à améliorer la gestion de la santé personnelle grâce à la technologie pendant ma deuxième année de BTS SIO. En utilisant .NET MAUI, une plateforme multi-applications, nous avons conçu une solution multiplateforme qui permet aux utilisateurs de suivre leur prise de médicaments de manière simple et efficace.",
+      besoin: 
+        "L'objectif principal était de créer une application permettant aux utilisateurs de suivre leurs médicaments et de gérer leur prise de manière efficace. Le besoin était de réduire les risques d'oubli de médicaments en fournissant une interface intuitive, simple d’utilisation, tout en permettant d'ajuster facilement les informations sur les médicaments pris.",
+      environnement: 
+        "Le projet a été réalisé avec .NET MAUI, une technologie moderne permettant de développer des applications multiplateformes avec une seule base de code. Le design a été conçu pour être à la fois fonctionnel et convivial, en optimisant l'expérience utilisateur pour garantir une utilisation facile.",
+      realisation: 
+        "L'application a été conçue avec des fonctionnalités permettant aux utilisateurs de suivre leurs prises de médicaments, d’ajouter, modifier et supprimer des enregistrements. Un soin particulier a été apporté à la création d'une interface simple, claire et accessible, favorisant l’engagement des utilisateurs. Des tests ont été réalisés pour assurer la compatibilité de l'application sur plusieurs plateformes, tout en maintenant une expérience homogène.",
+      bilan: 
+      "Le projet Track It a abouti à une application fonctionnelle, efficace et facile à utiliser pour le suivi de la médication. Grâce à sa conception simple et intuitive, l’application répond aux besoins des utilisateurs qui peuvent désormais suivre leur traitement de manière précise et éviter les oublis. L'utilisation de .NET MAUI a permis de développer une solution multiplateforme rapide et fiable.",
+      competence: 
+        "Ce projet a permis de mettre en pratique une variété de compétences en développement d'applications multiplateformes avec .NET MAUI, en gestion de projet agile et en conception d'interface utilisateur. Il a également renforcé nos capacités à développer des applications pratiques répondant à des besoins concrets, en combinant la technologie avec une approche centrée sur l'utilisateur.",  
       showGithub: true,
       showLink: false,
       category: ".NET",

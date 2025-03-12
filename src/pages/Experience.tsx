@@ -36,6 +36,18 @@ const Experience = () => {
       logoUrl:
         "https://images.unsplash.com/photo-1498758536662-35b82cd15e29?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsdWUlMjBjb21wdXRlcnxlbnwwfHwwfHx8MA%3D%3D",
     },
+    {
+      position: "Volontaire en service civique",
+      company: "AFEV",
+      timePeriod: {
+        year: "Octobre 2024 - Juin 2025",
+        color: "bg-orange-300 dark:bg-orange-500",
+      },
+      description:
+        "En tant que stagiaire chez Inolib, j'ai eu le privilège de contribuer au développement de diverse site web de l'entreprise, en mettant l'accent sur l'accessibilité et l'expérience utilisateur. Pendant cette expérience transformatrice, j'ai travaillé en étroite collaboration avec une équipe dynamique de professionnels.",
+      logoUrl: 
+        "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
   ];
 
   return (
