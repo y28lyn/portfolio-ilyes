@@ -73,5 +73,5 @@ const root = ReactDOM.createRoot(container);
 root.render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

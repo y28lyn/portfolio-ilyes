@@ -31,7 +31,9 @@
 .swiper-button-next {
   color: #f8fafc !important;
   padding: 40px;
-  transition: background-color 0.3s, color 0.3s !important;
+  transition:
+    background-color 0.3s,
+    color 0.3s !important;
   position: absolute;
 }
 

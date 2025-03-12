@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -57,7 +57,7 @@ const Contact = () => {
         "service_rsxawjs",
         "template_7sfujlu",
         formData,
-        "heoG0uyUhCZXKQxlf"
+        "heoG0uyUhCZXKQxlf",
       )
       .then(
         (result) => {
@@ -79,7 +79,7 @@ const Contact = () => {
             message: "Une erreur s'est produite lors de l'envoi de l'e-mail.",
             error: true,
           });
-        }
+        },
       );
   };
 
