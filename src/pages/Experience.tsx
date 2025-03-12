@@ -6,7 +6,7 @@ const Experience = () => {
     {
       position: "Employé polyvalent",
       company: "Cinéma Les Alizées",
-      timePeriod: { year: "Oct. 2021", color: "bg-rose-300 dark:bg-rose-500" },
+      timePeriod: { year: "Octobre 2021", color: "bg-rose-300 dark:bg-rose-500" },
       description:
         "Au cinéma de Bron, j'ai pu joué un rôle central durant mes études en accueillant les visiteurs, en assurant le contrôle du pass sanitaire, et en gérant l'ouverture/fermeture des salles. Cette expérience a renforcé ma polyvalence et ma volonté de contribuer à une atmosphère conviviale, tout en participant au succès du cinéma.",
       logoUrl:
@@ -16,7 +16,7 @@ const Experience = () => {
       position: "Agent de nettoiement",
       company: "Grand Lyon",
       timePeriod: {
-        year: "Juil. 2023",
+        year: "Juillet 2024",
         color: "bg-emerald-300 dark:bg-emerald-500",
       },
       description:
@@ -28,7 +28,7 @@ const Experience = () => {
       position: "Développeur web",
       company: "INOLIB",
       timePeriod: {
-        year: "Mai 2023 - Juin 2023 & Jan. 2024 - Fév. 2024",
+        year: "Janvier 2024 - Février 2024",
         color: "bg-blue-300 dark:bg-blue-500",
       },
       description:

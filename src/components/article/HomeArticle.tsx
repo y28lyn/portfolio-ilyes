@@ -12,7 +12,7 @@ const HomeArticle = () => {
               <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-800 dark:text-gray-200 md:mt-8">
                 Volontaire en service civique à l'AFEV, titulaire d'un BTS SIO option SLAM, passionné par le développement
                 web avec React, TypeScript, et Tailwind CSS, et un intérêt pour
-                le PHP.
+                le PHP ainsi que le C#.
               </p>
 
               <p className="mt-4 text-xl text-gray-800 dark:text-gray-200 md:mt-8">
